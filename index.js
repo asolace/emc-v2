@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 const bodyParser = require('body-parser')
-const users = require('./routes/userRoutes')
 const config = require('./config/database')
 mongoose.Promise = global.Promise;
 require('./config/passport')(passport)
@@ -19,11 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.get('/', (req, res) => {
-  res.send('Invalid Endpoint')
-})
-
-app.use('/users', users)
+require('./routes/userRoutes')(app)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
@@ -36,4 +31,12 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 3003
 
-app.listen(PORT)
+app.listen(PORT, () => {
+  console.log(`
+    © Asolace Development
+
+    Server started on port ${PORT}...
+
+    EMC Server initiated!
+    `);
+})
