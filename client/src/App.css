@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css?family=Alice|PT+Serif+Caption|Archivo+Black');
+
+h1, p {
+  font-family: 'Alice', serif;
+}
+
+.about-container {
+  margin-top: 50px;
+}
+
+.about-container-row {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.about-deacon-container {
+  margin-top: 50px;
+}
+
+.about-deacon-image {
+  margin-top: 4%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.about-deacon-image-container {
+  border-radius: 50%;
+  background-image: url('./photos/lightleather.jpg');
+  background-color: #b27c2a;
+  width: 218px;
+  height: 218px;
+  margin-left: 25%;
+}
+
+.about-deacon-name {
+  font-weight: 600;
+  margin-top: 10%;
+  margin-left: 30%;
+}
+
+.about-deacon-row {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 15%;
+}
+
+
+.about-leader-image-container {
+  border-radius: 50%;
+  background-image: url('./photos/mediumleather.jpg');
+  background-color: #b27c2a;
+  width: 270px;
+  height: 270px;
+  margin-left: 25%;
+}
+
+.about-leader-image {
+  margin-top: 4%;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.about-leader-text {
+  height: 300px;
+  width: 500px;
+  text-align: center;
+  font-family: 'Alice', serif;
+}
+
+.about-our-mission{
+  padding-top: 100px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-family: 'Alice', serif;
+}
+
+.about-page-container {
+  background-color: #f4f2ed;
+  width: 100vw;
+}
+
+.about-mission-statement{
+  font-weight:600;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.about-mission-statement-out-container {
+  background-image: url('./photos/blurrychurch.jpg');
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 80vh;
+  margin-left: 0%;
+}
+.about-mission-statement-in-container {
+  padding-top: 30px;
+  margin-left: 20%;
+  width: 60vw;
+}
+
+.about-our-leaders {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  margin-top: 75px;
+}
+
+.about-our-mission{
+  padding-top: 80px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+}
+
+.about-page-container {
+  background-color: #f4f2ed;
+  width: 100vw;
+}
+
+.about-restofus-header {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+.about-restofus-image {
+  width: 45vw;
+  height: 80vh;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  width: 90%;
+}
+
+.about-restofus-frame {
+  margin-top: 50px;
+  margin-left: 20%;
+  width: 60vw;
+  background-image: url('./photos/polaroidframeedited.PNG');
+  background-size: 100% 100%;
+  box-shadow: 0px 0px 10px 20px black;
+}
+
+.about-space {
+  padding-bottom: 100px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-container {
+  margin-top: 57px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+nav {
+  background-color: white;
+}
+
+.carousel {
+  left: 15%;
+  width: 70%;
+}
+
+.col {
+  padding: 10px 0 0 0;
+}
+
+.container {
+  margin-top: 130px;
+}
+
+.direction-emc {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.emc-brand-blue {
+  font-family: 'Archivo Black', sans-serif;
+  color: #5058b2;
+  font-size: 1.3em;
+}
+
+.emc-brand-red {
+  font-family: 'Archivo Black', sans-serif;
+  color: #ad574e;
+  font-size: 1.3em;
+}
+
+.emc-title-blue {
+  color: #5058b2;
+  font-size: 0.8em;
+}
+
+.emc-title-red {
+  color: #ad574e;
+  font-size: 0.8em;
+}
+
+.gospel-img {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-tri-section-header {
+  color: #5058b2;
+  font-family: 'PT Serif Caption', serif;
+  font-size: 2.8vw;
+  font-weight: 900;
+}
+
+.home-header {
+  font-family: 'PT Serif Caption', serif;
+}
+
+.home-text {
+  font-size: 1.2em;
+  font-family: 'Alice', serif;
+}
+
+.home-tri-section-content {
+  font-family: 'Alice', serif;
+  font-size: 2vw;
+}
+
+.img-in-pa {
+  width: 370px;
+  height: auto;
+}
+
+.name-me-section-home {
+  font-family: 'PT Serif Caption', serif;
+  color: black;
+}
+
+.name-me-section-home:hover {
+  color: #ad574e;
+}
+
+.name-me-img-home {
+  width: 350px;
+  height: 212px;
+}
+
+.name-me-text {
+  font-family: 'PT Serif Caption', serif;
+  padding-top: 20px;
+}
+
+.nav-link {
+  font-weight: 400;
+  position: relative;
+}
+
+.nav-link:after,
+.nav-link:before {
+  transition: all .5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #ad574e;
+  height: 1px;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #ad574e !important;
+}
+
+.section-icon {
+  text-align: right;
+  font-size: 2em;
+}
+
+.sunday-time {
+  font-size: 2.2em;
+}
+
+/*Footer Begin*/
+.copyright {
+  color: gray;
+}
+
+.footer-container {
+  padding-top: 30px;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+  background-color: #555;
+}
+
+.social-wrap button {
+  margin: 20px;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  font-size: 1.25em;
+  -webkit-transition: color .25s ease-out, background .25s ease-out, border-radius .25s ease-out;
+  transition: color .25s ease-out, background .25s ease-out, border-radius .25s ease-out;
+  box-shadow: 0px 27px 73px -10px rgba(0, 0, 0, 0.75);
+}
+.social-wrap button:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0px 27px 45px -10px rgba(0, 0, 0, 0.75);
+}
+.social-wrap .facebook {
+  color: #3b5998;
+  background-color: #fff;
+}
+.social-wrap .facebook:hover {
+  color: #fff;
+  background-color: #3b5998;
+}
+.social-wrap .facebook:active {
+  background-color: #fff;
+  color: #3b5998;
+}
+.social-wrap .twitter {
+  color: #00aced;
+  background-color: #fff;
+}
+.social-wrap .twitter:hover {
+  color: #fff;
+  background-color: #00aced;
+}
+.social-wrap .twitter:active {
+  background-color: #fff;
+  color: #00aced;
+}
+.social-wrap .youtube {
+  color: #ae0000;
+  background-color: #fff;
+}
+.social-wrap .youtube:hover {
+  color: #fff;
+  background-color: #ae0000;
+}
+.social-wrap .youtube:active {
+  background-color: #fff;
+  color: #ae0000;
+}
+/*Footer End*/
+
+/*WARPING BEGIN*/
+:root {
+  --deg: 1;
+  --x: -50%;
+  --y: -50%;
+}
+
+.site-status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #2F3230;
+  font-weight: bold;
+  background-color: rgb(28, 54, 76);
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+
+.site-status .fa {
+  background-color: rgb(28, 54, 76);
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+.warpings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(var(--x, -50%), var(--y, -50%)) rotate(0deg);
+          transform: translate(var(--x, -50%), var(--y, -50%)) rotate(0deg);
+  font-size: 20vmin;
+  width: 3em;
+  height: 3em;
+  border-radius: 90% 95% 85% 105%;
+  background: #0f0;
+  mix-blend-mode: screen;
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
+  -webkit-animation: wobble calc(150ms * var(--t)) linear infinite;
+          animation: wobble calc(150ms * var(--t)) linear infinite;
+  -webkit-transform-origin: -var(--y) -var(--x);
+          transform-origin: -var(--y) -var(--x);
+  box-shadow: 0 0 .5em .2em #000 inset, 0 0 .15em 0 #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.warpings::after {
+  font-size: 1em;
+  white-space: nowrap;
+}
+.warpings:nth-child(1) {
+  --x: -53%;
+  --y: -53%;
+  --t: 37;
+}
+.warpings:nth-child(2) {
+  --x: -47%;
+  --y: -52%;
+  --t: 58;
+}
+.warpings:nth-child(3) {
+  --x: -45%;
+  --y: -50%;
+  --t: 46;
+}
+.warpings:nth-child(4) {
+  --x: -53%;
+  --y: -45%;
+  --t: 72;
+}
+.warpings:nth-child(5) {
+  --x: -55%;
+  --y: -45%;
+  --t: 62;
+}
+
+@-webkit-keyframes wobble {
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+    -webkit-transform: translate(var(--x), var(--y)) rotate(360deg);
+            transform: translate(var(--x), var(--y)) rotate(360deg);
+  }
+}
+
+@keyframes wobble {
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+    -webkit-transform: translate(var(--x), var(--y)) rotate(360deg);
+            transform: translate(var(--x), var(--y)) rotate(360deg);
+  }
+}
+/*WARPING END*/
+
+@media screen and (max-width: 1250px) {
+  .about-deacon-image { width: 165px; height: 165px; }
+  .about-deacon-image-container { width: 180px; height: 180px; }
+  .about-deacon-name { font-size: 27px }
+  .about-our-leaders { font-size: 32px; }
+  .about-leader-text { font-size: 15px; width: 450px;}
+  .about-our-mission { padding-top: 70px; font-size: 32px; }
+  .about-mission-statement { padding-left: 30%; padding-right: 0%;}
+  .about-mission-statement-out-container { height: 500px;}
+  .about-mission-statement-in-container {padding-top: 35px; font-size: 15px; margin-left: 5%; width: 70vw; height: 90vh;}
+}
+
+@media screen and (max-width: 1100px) {
+  .about-deacon-image { width: 200px; height: 200px; }
+  .about-deacon-image-container { width: 218px; height: 218px; }
+  .about-deacon-name { font-size: 27px }
+  .about-leader-text { font-size: 13.5px; width: 400px; }
+  .about-leader-image { width: 200px; height: 200px; }
+  .about-leader-image-container { width: 218px; height: 218px;}
+}
+
+@media screen and (max-width: 900px) {
+  .about-our-leaders { font-size: 28px; }
+  .about-leader-text { font-size: 12.5px; width: 350px; }
+  .about-our-mission { padding-top: 70px; font-size: 28px; }
+  .about-mission-statement { padding-left: 20%; padding-right: 0%;}
+  .about-mission-statement-out-container { height: 450px;}
+  .about-mission-statement-in-container {padding-top: 35px; font-size: 12.5px; margin-left: 7.5%; width: 70vw; height: 90vh;}
+  .home-tri-section-header { font-size: 30px; }
+  .sunday-time { font-size: 30px; }
+  .home-tri-section-content { font-size: 20px; }
+}
+
+@media screen and (max-width: 800px) {
+  .about-leader-image { width: 150px; height: 150px; }
+  .about-leader-image-container { width: 165px; height: 165px;}
+  .about-leader-text { font-size: 10px; width: 300px; }
+}
+
+@media screen and (max-width: 700px) {
+  .about-leader-text { font-size: 10px; width: 250px; }
+  .about-our-leaders { font-size: 25px; }
+  .about-our-mission { padding-top: 70px; font-size: 25px; }
+  .about-mission-statement { padding-left: 10%; padding-right: 0%;}
+  .about-mission-statement-out-container { height: 375px;}
+  .about-mission-statement-in-container {padding-top: 20px; font-size: 10px; margin-left: 10%; width: 70vw; height: 90vh;}
+}
+
+@media screen and (max-width: 600px) {
+  .about-leader-image { width: 200px; height: 200px; }
+  .about-leader-image-container { width: 218px; height: 218px; }
+  .about-leader-text { width: 300px; margin-left: 15%; margin-top: 10%;}
+}
+
+@media screen and (max-width: 500px) {
+  .about-our-leaders { font-size: 20px; }
+  .about-our-mission { padding-top: 50px; font-size: 20px; }
+  .about-mission-statement { padding-left: 5%; padding-right: 0%;}
+  .about-mission-statement-out-container { height: 350px;}
+  .about-mission-statement-in-container {padding-top: 20px; font-size: 10px; margin-left: 12.5%; width: 70vw; height: 90vh;}
+  .home-tri-section-header { font-size: 20px; }
+  .home-tri-section-content { font-size: 15px; }
+  .direction-emc { font-size: 17px; }
+}
+
+@media screen and (max-width: 400px) {
+  .about-our-leaders { font-size: 20px; }
+  .about-our-mission { padding-top: 40px; font-size: 20px; }
+  .about-mission-statement { padding-left: 10%; padding-right: 0;}
+  .about-mission-statement-out-container { height: 300px;}
+  .about-mission-statement-in-container {padding-top: 10px; font-size: 8px; margin-left: 10%; width: 70vw; height: 90vh;}
+}
+
+@media screen and (max-width: 416px) {
+  .emc-title-blue {
+    width: 1px;
+    visibility: hidden;
+  }
+
+  .emc-title-red {
+    visibility: hidden;
+    width: 1px;
+  }
+
+  .navbar-brand {
+    width: 80px;
+  }
+}
