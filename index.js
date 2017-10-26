@@ -5,13 +5,11 @@ const cookieSession = require('cookie-session')
 const passport = require('passport')
 const bodyParser = require('body-parser')
 const config = require('./config/database')
+const keys = require('./config/keys')
 mongoose.Promise = global.Promise;
 require('./config/passport')(passport)
 
-mongoose.connect(config.database, err => {
-  if (err) console.log('Failed to connect to Mongodb... ', err)
-  else console.log('Succesfully connected to', config.database)
-})
+mongoose.connect(keys.mongoURI)
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
