@@ -36,12 +36,4 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 3003
 
-app.listen(PORT, () => {
-  console.log(`
-    © Asolace Development
-
-    Server started on port ${PORT}...
-
-    EMC Server initiated!
-    `);
-})
+app.listen(PORT)
