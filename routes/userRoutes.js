@@ -1,7 +1,7 @@
 const passport = require('passport')
 const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
-const User = require('../models/user')
+const User = require('../models/User')
 const Validator = require('validator')
 const isEmpty = require('lodash/isEmpty')
 
