@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import grouppic from '../photos/people/IMG_0582.JPG';
 import profilepic from '../photos/tempprofilepic.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -31,7 +31,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -48,7 +48,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -65,7 +65,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -82,7 +82,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -105,16 +105,16 @@ class About extends Component {
         <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
           <div className="about-deacon-container">
             <Row className="about-deacon-row">
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Lulu Lim</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Mimi Ahn</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Kay Choi</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Arlene Macaraeg</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Lulu Lim</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Mimi Ahn</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Kay Choi</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Arlene Macaraeg</h2></Col>
             </Row>
             <Row className="about-deacon-row">
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Nilsa Morales</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Jason Park</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Daniel Hsin</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Virgil Macaraeg</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Nilsa Morales</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Jason Park</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Daniel Hsin</h2></Col>
+              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic} alt="profile pic"/></div><h2 className="about-deacon-name">Virgil Macaraeg</h2></Col>
             </Row>
           </div>
         </ScrollAnimation>
@@ -125,7 +125,7 @@ class About extends Component {
 
         <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
           <div className="about-restofus-frame">
-            <img className="about-restofus-image" src={grouppic}></img>
+            <img className="about-restofus-image" src={grouppic} alt="profile pic" />
           </div>
         </ScrollAnimation>
         <br/><br/><br/><br/>
