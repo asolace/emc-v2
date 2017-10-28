@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import grouppic from '../photos/people/IMG_0582.JPG';
 import profilepic from '../photos/tempprofilepic.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -31,7 +31,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -48,7 +48,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -65,7 +65,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -82,7 +82,7 @@ class About extends Component {
             <Row className="about-leader-row">
               <Col>
                 <div className="about-leader-image-border">
-                  <img className="about-leader-image" src={profilepic} />
+                  <img className="about-leader-image" src={profilepic} alt="profile pic"/>
                 </div>
               </Col>
               <Col>
@@ -159,7 +159,7 @@ class About extends Component {
 
         <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
           <div className="about-restofus-frame">
-            <img className="about-restofus-image" src={grouppic}></img>
+            <img className="about-restofus-image" src={grouppic} alt="profile pic" />
           </div>
         </ScrollAnimation>
         <br/><br/><br/><br/>
