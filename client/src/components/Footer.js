@@ -18,7 +18,6 @@ const Footer = () =>
         <button className='youtube'>
           <FaYoutube />
         </button>
-
     </div>
     <p className="copyright">&copy; Copyright 2017 EMC<br/>@asolace development</p>
   </div>

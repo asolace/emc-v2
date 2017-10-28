@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import About from './components/About'
 import Fellowship from './components/Fellowship'
+import Footer from './components/Footer'
 
 import Warping from './components/Warping'
 
@@ -20,12 +21,12 @@ const Prayers = () =>
   <Warping />
 </div>
 
-const Photos = () =>
+const Gallery = () =>
 <div className="about-page">
   <Warping />
 </div>
 
-const LocaTime = () =>
+const Events = () =>
 <div className="about-page">
   <Warping />
 </div>
@@ -42,9 +43,10 @@ class App extends Component {
             <Route path="/members" component={ Members } />
             <Route path="/fellowship" component={ Fellowship } />
             <Route path="/prayers" component={ Prayers } />
-            <Route path="/photos" component={ Photos } />
-            <Route path="/location-time" component={ LocaTime } />
+            <Route path="/gallery" component={ Gallery } />
+            <Route path="/events" component={ Events } />
           </div>
+          <Footer />
         </div>
       </BrowserRouter>
 
