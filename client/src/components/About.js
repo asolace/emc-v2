@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
+import ScrollAnimation from 'react-animate-on-scroll';
 import grouppic from '../photos/people/IMG_0582.JPG';
 import profilepic from '../photos/tempprofilepic.jpg';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 class About extends Component {
   render() {
@@ -52,7 +52,7 @@ class About extends Component {
                 </div>
               </Col>
               <Col>
-                <h2 className="about-leader-name">Pastor Jae Lee</h2>
+                <h2 className="about-leader-name">Pastor Pio Lee</h2>
                 <p className="about-leader-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Donec nec dui et enim commodo facilisis id in magna.
@@ -69,7 +69,7 @@ class About extends Component {
                 </div>
               </Col>
               <Col>
-                <h2 className="about-leader-name">Pastor Jae Lee</h2>
+                <h2 className="about-leader-name">Pastor Enrique Piñero</h2>
                 <p className="about-leader-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Donec nec dui et enim commodo facilisis id in magna.
@@ -86,7 +86,7 @@ class About extends Component {
                 </div>
               </Col>
               <Col>
-                <h2 className="about-leader-name">Pastor Jae Lee</h2>
+                <h2 className="about-leader-name">Dr. Soo-Il Lee</h2>
                 <p className="about-leader-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Donec nec dui et enim commodo facilisis id in magna.
