@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
 const Validator = require('validator')
 const isEmpty = require('lodash/isEmpty')
+const User = require('../models/User')
 
 validateInput = data => {
   let errors = {}

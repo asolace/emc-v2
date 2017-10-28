@@ -6,6 +6,8 @@ const UserSchema = mongoose.Schema({
   password: { type: String, required: true }
 })
 
+const User = module.exports = mongoose.model('User', UserSchema)
+
 module.exports.getUserById = function(id, callback){
   User.findById(id, callback)
 }
