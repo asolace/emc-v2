@@ -101,20 +101,54 @@ class About extends Component {
 
         <hr />
 
-        <h1 className="about-our-leaders">Our Deacons</h1>
+        <h1 className="about-leader-header">Our Deacons</h1>
         <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
           <div className="about-deacon-container">
-            <Row className="about-deacon-row">
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Lulu Lim</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Mimi Ahn</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Kay Choi</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Arlene Macaraeg</h2></Col>
+            <Row className="about-deacon-rowA">
+              <Col>
+                <div className="about-deacon-image-borderA">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameA">Lulu Lim</h2>
+              </Col>
+              <Col>
+                <div className="about-deacon-image-borderA">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameA">Mimi Ahn</h2>
+              </Col>
+              <Col>
+                <div className="about-deacon-image-borderA">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameA">Kay Choi</h2>
+              </Col>
+              <Col>
+                <div className="about-deacon-image-borderA">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameA">Arlene & Virgil Macaraeg</h2>
+              </Col>
             </Row>
-            <Row className="about-deacon-row">
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Nilsa Morales</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Jason Park</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Daniel Hsin</h2></Col>
-              <Col><div className="about-deacon-image-container"><img className="about-deacon-image" src={profilepic}></img></div><h2 className="about-deacon-name">Virgil Macaraeg</h2></Col>
+            <Row className="about-deacon-rowB">
+              <Col>
+                <div className="about-deacon-image-borderB">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameB">Nilsa Morales</h2>
+              </Col>
+              <Col>
+                <div className="about-deacon-image-borderB">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameB">Jason Park</h2>
+              </Col>
+              <Col>
+                <div className="about-deacon-image-borderB">
+                  <img className="about-deacon-image" src={profilepic}></img>
+                </div>
+                <h2 className="about-deacon-nameB">Daniel Hsin</h2>
+              </Col>
             </Row>
           </div>
         </ScrollAnimation>

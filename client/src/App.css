@@ -22,39 +22,6 @@ nav {
 
 /*About Page Begin*/
 
-.about-deacon-container {
-  margin-top: 50px;
-}
-
-.about-deacon-image {
-  margin-top: 4%;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-}
-
-.about-deacon-image-container {
-  border-radius: 50%;
-  background-image: url('./photos/lightleather.jpg');
-  background-color: #b27c2a;
-  width: 218px;
-  height: 218px;
-  margin-left: 25%;
-}
-
-.about-deacon-name {
-  font-family: 'Alice', serif;
-  font-weight: 600;
-  margin-top: 10%;
-  margin-left: 85px;
-}
-
-.about-deacon-row {
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 15%;
-}
-
 /* About Mission Section BEGIN */
 .about-mission-container{
   background-attachment: fixed;
@@ -148,10 +115,10 @@ nav {
 }
 
 @media screen and (max-width: 800px){
-  .about-leader-image-border { margin-left: 25vw; height: 35vw; width: 35vw; }
+  .about-leader-image-border { margin-left: 21.5vw; height: 35vw; width: 35vw; }
   .about-leader-image { height: 32vw; width: 32vw; }
-  .about-leader-name {margin-left: 2vw}
-  .about-leader-text { margin-left: 2vw; min-width: 450px; width: auto;}
+  .about-leader-name {margin-left: 3vw}
+  .about-leader-text { margin-left: 2vw; min-width: 400px; width: auto; }
 }
 
 @media screen and (max-width: 500px){
@@ -159,9 +126,99 @@ nav {
 }
 /* About Leaders Section END */
 
+/* About Deacons Section BEGIN */
+
+.about-deacon-container {
+  margin-right: 0px !important;
+  margin-top: 50px;
+}
+
+.about-deacon-image {
+  margin-top: 4%;
+  border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+}
+
+.about-deacon-image-borderA {
+  border-radius: 50%;
+  background-image: url('./photos/lightleather.jpg');
+  background-color: #b27c2a;
+  width: 15.2vw;
+  height: 15.2vw;
+  margin-left: 1vw;
+}
+
+.about-deacon-image-borderB {
+  border-radius: 50%;
+  background-image: url('./photos/lightleather.jpg');
+  background-color: #b27c2a;
+  width: 15.2vw;
+  height: 15.2vw;
+  margin-left: 1vw;
+}
+
+.about-deacon-nameA {
+  font-family: 'Alice', serif;
+  font-weight: 600;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 1vw;
+}
+
+.about-deacon-nameB {
+  font-family: 'Alice', serif;
+  font-weight: 600;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 1vw;
+}
+
+.about-deacon-rowA {
+  margin-right: 0px !important;
+  padding-bottom: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.about-deacon-rowB {
+  margin-right: 0px !important;
+  padding-bottom: 5vw;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+@media screen and (max-width: 1150px){
+  .about-deacon-nameA { font-size: 24px; }
+  .about-deacon-nameB { font-size: 24px;}
+}
+
+@media screen and (max-width: 800px){
+  .about-deacon-image-borderA { margin: auto; height: 26vw; width: 26vw; margin-right: 0px; }
+  .about-deacon-image-borderB { margin: auto; height: 26vw; width: 26vw; }
+  .about-deacon-image { height: 24vw; width: 24vw; }
+  .about-deacon-nameA { font-size: 20px; margin-left: 35%; }
+  .about-deacon-nameB { font-size: 20px; margin-left: 10%; }
+  .about-deacon-rowB { padding-left:15%; padding-right: 5%;}
+}
+
+@media screen and (max-width: 500px){
+  .about-deacon-nameA { margin-left: 30%; font-size: 14px;}
+  .about-deacon-nameB { margin-left: 10%; font-size: 14px;}
+  .about-deacon-rowB { padding-left:15%; padding-right: 5%;}
+}
+
+@media screen and (max-width: 360px){
+  .about-deacon-nameA { margin-left: 15%; font-size: 14px;}
+  .about-deacon-nameB { margin-left: 10%; font-size: 14px;}
+  .about-deacon-rowB { padding-left:12.5%; padding-right: 7.5%;}
+}
+
+/* About Deacon Section END */
+
 .about-page-container {
   background-color: #f4f2ed;
-  width: 98.9vw;
+  width: auto;
 }
 
 .about-restofus-header {
@@ -191,64 +248,6 @@ nav {
 
 .about-space {
   padding-bottom: 100px;
-}
-
-@media screen and (max-width: 1250px) {
-  .about-deacon-image { width: 165px; height: 165px; }
-  .about-deacon-image-container { width: 180px; height: 180px; }
-  .about-deacon-name { font-size: 23px; margin-left: 65px; }
-}
-
-@media screen and (max-width: 1050px) {
-  .about-deacon-image { width: 245px; height: 245px; }
-  .about-deacon-image-container { width: 265px; height: 265px; }
-  .about-deacon-name { font-size: 27px; margin-left: 82px; padding-bottom: 60px;}
-}
-
-@media screen and (max-width: 900px) {
-  .about-deacon-image { width: 210px; height: 210px; }
-  .about-deacon-image-container { width: 228px; height: 228px; }
-  .about-deacon-name { font-size: 20px; margin-left: 70px; padding-bottom: 40px; }
-  .about-restofus-image { height: auto; }
-  .about-restofus-frame { margin-left: 10%; width: 80vw; }
-}
-
-@media screen and (max-width: 800px) {
-  .about-deacon-image { width: 190px; height: 190px; }
-  .about-deacon-image-container { width: 208px; height: 208px; }
-  .about-deacon-name { font-size: 20px }
-  .about-restofus-image { height: auto; }
-}
-
-@media screen and (max-width: 700px) {
-  .about-deacon-image { width: 175px; height: 175px; }
-  .about-deacon-image-container { width: 190px; height: 190px; }
-  .about-deacon-name { margin-left: 60px; font-size: 20px; }
-}
-
-@media screen and (max-width: 600px) {
-  .about-deacon-image { width: 150px; height: 150px; }
-  .about-deacon-image-container { width: 165px; height: 165px; }
-  .about-deacon-name { margin-left: 60px;}
-}
-
-@media screen and (max-width: 500px) {
-  .about-deacon-image { width: 190px; height: 190px; }
-  .about-deacon-image-container { width: 208px; height: 208px; }
-  .about-deacon-name { margin-left: 25px;}
-}
-
-@media screen and (max-width: 400px) {
-  .about-deacon-image { width: 175px; height: 175px; }
-  .about-deacon-image-container { width: 190px; height: 190px; }
-  .about-deacon-name { margin-left: 40px; }
-}
-
-@media screen and (max-width: 360px) {
-  .about-deacon-image { width: 150px; height: 150px; }
-  .about-deacon-image-container { width: 165px; height: 165px; }
-  .about-deacon-name { margin-left: 45px; }
-  .about-restofus-frame { margin-left: 10%; width: 80vw;}
 }
 
 /*About Page End*/
