@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeSlider from './HomeSlider'
+import Slider from './Slider'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap';
 import Gmaps from './Gmaps'
@@ -10,11 +10,33 @@ import members from '../photos/people/IMG_0582.JPG'
 import events from '../photos/people/IMG_0433.jpg'
 import prayers from '../photos/people/IMG_0510.JPG'
 
+import carousel1 from '../photos/carousel/carousel-1.jpg'
+import carousel2 from '../photos/carousel/carousel-2.jpg'
+import carousel3 from '../photos/carousel/carousel-3.jpg'
+
+const carouselItems = [
+  {
+    src: carousel1,
+    altText: '',
+    caption: ''
+  },
+  {
+    src: carousel2,
+    altText: '',
+    caption: ''
+  },
+  {
+    src: carousel3,
+    altText: '',
+    caption: ''
+  }
+]
+
 class Home extends Component {
   render() {
     return (
       <div>
-        <HomeSlider />
+        <Slider carouselItems={carouselItems} />
         <hr/>
         <div className="container">
           <h3 className="home-header">Friends and Family Devoted to Christ!</h3><br/>

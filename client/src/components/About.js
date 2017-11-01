@@ -107,25 +107,25 @@ class About extends Component {
             <Row className="about-deacon-rowA">
               <Col>
                 <div className="about-deacon-image-borderA">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameA">Lulu Lim</h2>
               </Col>
               <Col>
                 <div className="about-deacon-image-borderA">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameA">Mimi Ahn</h2>
               </Col>
               <Col>
                 <div className="about-deacon-image-borderA">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameA">Kay Choi</h2>
               </Col>
               <Col>
                 <div className="about-deacon-image-borderA">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameA">Arlene & Virgil Macaraeg</h2>
               </Col>
@@ -133,19 +133,19 @@ class About extends Component {
             <Row className="about-deacon-rowB">
               <Col>
                 <div className="about-deacon-image-borderB">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameB">Nilsa Morales</h2>
               </Col>
               <Col>
                 <div className="about-deacon-image-borderB">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameB">Jason Park</h2>
               </Col>
               <Col>
                 <div className="about-deacon-image-borderB">
-                  <img className="about-deacon-image" src={profilepic}></img>
+                  <img className="about-deacon-image" src={profilepic} alt="profile"></img>
                 </div>
                 <h2 className="about-deacon-nameB">Daniel Hsin</h2>
               </Col>
