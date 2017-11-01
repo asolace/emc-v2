@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import Warping from './Warping'
+import FGSlider from './FGSlider';
+import TCSlider from './TCSlider';
+import PMSlider from './PMSlider';
+import SGSlider from './SGSlider';
+import PGSlider from './PGSlider';
 
 class Fellowship extends Component {
   render() {
     return (
-      <div className="fellowship-page">
-        <Warping />
+      <div>
+        <FGSlider />
+        <TCSlider />
+        <PMSlider />
+        <SGSlider />
+        <PGSlider />
       </div>
     )
   }

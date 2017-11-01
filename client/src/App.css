@@ -20,7 +20,7 @@ nav {
   background-color: white;
 }
 
-/*About Page Begin*/
+/* About Page Begin */
 
 /* About Mission Section BEGIN */
 .about-mission-container{
@@ -93,7 +93,7 @@ nav {
 }
 
 .about-leader-name{
-  margin-top: 20px;
+  margin-top: 30px;
   font-family: 'Alice', serif;
   font-size: 32px;
 }
@@ -105,7 +105,7 @@ nav {
 }
 
 @media screen and (max-width: 1150px){
-  .about-leader-name { font-size: 24px; }
+  .about-leader-name { font-size: 24px; margin-top: 20px;}
   .about-leader-text { font-size: 14px; }
 }
 
@@ -250,12 +250,22 @@ nav {
   padding-bottom: 100px;
 }
 
-/*About Page End*/
+/* About Page END */
 
+/* Fellowship Page BEGIN */
+
+.fellowship-slider-container {
+  width: 50%;
+}
+
+/* Fellowship Page END */
+
+/*
 .carousel {
   left: 15%;
   width: 70%;
 }
+*/
 
 .col {
   padding: 10px 0 0 0;
@@ -322,6 +332,10 @@ nav {
 .img-in-pa {
   width: 370px;
   height: auto;
+}
+
+.login-button {
+  padding-left: 10px;
 }
 
 .name-me-section-home {

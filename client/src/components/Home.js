@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Slider from './Slider'
+import HomeSlider from './HomeSlider'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap';
 import Gmaps from './Gmaps'
@@ -14,7 +14,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Slider />
+        <HomeSlider />
         <hr/>
         <div className="container">
           <h3 className="home-header">Friends and Family Devoted to Christ!</h3><br/>
