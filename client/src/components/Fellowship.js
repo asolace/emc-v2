@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
-import Slider from './Slider';
+import { Row, Col, UncontrolledCarousel } from 'reactstrap';
 
 import carousel4 from '../photos/carousel/carousel-4.jpg'
 import carousel5 from '../photos/carousel/carousel-5.jpg'
@@ -41,7 +40,7 @@ class Fellowship extends Component {
           <Row>
             <Col>
               <div className="testA">
-                <Slider carouselItems={carouselItems1} />
+                <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
               </div>
             </Col>
             <Col>
@@ -70,7 +69,7 @@ class Fellowship extends Component {
           <Row>
             <Col>
               <div className="testA">
-                <Slider carouselItems={carouselItems2} />
+                <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
               </div>
             </Col>
             <Col>
