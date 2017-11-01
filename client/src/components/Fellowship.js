@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'reactstrap';
 import Slider from './Slider';
 
 import carousel4 from '../photos/carousel/carousel-4.jpg'
@@ -36,8 +37,64 @@ class Fellowship extends Component {
   render() {
     return (
       <div>
-        <Slider carouselItems={carouselItems1} />
-        <Slider carouselItems={carouselItems2} />
+        <div>
+          <Row>
+            <Col>
+              <div className="testA">
+                <Slider carouselItems={carouselItems1} />
+              </div>
+            </Col>
+            <Col>
+              <div className="testB">
+                <p><b>Time: </b> 8:00pm </p>
+                <p><b>Location: </b> Multiple Locations </p>
+                <p><b>Contact: </b> Pastor Jae </p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <div className="testC">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+              sit amet tincidunt nibh. Nullam et nisl felis.
+              </p>
+            </div>
+          </Row>
+        </div>
+        <div>
+          <Row>
+            <Col>
+              <div className="testA">
+                <Slider carouselItems={carouselItems2} />
+              </div>
+            </Col>
+            <Col>
+              <div className="testB">
+                <p><b>Time: </b> 8:00pm </p>
+                <p><b>Location: </b> Multiple Locations </p>
+                <p><b>Contact: </b> Pastor Jae </p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <div className="testC">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+              sit amet tincidunt nibh. Nullam et nisl felis.
+              </p>
+            </div>
+          </Row>
+        </div>
       </div>
     )
   }

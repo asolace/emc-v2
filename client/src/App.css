@@ -254,18 +254,30 @@ nav {
 
 /* Fellowship Page BEGIN */
 
-.fellowship-slider-container {
-  width: 50%;
+.testA {
+  width: 40vw;
+  margin-left: 20vw;
+}
+
+.testB {
+  background-color: lightgrey;
+  border-radius: 10%;
+  margin-top: 75px;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-bottom: 25px;
+  margin-right: 20vw;
+  text-align: left;
+}
+
+.testC {
+  padding-top: 50px;
+  margin-left: 20vw;
+  width: 60vw;
+  padding-bottom: 100px;
 }
 
 /* Fellowship Page END */
-
-/*
-.carousel {
-  left: 15%;
-  width: 70%;
-}
-*/
 
 .col {
   padding: 10px 0 0 0;
