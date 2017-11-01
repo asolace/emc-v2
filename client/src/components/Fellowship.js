@@ -38,6 +38,51 @@ class Fellowship extends Component {
   render() {
     return (
       <div className="fellowship-page-background">
+
+        <div className="f-intro-container">
+          <p className="f-intro-text">
+          "They devoted themselves to the apostles' teaching and to
+          fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
+          </p>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div className="f-fg-container">
+          <h1 className="f-header">Friends Gathering</h1>
+          <Row className="f-row">
+            <Col>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
+              </div>
+            </Col>
+            <Col>
+              <div className="f-info">
+                <tr>
+                  <td><b>Time: </b></td>
+                  <td>Thurs. & Fri. 7pm</td>
+                </tr>
+                <tr>
+                  <td><b>Location: </b></td>
+                  <td>Pastor Jaes Humble Abode & Church</td>
+                </tr>
+                <tr>
+                  <td><b>Contact: </b></td>
+                  <td>Pastor Pio</td>
+                </tr>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
         <div className="fellowship-intro-container">
           <p className="fellowship-intro-text">
           "They devoted themselves to the apostles' teaching and to

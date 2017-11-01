@@ -258,6 +258,79 @@ nav {
 
 /* Fellowship Page BEGIN */
 
+.f-intro-container{
+  background-attachment: fixed;
+  background-image: url('./photos/biblecandle.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 92vh;
+  opacity: 0.85;
+  color: white;
+}
+
+.f-fg-container{
+  background-attachment: fixed;
+  background-image: url('./photos/biblestudy.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.9;
+  color: white;
+}
+
+.f-header{
+  padding-top: 10vw;
+}
+
+.f-fg-text {
+  font-size: 22px;
+  font-weight: 600;
+  padding-top: 10vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  animation: fadeIn 2s;
+}
+
+.f-intro-text {
+  font-size: 22px;
+  font-weight: 600;
+  padding-top: 20vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  animation: fadeIn 2s;
+}
+
+.f-row {
+  width: 100vw;
+}
+
+.f-description {
+  background-color: white;
+  color: black;
+  border-radius: 10%;
+  width: 40vw;
+  margin-top: 2.5vw;
+  margin-left: 20vw;
+  padding: 2.5vw;
+  opacity: 0.7;
+}
+
+.f-info {
+  background-color: lightgrey;
+  border-radius: 10%;
+  margin-top: 6vw;
+  margin-bottom: auto;
+  padding-top: 2.5vw;
+  padding-left: 10px;
+  padding-bottom: 2.5vw;
+  margin-right: 10vw;
+  width: 250px;
+  text-align: left;
+}
+/* before changes */
+
 .fellowship-intro-container {
   background-attachment: fixed;
   background-image: url('./photos/biblestudy.jpg');
