@@ -48,7 +48,7 @@ class Fellowship extends Component {
         <br/><br/><br/><br/><br/><br/><br/><br/>
 
         <div className="f-fg-container">
-          <h1 className="f-header">Friends Gathering</h1>
+          <h1 className="f-fg-header">Friends Gathering</h1>
           <Row className="f-row">
             <Col>
               <div className="f-description">
@@ -81,6 +81,171 @@ class Fellowship extends Component {
             </Col>
           </Row>
         </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div className="f-pm-container">
+          <h1 className="f-pm-header">Prayer Meeting</h1>
+          <Row className="f-row">
+            <Col>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
+              </div>
+            </Col>
+            <Col>
+              <div className="f-info">
+                <tr>
+                  <td><b>Time: </b></td>
+                  <td>Saturday 7pm</td>
+                </tr>
+                <tr>
+                  <td><b>Location: </b></td>
+                  <td>Church</td>
+                </tr>
+                <tr>
+                  <td><b>Contact: </b></td>
+                  <td>Lulu Lim</td>
+                </tr>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div className="f-tc-container">
+          <h1 className="f-tc-header">Tee Class</h1>
+          <Row className="f-row">
+            <Col>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
+              </div>
+            </Col>
+            <Col>
+              <div className="f-info">
+                <tr>
+                  <td><b>Time: </b></td>
+                  <td>Sunday 11am</td>
+                </tr>
+                <tr>
+                  <td><b>Location: </b></td>
+                  <td>Church</td>
+                </tr>
+                <tr>
+                  <td><b>Contact: </b></td>
+                  <td>Jason Park</td>
+                </tr>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div className="f-sg-container">
+          <h1 className="f-sg-header">Saturday Group</h1>
+          <Row className="f-row">
+            <Col>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
+              </div>
+            </Col>
+            <Col>
+              <div className="f-info">
+                <tr>
+                  <td><b>Time: </b></td>
+                  <td>Saturday 5:30pm</td>
+                </tr>
+                <tr>
+                  <td><b>Location: </b></td>
+                  <td>Church</td>
+                </tr>
+                <tr>
+                  <td><b>Contact: </b></td>
+                  <td>Dr. Soo-Il Lee</td>
+                </tr>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div className="f-pg-container">
+          <h1 className="f-pg-header">Parent Group</h1>
+          <Row className="f-row">
+            <Col>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
+              </div>
+            </Col>
+            <Col>
+              <div className="f-info">
+                <tr>
+                  <td><b>Time: </b></td>
+                  <td>Monday</td>
+                </tr>
+                <tr>
+                  <td><b>Location: </b></td>
+                  <td>Church</td>
+                </tr>
+                <tr>
+                  <td><b>Contact: </b></td>
+                  <td>Dr. Soo-Il Lee</td>
+                </tr>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <br/><br/><br/><br/><br/><br/><br/><br/>
         <div className="fellowship-intro-container">
