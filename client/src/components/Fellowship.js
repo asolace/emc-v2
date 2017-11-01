@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, UncontrolledCarousel } from 'reactstrap';
 import Slider from './Slider';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -51,7 +51,7 @@ class Fellowship extends Component {
           <Row className="fellowship-row">
             <Col>
               <div className="fellowship-slider">
-                <Slider carouselItems={carouselItems1} />
+                <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
               </div>
             </Col>
             <Col>
@@ -83,7 +83,7 @@ class Fellowship extends Component {
           <Row className="fellowship-row">
             <Col>
               <div className="fellowship-slider">
-                <Slider carouselItems={carouselItems2} />
+                <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
               </div>
             </Col>
             <Col>
