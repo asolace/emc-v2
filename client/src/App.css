@@ -391,6 +391,26 @@ nav {
   width: 250px;
   text-align: left;
 }
+
+.f-test-header {
+  font-family: 'Alice', sans-serif;
+  font-weight: 600;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.f-test-info {
+  font-size: 14px;
+  border-radius: 10%;
+  margin-top: 1vw;
+  margin-bottom: auto;
+  padding-top: 2.5vw;
+  padding-left: 10px;
+  padding-bottom: 2.5vw;
+  margin-right: 10vw;
+  width: 250px;
+  text-align: left;
+}
 /* before changes */
 
 .fellowship-intro-container {

@@ -464,6 +464,56 @@ class Fellowship extends Component {
           </Row>
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <div className="fellowship-container">
+          <Row className="fellowship-row">
+            <h1 className="f-test-header">Friends Gathering </h1>
+          </Row>
+          <Row className="fellowship-row">
+            <Col>
+              <div className="fellowship-slider">
+                <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
+              </div>
+            </Col>
+            <Col>
+              <div className="f-test-info">
+                <p><b>Time: </b></p>
+                <p>Thurs. & Fri. 7pm</p>
+                <p><b>Location: </b></p>
+                <p>Pastor Jaes Humble Abode & Church</p>
+                <p><b>Contact: </b></p>
+                <p>Pastor Pio</p>
+              </div>
+            </Col>
+          </Row>
+          <Row className="fellowship-row">
+            <div className="fellowship-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+              sit amet tincidunt nibh. Nullam et nisl felis.
+              </p>
+            </div>
+          </Row>
+        </div>
+
       </div>
     )
   }
