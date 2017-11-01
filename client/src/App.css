@@ -4,6 +4,10 @@ h1, p {
   font-family: 'Alice', serif;
 }
 
+td {
+  padding-right: 5px;
+}
+
 .App {
   text-align: center;
 }
@@ -302,7 +306,6 @@ nav {
 }
 
 .fellowship-row {
-  background-color: #f4f2ed;
   width: 100vw;
 }
 
@@ -314,11 +317,13 @@ nav {
 .fellowship-info {
   background-color: lightgrey;
   border-radius: 10%;
-  margin-top: 75px;
-  padding-top: 25px;
+  margin-top: 5vw;
+  margin-bottom: auto;
+  padding-top: 2.5vw;
   padding-left: 10px;
-  padding-bottom: 25px;
-  margin-right: 20vw;
+  padding-bottom: 2.5vw;
+  margin-right: 10vw;
+  width: 250px;
   text-align: left;
 }
 
@@ -338,6 +343,11 @@ nav {
   margin: auto;
   padding-bottom: 50px;
 }
+
+.fellowship-tdmargin {
+  margin-left: 10px;
+}
+
 /* Fellowship Page END */
 
 .col {
