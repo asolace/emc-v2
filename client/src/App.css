@@ -581,6 +581,42 @@ nav {
   padding-left: 10px;
 }
 
+/* Login Section BEGIN */
+
+.l-page-background {
+  background-color: #f4f2ed;
+  width: auto;
+  height: 100vh;
+}
+
+.l-container {
+  position: absolute;
+  top: 35%;
+  left: 40vw;
+  border-color: grey;
+  border-style: solid;
+  border-width: 5px;
+  background-color: white;
+}
+
+.l-email {
+  padding: 30px;
+  padding-bottom: 0px;
+  width: 300px;
+}
+
+.l-password {
+  padding: 30px;
+  padding-bottom: 25px;
+  width: 300px;
+}
+
+.l-button {
+  padding-bottom: 25px;
+}
+
+/* Login Section END */
+
 .name-me-section-home {
   font-family: 'PT Serif Caption', serif;
   color: black;

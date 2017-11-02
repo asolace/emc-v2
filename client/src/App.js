@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import About from './components/About'
 import Fellowship from './components/Fellowship'
+import Login from './components/Login'
 import Footer from './components/Footer'
 
 import Warping from './components/Warping'
@@ -42,6 +43,7 @@ class App extends Component {
             <Route path="/about" component={ About } />
             <Route path="/members" component={ Members } />
             <Route path="/fellowship" component={ Fellowship } />
+            <Route path="/login" component={ Login } />
             <Route path="/prayers" component={ Prayers } />
             <Route path="/gallery" component={ Gallery } />
             <Route path="/events" component={ Events } />

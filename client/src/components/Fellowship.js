@@ -247,7 +247,7 @@ class Fellowship extends Component {
                     <td>Dr. Soo-Il Lee</td>
                   </tr>
                 </div>
-              </ScrollAnimation>
+              </ScrollAnimation>  
             </Col>
           </Row>
         </div>
