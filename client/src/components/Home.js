@@ -36,13 +36,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Slider carouselItems={carouselItems} />
+        <div className="home-slider">
+          <Slider className="home-slider" carouselItems={carouselItems} />
+        </div>
         <hr/>
         <div className="container">
           <h3 className="home-header">Friends and Family Devoted to Christ!</h3><br/>
           <p className="home-text">
             Ebenezer Mission Church is a missional church.
-            We believe in Jesus Christ as our Lord and savior! We believe that fellowship, service, and worship are vital for spiritual growth. Therefore we strive to get together as much as possible to learn and grow through the Bible which is the inspire word of God given to man and is useful for teaching, rebuking, correcting and training in righteousness.
+            We believe in Jesus Christ as our Lord and savior! We believe that fellowship, service, and worship are vital for spiritual growth. Therefore we strive to get together as much as possible to learn and grow through the Bible which is the inspired word of God given to man and is useful for teaching, rebuking, correcting and training in righteousness.
           </p>
         </div>
         <div className="container">
