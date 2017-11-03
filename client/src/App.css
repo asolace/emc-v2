@@ -577,46 +577,6 @@ nav {
   height: auto;
 }
 
-.login-button {
-  padding-left: 10px;
-}
-
-/* Login Section BEGIN */
-
-.l-page-background {
-  background-color: #f4f2ed;
-  width: auto;
-  height: 100vh;
-}
-
-.l-container {
-  position: absolute;
-  top: 35%;
-  left: 40vw;
-  border-color: grey;
-  border-style: solid;
-  border-width: 5px;
-  background-color: white;
-}
-
-.l-email {
-  padding: 30px;
-  padding-bottom: 0px;
-  width: 300px;
-}
-
-.l-password {
-  padding: 30px;
-  padding-bottom: 25px;
-  width: 300px;
-}
-
-.l-button {
-  padding-bottom: 25px;
-}
-
-/* Login Section END */
-
 .name-me-section-home {
   font-family: 'PT Serif Caption', serif;
   color: black;
@@ -676,11 +636,17 @@ nav {
 /*Footer Begin*/
 .copyright {
   color: gray;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.member-login-link a {
+  font-size: 15px;
+  color: gray;
 }
 
 .footer-container {
   padding-top: 30px;
-  text-align: center;
   height: 200px;
   margin-top: 50px;
   background-color: #555;
@@ -739,6 +705,27 @@ nav {
   color: #ae0000;
 }
 /*Footer End*/
+
+/*Login Begin*/
+.login-container {
+  margin: 0 15vw 70px 15vw;
+  border: 1px solid #d8d8d8;
+  padding: 1em 1em 1em;
+  text-align: left;
+  min-width: 256px;
+}
+
+.login-container::before {
+  text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: 500;
+    content: 'Member Login';
+}
+/*Login End*/
 
 /*Home Page @media BEGIN*/
 

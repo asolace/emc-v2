@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import FaFacebook from 'react-icons/lib/fa/facebook'
 import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaYoutube from 'react-icons/lib/fa/youtube'
@@ -19,7 +20,9 @@ const Footer = () =>
           <FaYoutube />
         </button>
     </div>
-    <p className="copyright">&copy; Copyright 2017 EMC<br/>@asolace development</p>
+    <span className="member-login-link"><Link to='/login'>Member Login</Link> </span>
+    <p className="copyright">&copy; Copyright 2017 EMC -- @asolace development</p>
+
   </div>
 
 export default Footer
