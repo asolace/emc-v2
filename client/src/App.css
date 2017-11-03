@@ -590,12 +590,12 @@ nav {
 }
 
 .l-cross {
-  height: 300px;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  height: 250px;
+  padding-top: 15px;
+  padding-bottom: 35px;
 }
 
-.l-email {
+.l-inputA {
   margin: auto;
   padding: 30px;
   padding-bottom: 0px;
@@ -603,7 +603,7 @@ nav {
 
 }
 
-.l-password {
+.l-inputB {
   margin: auto;
   padding: 30px;
   padding-top: 0px;
@@ -622,6 +622,29 @@ nav {
   margin: auto;
   width: 40vw;
   min-width: 300px;
+}
+
+.l-col-vr {
+  width: 5px;
+}
+
+.l-col-login {
+  margin-left: 53px;
+  width: 330px;
+}
+
+.l-col-signup {
+  width: 380px;
+}
+
+.l-row {
+  margin: auto;
+  padding-bottom: 20px;
+  width: 770px;
+}
+.l-vr {
+  border-left:3px solid lightgrey;
+  height:200px;
 }
 /* Login Section END */
 
@@ -684,11 +707,17 @@ nav {
 /*Footer Begin*/
 .copyright {
   color: gray;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.member-login-link a {
+  font-size: 15px;
+  color: gray;
 }
 
 .footer-container {
   padding-top: 30px;
-  text-align: center;
   height: 200px;
   margin-top: 50px;
   background-color: #555;
@@ -747,6 +776,27 @@ nav {
   color: #ae0000;
 }
 /*Footer End*/
+
+/*Login Begin*/
+.login-container {
+  margin: 0 15vw 70px 15vw;
+  border: 1px solid #d8d8d8;
+  padding: 1em 1em 1em;
+  text-align: left;
+  min-width: 256px;
+}
+
+.login-container::before {
+  text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: 500;
+    content: 'Member Login';
+}
+/*Login End*/
 
 /*Home Page @media BEGIN*/
 
