@@ -9,7 +9,7 @@ import {
 
 import loadingGif from '../photos/loadingGif.gif'
 
-class HomeSlider extends Component {
+class Slider extends Component {
   state = {
     activeIndex: 0,
     items: [
@@ -82,4 +82,4 @@ class HomeSlider extends Component {
   }
 }
 
-export default HomeSlider
+export default Slider

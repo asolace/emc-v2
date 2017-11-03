@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col, UncontrolledCarousel } from 'reactstrap';
-import Slider from './Slider';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import carousel4 from '../photos/carousel/carousel-4.jpg'
@@ -34,260 +33,41 @@ const carouselItems2 = [
   }
 ]
 
-class Fellowship extends Component {
-  render() {
-    return (
-      <div className="fellowship-page-background">
+const Fellowship = () => {
+  return (
+    <div className="fellowship-page-background">
 
-        <div className="f-intro-container">
-          <p className="f-intro-text">
-          "They devoted themselves to the apostles' teaching and to
-          fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
-          </p>
-        </div>
-
-
-        <div className="f-fg-container">
-          <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
-            <h1 className="f-fg-header">Friends Gathering</h1>
-          </ScrollAnimation>
-          <Row className="f-row">
-            <Col>
-              <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
-                <div className="f-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                  orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                  eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                  congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                  nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                  Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                  sit amet tincidunt nibh. Nullam et nisl felis.
-                  </p>
-                </div>
-              </ScrollAnimation>
-            </Col>
-            <Col>
-              <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
-                <div className="f-info">
-                  <tr>
-                    <td><b>Time: </b></td>
-                    <td>Thurs. & Fri. 7pm</td>
-                  </tr>
-                  <tr>
-                    <td><b>Location: </b></td>
-                    <td>Pastor Jaes Humble Abode & Church</td>
-                  </tr>
-                  <tr>
-                    <td><b>Contact: </b></td>
-                    <td>Pastor Pio</td>
-                  </tr>
-                </div>
-              </ScrollAnimation>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="f-pm-container">
-          <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
-            <h1 className="f-pm-header">Prayer Meeting</h1>
-          </ScrollAnimation>
-          <Row className="f-row">
-            <Col>
-              <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
-                <div className="f-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                  orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                  eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                  congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                  nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                  Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                  sit amet tincidunt nibh. Nullam et nisl felis.
-                  </p>
-                </div>
-              </ScrollAnimation>
-            </Col>
-            <Col>
-              <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
-                <div className="f-info">
-                  <tr>
-                    <td><b>Time: </b></td>
-                    <td>Saturday 7pm</td>
-                  </tr>
-                  <tr>
-                    <td><b>Location: </b></td>
-                    <td>Church</td>
-                  </tr>
-                  <tr>
-                    <td><b>Contact: </b></td>
-                    <td>Lulu Lim</td>
-                  </tr>
-                </div>
-              </ScrollAnimation>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="f-tc-container">
-          <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
-            <h1 className="f-tc-header">TEE Class</h1>
-          </ScrollAnimation>
-          <Row className="f-row">
-            <Col>
-              <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
-                <div className="f-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                  orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                  eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                  congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                  nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                  Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                  sit amet tincidunt nibh. Nullam et nisl felis.
-                  </p>
-                </div>
-              </ScrollAnimation>
-            </Col>
-            <Col>
-              <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
-                <div className="f-info">
-                  <tr>
-                    <td><b>Time: </b></td>
-                    <td>Sunday 11am</td>
-                  </tr>
-                  <tr>
-                    <td><b>Location: </b></td>
-                    <td>Church</td>
-                  </tr>
-                  <tr>
-                    <td><b>Contact: </b></td>
-                    <td>Jason Park</td>
-                  </tr>
-                </div>
-              </ScrollAnimation>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="f-sg-container">
-          <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
-            <h1 className="f-sg-header">Saturday Group</h1>
-          </ScrollAnimation>
-          <Row className="f-row">
-            <Col>
-              <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
-                <div className="f-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                  orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                  eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                  congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                  nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                  Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                  sit amet tincidunt nibh. Nullam et nisl felis.
-                  </p>
-                </div>
-              </ScrollAnimation>
-            </Col>
-            <Col>
-              <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
-                <div className="f-info">
-                  <tr>
-                    <td><b>Time: </b></td>
-                    <td>Saturday 5:30pm</td>
-                  </tr>
-                  <tr>
-                    <td><b>Location: </b></td>
-                    <td>Church</td>
-                  </tr>
-                  <tr>
-                    <td><b>Contact: </b></td>
-                    <td>Dr. Soo-Il Lee</td>
-                  </tr>
-                </div>
-              </ScrollAnimation>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="f-pg-container">
-          <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
-            <h1 className="f-pg-header">Parent Group</h1>
-          </ScrollAnimation>
-          <Row className="f-row">
-            <Col>
-              <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
-                <div className="f-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                  orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                  eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                  congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                  nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                  Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                  sit amet tincidunt nibh. Nullam et nisl felis.
-                  </p>
-                </div>
-              </ScrollAnimation>
-            </Col>
-            <Col>
-              <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
-                <div className="f-info">
-                  <tr>
-                    <td><b>Time: </b></td>
-                    <td>Monday</td>
-                  </tr>
-                  <tr>
-                    <td><b>Location: </b></td>
-                    <td>Church</td>
-                  </tr>
-                  <tr>
-                    <td><b>Contact: </b></td>
-                    <td>Dr. Soo-Il Lee</td>
-                  </tr>
-                </div>
-              </ScrollAnimation>  
-            </Col>
-          </Row>
-        </div>
+      <div className="f-intro-container">
+        <p className="f-intro-text">
+        "They devoted themselves to the apostles' teaching and to
+        fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
+        </p>
+      </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <br/><br/><br/><br/><br/><br/><br/><br/>
-        <div className="fellowship-intro-container">
-          <p className="fellowship-intro-text">
-          "They devoted themselves to the apostles' teaching and to
-          fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
-          </p>
-        </div>
-        <div className="fellowship-container">
-          <Row className="fellowship-row">
-            <h1 className="fellowship-header">Friends Gathering </h1>
-          </Row>
-          <Row className="fellowship-row">
-            <Col>
-              <div className="fellowship-slider">
-                <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
+      <div className="f-fg-container">
+        <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
+          <h1 className="f-fg-header">Friends Gathering</h1>
+        </ScrollAnimation>
+        <Row className="f-row">
+          <Col>
+            <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
               </div>
-            </Col>
-            <Col>
-              <div className="fellowship-info">
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
+              <div className="f-info">
                 <tr>
                   <td><b>Time: </b></td>
                   <td>Thurs. & Fri. 7pm</td>
@@ -301,77 +81,34 @@ class Fellowship extends Component {
                   <td>Pastor Pio</td>
                 </tr>
               </div>
-            </Col>
-          </Row>
-          <Row className="fellowship-row">
-            <div className="fellowship-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-              sit amet tincidunt nibh. Nullam et nisl felis.
-              </p>
-            </div>
-          </Row>
-        </div>
+            </ScrollAnimation>
+          </Col>
+        </Row>
+      </div>
 
-        <div>
-          <Row className="fellowship-row">
-            <h1 className="fellowship-header">Tee Class </h1>
-          </Row>
-          <Row className="fellowship-row">
-            <Col>
-              <div className="fellowship-slider">
-                <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+      <div className="f-pm-container">
+        <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
+          <h1 className="f-pm-header">Prayer Meeting</h1>
+        </ScrollAnimation>
+        <Row className="f-row">
+          <Col>
+            <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
               </div>
-            </Col>
-            <Col>
-              <div className="fellowship-info">
-                <tr>
-                  <td><b>Time: </b></td>
-                  <td>Sunday 11am</td>
-                </tr>
-                <tr>
-                  <td><b>Location: </b></td>
-                  <td>Church</td>
-                </tr>
-                <tr>
-                  <td><b>Contact: </b></td>
-                  <td>Jason Park</td>
-                </tr>
-              </div>
-            </Col>
-          </Row>
-          <Row className="fellowship-row">
-            <div className="fellowship-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-              sit amet tincidunt nibh. Nullam et nisl felis.
-              </p>
-            </div>
-          </Row>
-        </div>
-
-        <div>
-          <Row className="fellowship-row">
-            <h1 className="fellowship-header">Prayer Meeting </h1>
-          </Row>
-          <Row className="fellowship-row">
-            <Col>
-              <div className="fellowship-slider">
-                <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
-              </div>
-            </Col>
-            <Col>
-              <div className="fellowship-info">
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
+              <div className="f-info">
                 <tr>
                   <td><b>Time: </b></td>
                   <td>Saturday 7pm</td>
@@ -385,35 +122,75 @@ class Fellowship extends Component {
                   <td>Lulu Lim</td>
                 </tr>
               </div>
-            </Col>
-          </Row>
-          <Row className="fellowship-row">
-            <div className="fellowship-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-              sit amet tincidunt nibh. Nullam et nisl felis.
-              </p>
-            </div>
-          </Row>
-        </div>
+            </ScrollAnimation>
+          </Col>
+        </Row>
+      </div>
 
-        <div>
-          <Row className="fellowship-row">
-            <h1 className="fellowship-header">Saturday Group</h1>
-          </Row>
-          <Row className="fellowship-row">
-            <Col>
-              <div className="fellowship-slider">
-                <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+      <div className="f-tc-container">
+        <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
+          <h1 className="f-tc-header">TEE Class</h1>
+        </ScrollAnimation>
+        <Row className="f-row">
+          <Col>
+            <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
               </div>
-            </Col>
-            <Col>
-              <div className="fellowship-info">
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
+              <div className="f-info">
+                <tr>
+                  <td><b>Time: </b></td>
+                  <td>Sunday 11am</td>
+                </tr>
+                <tr>
+                  <td><b>Location: </b></td>
+                  <td>Church</td>
+                </tr>
+                <tr>
+                  <td><b>Contact: </b></td>
+                  <td>Jason Park</td>
+                </tr>
+              </div>
+            </ScrollAnimation>
+          </Col>
+        </Row>
+      </div>
+
+      <div className="f-sg-container">
+        <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
+          <h1 className="f-sg-header">Saturday Group</h1>
+        </ScrollAnimation>
+        <Row className="f-row">
+          <Col>
+            <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
+              </div>
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
+              <div className="f-info">
                 <tr>
                   <td><b>Time: </b></td>
                   <td>Saturday 5:30pm</td>
@@ -427,35 +204,34 @@ class Fellowship extends Component {
                   <td>Dr. Soo-Il Lee</td>
                 </tr>
               </div>
-            </Col>
-          </Row>
-          <Row className="fellowship-row">
-            <div className="fellowship-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-              sit amet tincidunt nibh. Nullam et nisl felis.
-              </p>
-            </div>
-          </Row>
-        </div>
+            </ScrollAnimation>
+          </Col>
+        </Row>
+      </div>
 
-        <div>
-          <Row className="fellowship-row">
-            <h1 className="fellowship-header">Parent Group</h1>
-          </Row>
-          <Row className="fellowship-row">
-            <Col>
-              <div className="fellowship-slider">
-                <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+      <div className="f-pg-container">
+        <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
+          <h1 className="f-pg-header">Parent Group</h1>
+        </ScrollAnimation>
+        <Row className="f-row">
+          <Col>
+            <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
+              <div className="f-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+                sit amet tincidunt nibh. Nullam et nisl felis.
+                </p>
               </div>
-            </Col>
-            <Col>
-              <div className="fellowship-info">
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
+              <div className="f-info">
                 <tr>
                   <td><b>Time: </b></td>
                   <td>Monday</td>
@@ -469,76 +245,298 @@ class Fellowship extends Component {
                   <td>Dr. Soo-Il Lee</td>
                 </tr>
               </div>
-            </Col>
-          </Row>
-          <Row className="fellowship-row">
-            <div className="fellowship-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-              sit amet tincidunt nibh. Nullam et nisl felis.
-              </p>
-            </div>
-          </Row>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <br/><br/><br/><br/><br/><br/><br/><br/>
-
-        <div className="fellowship-container">
-          <Row className="fellowship-row">
-            <h1 className="f-test-header">Friends Gathering </h1>
-          </Row>
-          <Row className="fellowship-row">
-            <Col>
-              <div className="fellowship-slider">
-                <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
-              </div>
-            </Col>
-            <Col>
-              <div className="f-test-info">
-                <p><b>Time: </b></p>
-                <p>Thurs. & Fri. 7pm</p>
-                <p><b>Location: </b></p>
-                <p>Pastor Jaes Humble Abode & Church</p>
-                <p><b>Contact: </b></p>
-                <p>Pastor Pio</p>
-              </div>
-            </Col>
-          </Row>
-          <Row className="fellowship-row">
-            <div className="fellowship-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-              orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-              eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-              congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-              nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-              Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-              sit amet tincidunt nibh. Nullam et nisl felis.
-              </p>
-            </div>
-          </Row>
-        </div>
-
+            </ScrollAnimation>
+          </Col>
+        </Row>
       </div>
-    )
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <div className="fellowship-intro-container">
+        <p className="fellowship-intro-text">
+        "They devoted themselves to the apostles' teaching and to
+        fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
+        </p>
+      </div>
+      <div className="fellowship-container">
+        <Row className="fellowship-row">
+          <h1 className="fellowship-header">Friends Gathering </h1>
+        </Row>
+        <Row className="fellowship-row">
+          <Col>
+            <div className="fellowship-slider">
+              <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
+            </div>
+          </Col>
+          <Col>
+            <div className="fellowship-info">
+              <tr>
+                <td><b>Time: </b></td>
+                <td>Thurs. & Fri. 7pm</td>
+              </tr>
+              <tr>
+                <td><b>Location: </b></td>
+                <td>Pastor Jaes Humble Abode & Church</td>
+              </tr>
+              <tr>
+                <td><b>Contact: </b></td>
+                <td>Pastor Pio</td>
+              </tr>
+            </div>
+          </Col>
+        </Row>
+        <Row className="fellowship-row">
+          <div className="fellowship-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+            orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+            eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+            congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+            nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+            Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+            sit amet tincidunt nibh. Nullam et nisl felis.
+            </p>
+          </div>
+        </Row>
+      </div>
+
+      <div>
+        <Row className="fellowship-row">
+          <h1 className="fellowship-header">Tee Class </h1>
+        </Row>
+        <Row className="fellowship-row">
+          <Col>
+            <div className="fellowship-slider">
+              <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+            </div>
+          </Col>
+          <Col>
+            <div className="fellowship-info">
+              <tr>
+                <td><b>Time: </b></td>
+                <td>Sunday 11am</td>
+              </tr>
+              <tr>
+                <td><b>Location: </b></td>
+                <td>Church</td>
+              </tr>
+              <tr>
+                <td><b>Contact: </b></td>
+                <td>Jason Park</td>
+              </tr>
+            </div>
+          </Col>
+        </Row>
+        <Row className="fellowship-row">
+          <div className="fellowship-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+            orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+            eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+            congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+            nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+            Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+            sit amet tincidunt nibh. Nullam et nisl felis.
+            </p>
+          </div>
+        </Row>
+      </div>
+
+      <div>
+        <Row className="fellowship-row">
+          <h1 className="fellowship-header">Prayer Meeting </h1>
+        </Row>
+        <Row className="fellowship-row">
+          <Col>
+            <div className="fellowship-slider">
+              <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+            </div>
+          </Col>
+          <Col>
+            <div className="fellowship-info">
+              <tr>
+                <td><b>Time: </b></td>
+                <td>Saturday 7pm</td>
+              </tr>
+              <tr>
+                <td><b>Location: </b></td>
+                <td>Church</td>
+              </tr>
+              <tr>
+                <td><b>Contact: </b></td>
+                <td>Lulu Lim</td>
+              </tr>
+            </div>
+          </Col>
+        </Row>
+        <Row className="fellowship-row">
+          <div className="fellowship-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+            orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+            eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+            congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+            nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+            Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+            sit amet tincidunt nibh. Nullam et nisl felis.
+            </p>
+          </div>
+        </Row>
+      </div>
+
+      <div>
+        <Row className="fellowship-row">
+          <h1 className="fellowship-header">Saturday Group</h1>
+        </Row>
+        <Row className="fellowship-row">
+          <Col>
+            <div className="fellowship-slider">
+              <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+            </div>
+          </Col>
+          <Col>
+            <div className="fellowship-info">
+              <tr>
+                <td><b>Time: </b></td>
+                <td>Saturday 5:30pm</td>
+              </tr>
+              <tr>
+                <td><b>Location: </b></td>
+                <td>Church</td>
+              </tr>
+              <tr>
+                <td><b>Contact: </b></td>
+                <td>Dr. Soo-Il Lee</td>
+              </tr>
+            </div>
+          </Col>
+        </Row>
+        <Row className="fellowship-row">
+          <div className="fellowship-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+            orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+            eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+            congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+            nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+            Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+            sit amet tincidunt nibh. Nullam et nisl felis.
+            </p>
+          </div>
+        </Row>
+      </div>
+
+      <div>
+        <Row className="fellowship-row">
+          <h1 className="fellowship-header">Parent Group</h1>
+        </Row>
+        <Row className="fellowship-row">
+          <Col>
+            <div className="fellowship-slider">
+              <UncontrolledCarousel autoPlay={false} items={carouselItems2} />
+            </div>
+          </Col>
+          <Col>
+            <div className="fellowship-info">
+              <tr>
+                <td><b>Time: </b></td>
+                <td>Monday</td>
+              </tr>
+              <tr>
+                <td><b>Location: </b></td>
+                <td>Church</td>
+              </tr>
+              <tr>
+                <td><b>Contact: </b></td>
+                <td>Dr. Soo-Il Lee</td>
+              </tr>
+            </div>
+          </Col>
+        </Row>
+        <Row className="fellowship-row">
+          <div className="fellowship-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+            orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+            eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+            congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+            nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+            Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+            sit amet tincidunt nibh. Nullam et nisl felis.
+            </p>
+          </div>
+        </Row>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+
+      <div className="fellowship-container">
+        <Row className="fellowship-row">
+          <h1 className="f-test-header">Friends Gathering </h1>
+        </Row>
+        <Row className="fellowship-row">
+          <Col>
+            <div className="fellowship-slider">
+              <UncontrolledCarousel autoPlay={false} items={carouselItems1} />
+            </div>
+          </Col>
+          <Col>
+            <div className="f-test-info">
+              <p><b>Time: </b></p>
+              <p>Thurs. & Fri. 7pm</p>
+              <p><b>Location: </b></p>
+              <p>Pastor Jaes Humble Abode & Church</p>
+              <p><b>Contact: </b></p>
+              <p>Pastor Pio</p>
+            </div>
+          </Col>
+        </Row>
+        <Row className="fellowship-row">
+          <div className="fellowship-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin gravida aliquam semper. In laoreet urna lacus, nec varius
+            orci mattis sed. Integer porta non tortor et placerat. Nam mollis
+            eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
+            congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
+            nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
+            Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
+            sit amet tincidunt nibh. Nullam et nisl felis.
+            </p>
+          </div>
+        </Row>
+      </div>
+
+    </div>
+  )
+
 }
 
 export default Fellowship
