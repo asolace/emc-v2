@@ -577,10 +577,6 @@ nav {
   height: auto;
 }
 
-.login-button {
-  padding-left: 10px;
-}
-
 /* Login Section BEGIN */
 
 .l-page-background {
@@ -590,31 +586,43 @@ nav {
 }
 
 .l-container {
-  position: absolute;
-  top: 35%;
-  left: 40vw;
-  border-color: grey;
-  border-style: solid;
-  border-width: 5px;
-  background-color: white;
+  margin: auto;
+}
+
+.l-cross {
+  height: 300px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .l-email {
+  margin: auto;
   padding: 30px;
   padding-bottom: 0px;
-  width: 300px;
+  width: 291.5px;
+
 }
 
 .l-password {
+  margin: auto;
   padding: 30px;
-  padding-bottom: 25px;
-  width: 300px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  width: 291.5px;
 }
 
 .l-button {
   padding-bottom: 25px;
 }
 
+.l-text {
+  font-family: 'Alice', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto;
+  width: 40vw;
+  min-width: 300px;
+}
 /* Login Section END */
 
 .name-me-section-home {
