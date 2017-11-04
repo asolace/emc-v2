@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Alice|PT+Serif+Caption|Archivo+Black');
+@font-face {
+  font-family: 'Gotham-Back-Regular';
+  src: local('Gotham-Back-Regular'), url(./fonts/GothamBlackRegular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: local('Bebas-Neue'), url(./fonts/BebasNeue.otf) format('opentype');
+}
 
 h1, p {
   font-family: 'Alice', serif;
@@ -482,26 +490,20 @@ nav {
   font-weight: 900;
 }
 
-.emc-brand-blue {
-  font-family: 'Archivo Black', sans-serif;
+.emc-brand {
+  font-family: 'Gotham-Back-Regular', sans-serif;
   color: #5058b2;
-  font-size: 1.3em;
-}
-
-.emc-brand-red {
-  font-family: 'Archivo Black', sans-serif;
-  color: #ad574e;
   font-size: 1.3em;
 }
 
 .emc-title-blue {
   color: #5058b2;
-  font-size: 0.8em;
+  font-family: 'Bebas-Neue', sans-serif;
 }
 
 .emc-title-red {
   color: #ad574e;
-  font-size: 0.8em;
+  font-family: 'Bebas-Neue', sans-serif;
 }
 
 .gospel-img {
@@ -540,7 +542,6 @@ nav {
   width: 370px;
   height: auto;
 }
-
 /* Login Section BEGIN */
 
 .l-page-background {

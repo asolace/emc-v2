@@ -8,22 +8,18 @@
 - [ ] Add Newcomers tab
 - [ ] Needs pictures of Staffs and community groups
 
-
- __About Page__
-  - [ ] Add directions
-
- __Footer__
-  - [ ] Add Contacts
+__Login Page__
+  - [ ] Needs to be responsive
 
 __Pages Needed__
   - [ ] Events
   - [ ] Members
   - [ ] Prayers
-  - [ ] Resources
+  - [ ] Resources  
 
 # Future editing
 - [ ] __Photos Page__
   - [ ] Upload to dedicated database for faster rendering.
   - [ ] Labels.
   - [ ] Able to upload if member.
-- [ ] Have logins for editing. (requires backend)
+- [ ] Have logins for editing.

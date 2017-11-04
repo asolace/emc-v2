@@ -18,9 +18,7 @@ class Header extends Component {
       <div className="header">
         <Navbar color="faded" light expand="md" fixed="top">
           <Link className="navbar-brand" to="/">
-            <span className="emc-brand-blue">E</span>
-            <span className="emc-brand-blue">M</span>
-            <span className="emc-brand-blue">C</span>
+            <span className="emc-brand">EMC</span>
             <span className="emc-title-blue"> | EBENEZER </span>
             <span className="emc-title-red">MISSION </span>
             <span className="emc-title-blue">CHURCH</span>
