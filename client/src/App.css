@@ -275,19 +275,11 @@ nav {
   color: black;
 }
 
-.f-fg-text {
-  font-size: 22px;
-  font-weight: 600;
-  padding-top: 10vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  animation: fadeIn 2s;
-}
-
+.f-fg-text,
 .f-intro-text {
   font-size: 22px;
   font-weight: 600;
-  padding-top: 20vw;
+  padding-top: 10vw;
   margin-left: 20vw;
   margin-right: 20vw;
   animation: fadeIn 2s;
