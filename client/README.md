@@ -7,14 +7,20 @@
 - [ ] Needs new favicon.
 - [ ] Add Newcomers tab
 - [ ] Needs pictures of Staffs and community groups
-- [ ] __About Page__
+
+
+ __About Page__
   - [ ] Add directions
-- [ ] __Home Page__
+
+__Home Page__
   - [ ] Carousel sizing needs fixing and centering after size fix.
-- [ ] __Footer__
+
+
+ __Footer__
   - [ ] Add Contacts and copyright
-- [ ] Have new comers page
-- [ ] __Pages Needed__
+  - [ ] Have new comers page
+
+__Pages Needed__
   - [ ] Events
   - [ ] Members
   - [ ] Prayers

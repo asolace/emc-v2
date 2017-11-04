@@ -17,14 +17,14 @@ class Header extends Component {
     return (
       <div className="header">
         <Navbar color="faded" light expand="md" fixed="top">
-          <NavbarBrand>
+          <Link className="navbar-brand" to="/">
             <span className="emc-brand-blue">E</span>
             <span className="emc-brand-blue">M</span>
             <span className="emc-brand-blue">C</span>
             <span className="emc-title-blue"> | EBENEZER </span>
             <span className="emc-title-red">MISSION </span>
             <span className="emc-title-blue">CHURCH</span>
-          </NavbarBrand>
+          </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
