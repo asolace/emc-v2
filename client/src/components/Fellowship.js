@@ -37,7 +37,7 @@ const Fellowship = () => {
   return (
     <div className="fellowship-page-background">
 
-      <div className="f-intro-container">
+      <div className="f-intro-container f-container">
         <p className="f-intro-text">
         "They devoted themselves to the apostles' teaching and to
         fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
@@ -45,7 +45,7 @@ const Fellowship = () => {
       </div>
 
 
-      <div className="f-fg-container">
+      <div className="f-fg-container f-container">
         <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
           <h1 className="f-fg-header">Friends Gathering</h1>
         </ScrollAnimation>
@@ -86,7 +86,7 @@ const Fellowship = () => {
         </Row>
       </div>
 
-      <div className="f-pm-container">
+      <div className="f-pm-container f-container">
         <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
           <h1 className="f-pm-header">Prayer Meeting</h1>
         </ScrollAnimation>
@@ -127,7 +127,7 @@ const Fellowship = () => {
         </Row>
       </div>
 
-      <div className="f-tc-container">
+      <div className="f-tc-container f-container">
         <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
           <h1 className="f-tc-header">TEE Class</h1>
         </ScrollAnimation>
@@ -168,7 +168,7 @@ const Fellowship = () => {
         </Row>
       </div>
 
-      <div className="f-sg-container">
+      <div className="f-sg-container f-container">
         <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
           <h1 className="f-sg-header">Saturday Group</h1>
         </ScrollAnimation>
@@ -209,7 +209,7 @@ const Fellowship = () => {
         </Row>
       </div>
 
-      <div className="f-pg-container">
+      <div className="f-pg-container f-container">
         <ScrollAnimation animateIn='fadeIn' duration={0.5} animateOnce={true}>
           <h1 className="f-pg-header">Parent Group</h1>
         </ScrollAnimation>
@@ -268,7 +268,7 @@ const Fellowship = () => {
 
 
       <br/><br/><br/><br/><br/><br/><br/><br/>
-      <div className="fellowship-intro-container">
+      <div className="fellowship-intro-container f-container">
         <p className="fellowship-intro-text">
         "They devoted themselves to the apostles' teaching and to
         fellowship, to the breaking of bread and to prayer" Acts 2:42 NIV
