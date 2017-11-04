@@ -12,13 +12,8 @@
  __About Page__
   - [ ] Add directions
 
-__Home Page__
-  - [ ] Carousel sizing needs fixing and centering after size fix.
-
-
  __Footer__
-  - [ ] Add Contacts and copyright
-  - [ ] Have new comers page
+  - [ ] Add Contacts
 
 __Pages Needed__
   - [ ] Events

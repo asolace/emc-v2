@@ -20,7 +20,6 @@ const Footer = () =>
           <FaYoutube />
         </button>
     </div>
-    <span className="member-login-link"><Link to='/login'>Member Login</Link> </span>
     <p className="copyright">&copy; Copyright 2017 EMC -- @asolace development</p>
 
   </div>

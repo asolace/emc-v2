@@ -10,6 +10,7 @@ td {
 
 .App {
   text-align: center;
+  background-color: #f4f2ed;
 }
 
 .App-container {
@@ -74,15 +75,6 @@ nav {
   padding-right: 10%;
 }
 
-.about-leader-image-border {
-  border-radius: 50%;
-  background-image: url('./photos/mediumleather.jpg');
-  background-color: #b27c2a;
-  width: 20vw;
-  height: 20vw;
-  margin-left: 25%;
-}
-
 .about-leader-header {
   font-family: "Alice", serif;
   font-weight: 600;
@@ -144,32 +136,7 @@ nav {
   height: 14vw;
 }
 
-.about-deacon-image-borderA {
-  border-radius: 50%;
-  background-image: url('./photos/lightleather.jpg');
-  background-color: #b27c2a;
-  width: 15.2vw;
-  height: 15.2vw;
-  margin-left: 1vw;
-}
-
-.about-deacon-image-borderB {
-  border-radius: 50%;
-  background-image: url('./photos/lightleather.jpg');
-  background-color: #b27c2a;
-  width: 15.2vw;
-  height: 15.2vw;
-  margin-left: 1vw;
-}
-
-.about-deacon-nameA {
-  font-family: 'Alice', serif;
-  font-weight: 600;
-  margin-top: 10%;
-  margin-right: 10%;
-  margin-left: 1vw;
-}
-
+.about-deacon-nameA,
 .about-deacon-nameB {
   font-family: 'Alice', serif;
   font-weight: 600;
@@ -193,14 +160,14 @@ nav {
 }
 
 @media screen and (max-width: 1150px){
-  .about-deacon-nameA { font-size: 24px; }
-  .about-deacon-nameB { font-size: 24px;}
+  .about-deacon-nameA, .about-deacon-nameB { font-size: 24px; }
 }
 
 @media screen and (max-width: 800px){
-  .about-deacon-image-borderA { margin: auto; height: 26vw; width: 26vw; margin-right: 0px; }
-  .about-deacon-image-borderB { margin: auto; height: 26vw; width: 26vw; }
   .about-deacon-image { height: 24vw; width: 24vw; }
+  .about-deacon-image-borderA,
+  .about-deacon-image-borderB { margin: auto; height: 26vw; width: 26vw; }
+  .about-deacon-image-borderA { margin-right: 0px; }
   .about-deacon-nameA { font-size: 20px; margin-left: 35%; }
   .about-deacon-nameB { font-size: 20px; margin-left: 10%; }
   .about-deacon-rowB { padding-left:15%; padding-right: 5%;}
@@ -245,9 +212,6 @@ nav {
   margin-left: 20%;
   width: 60vw;
   height: auto;
-  background-image: url('./photos/polaroidframeedited.PNG');
-  background-size: 100% 100%;
-  box-shadow: 0px 0px 10px 20px #874f1f;
 }
 
 .about-space {
@@ -581,8 +545,7 @@ nav {
 
 .l-page-background {
   background-color: #f4f2ed;
-  width: auto;
-  height: 100vh;
+  height: 80vh;
 }
 
 .l-container {
