@@ -68,18 +68,22 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
-                <tr>
-                  <td><b>Time: </b></td>
-                  <td>Thurs. & Fri. 7pm</td>
-                </tr>
-                <tr>
-                  <td><b>Location: </b></td>
-                  <td>Pastor Jaes Humble Abode & Church</td>
-                </tr>
-                <tr>
-                  <td><b>Contact: </b></td>
-                  <td>Pastor Pio</td>
-                </tr>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><b>Time: </b></td>
+                      <td>Thurs. & Fri. 7pm</td>
+                    </tr>
+                    <tr>
+                      <td><b>Location: </b></td>
+                      <td>Pastor Jaes Humble Abode & Church</td>
+                    </tr>
+                    <tr>
+                      <td><b>Contact: </b></td>
+                      <td>Pastor Pio</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </ScrollAnimation>
           </Col>
@@ -109,18 +113,22 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
-                <tr>
-                  <td><b>Time: </b></td>
-                  <td>Saturday 7pm</td>
-                </tr>
-                <tr>
-                  <td><b>Location: </b></td>
-                  <td>Church</td>
-                </tr>
-                <tr>
-                  <td><b>Contact: </b></td>
-                  <td>Lulu Lim</td>
-                </tr>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><b>Time: </b></td>
+                      <td>Saturday 7pm</td>
+                    </tr>
+                    <tr>
+                      <td><b>Location: </b></td>
+                      <td>Church</td>
+                    </tr>
+                    <tr>
+                      <td><b>Contact: </b></td>
+                      <td>Lulu Lim</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </ScrollAnimation>
           </Col>
@@ -150,18 +158,22 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
-                <tr>
-                  <td><b>Time: </b></td>
-                  <td>Sunday 11am</td>
-                </tr>
-                <tr>
-                  <td><b>Location: </b></td>
-                  <td>Church</td>
-                </tr>
-                <tr>
-                  <td><b>Contact: </b></td>
-                  <td>Jason Park</td>
-                </tr>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><b>Time: </b></td>
+                      <td>Sunday 11am</td>
+                    </tr>
+                    <tr>
+                      <td><b>Location: </b></td>
+                      <td>Church</td>
+                    </tr>
+                    <tr>
+                      <td><b>Contact: </b></td>
+                      <td>Jason Park</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </ScrollAnimation>
           </Col>
@@ -191,18 +203,22 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
-                <tr>
-                  <td><b>Time: </b></td>
-                  <td>Saturday 5:30pm</td>
-                </tr>
-                <tr>
-                  <td><b>Location: </b></td>
-                  <td>Church</td>
-                </tr>
-                <tr>
-                  <td><b>Contact: </b></td>
-                  <td>Dr. Soo-Il Lee</td>
-                </tr>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><b>Time: </b></td>
+                      <td>Saturday 5:30pm</td>
+                    </tr>
+                    <tr>
+                      <td><b>Location: </b></td>
+                      <td>Church</td>
+                    </tr>
+                    <tr>
+                      <td><b>Contact: </b></td>
+                      <td>Dr. Soo-Il Lee</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </ScrollAnimation>
           </Col>
@@ -232,18 +248,22 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
-                <tr>
-                  <td><b>Time: </b></td>
-                  <td>Monday</td>
-                </tr>
-                <tr>
-                  <td><b>Location: </b></td>
-                  <td>Church</td>
-                </tr>
-                <tr>
-                  <td><b>Contact: </b></td>
-                  <td>Dr. Soo-Il Lee</td>
-                </tr>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><b>Time: </b></td>
+                      <td>Monday</td>
+                    </tr>
+                    <tr>
+                      <td><b>Location: </b></td>
+                      <td>Church</td>
+                    </tr>
+                    <tr>
+                      <td><b>Contact: </b></td>
+                      <td>Dr. Soo-Il Lee</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </ScrollAnimation>
           </Col>
@@ -286,18 +306,22 @@ const Fellowship = () => {
           </Col>
           <Col>
             <div className="fellowship-info">
-              <tr>
-                <td><b>Time: </b></td>
-                <td>Thurs. & Fri. 7pm</td>
-              </tr>
-              <tr>
-                <td><b>Location: </b></td>
-                <td>Pastor Jaes Humble Abode & Church</td>
-              </tr>
-              <tr>
-                <td><b>Contact: </b></td>
-                <td>Pastor Pio</td>
-              </tr>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Time: </b></td>
+                    <td>Thurs. & Fri. 7pm</td>
+                  </tr>
+                  <tr>
+                    <td><b>Location: </b></td>
+                    <td>Pastor Jaes Humble Abode & Church</td>
+                  </tr>
+                  <tr>
+                    <td><b>Contact: </b></td>
+                    <td>Pastor Pio</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </Col>
         </Row>
@@ -328,18 +352,22 @@ const Fellowship = () => {
           </Col>
           <Col>
             <div className="fellowship-info">
-              <tr>
-                <td><b>Time: </b></td>
-                <td>Sunday 11am</td>
-              </tr>
-              <tr>
-                <td><b>Location: </b></td>
-                <td>Church</td>
-              </tr>
-              <tr>
-                <td><b>Contact: </b></td>
-                <td>Jason Park</td>
-              </tr>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Time: </b></td>
+                    <td>Sunday 11am</td>
+                  </tr>
+                  <tr>
+                    <td><b>Location: </b></td>
+                    <td>Church</td>
+                  </tr>
+                  <tr>
+                    <td><b>Contact: </b></td>
+                    <td>Jason Park</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </Col>
         </Row>
@@ -370,18 +398,22 @@ const Fellowship = () => {
           </Col>
           <Col>
             <div className="fellowship-info">
-              <tr>
-                <td><b>Time: </b></td>
-                <td>Saturday 7pm</td>
-              </tr>
-              <tr>
-                <td><b>Location: </b></td>
-                <td>Church</td>
-              </tr>
-              <tr>
-                <td><b>Contact: </b></td>
-                <td>Lulu Lim</td>
-              </tr>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Time: </b></td>
+                    <td>Saturday 7pm</td>
+                  </tr>
+                  <tr>
+                    <td><b>Location: </b></td>
+                    <td>Church</td>
+                  </tr>
+                  <tr>
+                    <td><b>Contact: </b></td>
+                    <td>Lulu Lim</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </Col>
         </Row>
@@ -412,18 +444,22 @@ const Fellowship = () => {
           </Col>
           <Col>
             <div className="fellowship-info">
-              <tr>
-                <td><b>Time: </b></td>
-                <td>Saturday 5:30pm</td>
-              </tr>
-              <tr>
-                <td><b>Location: </b></td>
-                <td>Church</td>
-              </tr>
-              <tr>
-                <td><b>Contact: </b></td>
-                <td>Dr. Soo-Il Lee</td>
-              </tr>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Time: </b></td>
+                    <td>Saturday 5:30pm</td>
+                  </tr>
+                  <tr>
+                    <td><b>Location: </b></td>
+                    <td>Church</td>
+                  </tr>
+                  <tr>
+                    <td><b>Contact: </b></td>
+                    <td>Dr. Soo-Il Lee</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </Col>
         </Row>
@@ -454,18 +490,22 @@ const Fellowship = () => {
           </Col>
           <Col>
             <div className="fellowship-info">
-              <tr>
-                <td><b>Time: </b></td>
-                <td>Monday</td>
-              </tr>
-              <tr>
-                <td><b>Location: </b></td>
-                <td>Church</td>
-              </tr>
-              <tr>
-                <td><b>Contact: </b></td>
-                <td>Dr. Soo-Il Lee</td>
-              </tr>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Time: </b></td>
+                    <td>Monday</td>
+                  </tr>
+                  <tr>
+                    <td><b>Location: </b></td>
+                    <td>Church</td>
+                  </tr>
+                  <tr>
+                    <td><b>Contact: </b></td>
+                    <td>Dr. Soo-Il Lee</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </Col>
         </Row>
