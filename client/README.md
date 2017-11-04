@@ -4,7 +4,7 @@
 
 
 # To-dos
-- [ ] Needs new favicon.
+- [ ] Needs new favicon
 - [ ] Add Newcomers tab
 - [ ] Needs pictures of Staffs and community groups
 
