@@ -27,56 +27,56 @@ class Login extends Component {
         <p className="l-text">Romans 12:5 ESV</p>
 
         <div className="l-row">
-        <Row className="l-row">
-          <div className="l-col-login">
-            <Col>
-              <div className="l-container">
-                <Form>
-                  <FormGroup>
-                    <div className="l-inputA">
-                      <Input onChange={this.onChange} type="username" name="username" placeholder="Username" />
-                    </div>
-                  </FormGroup>
-                  <FormGroup>
-                    <div className="l-inputB">
-                      <Input onChange={this.onChange} type="password" name="password" placeholder="Password" />
-                    </div>
-                  </FormGroup>
-                </Form>
-                <Button onClick={this.onSubmit} color="info">Login</Button>
-              </div>
-            </Col>
-          </div>
+          <Row>
+            <div className="l-col-login">
+              <Col>
+                <div className="l-container">
+                  <Form>
+                    <FormGroup>
+                      <div className="l-inputA">
+                        <Input onChange={this.onChange} type="username" name="username" placeholder="Username" />
+                      </div>
+                    </FormGroup>
+                    <FormGroup>
+                      <div className="l-inputB">
+                        <Input onChange={this.onChange} type="password" name="password" placeholder="Password" />
+                      </div>
+                    </FormGroup>
+                  </Form>
+                  <Button onClick={this.onSubmit} color="info">Login</Button>
+                </div>
+              </Col>
+            </div>
 
-          <div className="l-col-vr">
-            <Col>
-              <div className="l-vr"></div>
-            </Col>
-          </div>
+            <div className="l-col-vr">
+              <Col>
+                <div className="l-vr"></div>
+              </Col>
+            </div>
 
-          <div className="l-col-signup">
-            <Col>
-              <div className="l-container">
-                <Form>
-                  <FormGroup>
-                    <div className="l-inputA">
-                      <Input onChange={this.onChange} type="username" name="username" placeholder="example@domain.com" />
-                    </div>
-                  </FormGroup>
-                  <FormGroup>
-                    <div className="l-inputB">
-                      <Input onChange={this.onChange} type="password" name="password" placeholder="Password" />
-                    </div>
-                  </FormGroup>
-                </Form>
-                <Button onClick={this.onSubmit} color="success">Sign-Up</Button>
-              </div>
-            </Col>
-          </div>
-        </Row>
+            <div className="l-col-signup">
+              <Col>
+                <div className="l-container">
+                  <Form>
+                    <FormGroup>
+                      <div className="l-inputA">
+                        <Input onChange={this.onChange} type="username" name="username" placeholder="example@domain.com" />
+                      </div>
+                    </FormGroup>
+                    <FormGroup>
+                      <div className="l-inputB">
+                        <Input onChange={this.onChange} type="password" name="password" placeholder="Password" />
+                      </div>
+                    </FormGroup>
+                  </Form>
+                  <Button onClick={this.onSubmit} color="success">Sign-Up</Button>
+                </div>
+              </Col>
+            </div>
+          </Row>
         </div>
 
-        <div>
+        <div className="l-closing-statement">
           <p>Here at EMC, we value membership and relationships very highly.</p>
           <p>If you would like to be a part of our family please feel free to sign-up!</p>
         </div>

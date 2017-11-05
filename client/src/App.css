@@ -258,6 +258,12 @@ nav {
 
 /* Fellowship Page BEGIN */
 
+.f-page-background {
+  background-color: #f4f2ed;
+  width: auto;
+  font-family: 'Alice', serif;
+}
+
 .f-intro-container{
   background-attachment: fixed;
   background-image: url('./photos/biblecandleedited.JPG');
@@ -454,55 +460,6 @@ nav {
 }
 */
 
-.fellowship-page-background {
-  background-color: #f4f2ed;
-  width: auto;
-  font-family: 'Alice', serif;
-}
-
-.fellowship-row {
-  width: 100vw;
-}
-
-.fellowship-slider {
-  width: 40vw;
-  margin-left: 20vw;
-}
-
-.fellowship-info {
-  background-color: lightgrey;
-  border-radius: 10%;
-  margin-top: 5vw;
-  margin-bottom: auto;
-  padding-top: 2.5vw;
-  padding-left: 10px;
-  padding-bottom: 2.5vw;
-  margin-right: 10vw;
-  width: 250px;
-  text-align: left;
-}
-
-.fellowship-container {
-  padding-top: 100px;
-}
-
-.fellowship-description {
-  padding-top: 50px;
-  margin-left: 20vw;
-  width: 60vw;
-  padding-bottom: 100px;
-}
-
-.fellowship-header {
-  font-weight: 600;
-  margin: auto;
-  padding-bottom: 50px;
-}
-
-.fellowship-tdmargin {
-  margin-left: 10px;
-}
-
 /* Fellowship Page END */
 
 .col {
@@ -518,20 +475,36 @@ nav {
   font-weight: 900;
 }
 
+.emc-brand {
+  width: 400px;
+}
+
+.emc-subbrandA {
+  width: 70px;
+}
+
+.emc-subbrandB {
+  width: 100px;
+}
+
 .emc-brand-blue {
   font-family: 'Archivo Black', sans-serif;
-  color: #5058b2;
+  color: #38322e;
+  /*color: #5058b2;*/
   font-size: 1.3em;
 }
 
 .emc-brand-red {
   font-family: 'Archivo Black', sans-serif;
-  color: #ad574e;
+  color:#191817;
+  font-weight: 600;
+  /*color: #ad574e;*/
   font-size: 1.3em;
 }
 
 .emc-title-blue {
-  color: #5058b2;
+  color: #38322e;
+  /*color: #5058b2;*/
   font-size: 0.8em;
 }
 
@@ -546,9 +519,16 @@ nav {
   margin-bottom: 30px;
 }
 
+.home-container {
+  background-color: #f4f2ed;
+}
+
+.header-navbar{
+  border-bottom: 2px solid grey;
+}
+
 .home-slider {
-  margin-left: 12.5vw;
-  width: 75vw;
+  width: 98.9vw;
 }
 
 .home-tri-section-header {
@@ -582,7 +562,8 @@ nav {
 .l-page-background {
   background-color: #f4f2ed;
   width: auto;
-  height: 100vh;
+  height: 700px;
+  margin-bottom: 0px;
 }
 
 .l-container {
@@ -646,6 +627,23 @@ nav {
   border-left:3px solid lightgrey;
   height:200px;
 }
+
+.l-closing-statement {
+  padding: 40px;
+}
+
+@media screen and (max-width: 800px){
+  .l-row { width: auto;}
+}
+
+@media screen and (max-width: 755px){
+  .l-col-vr { opacity: 0; width: 0px; }
+  .l-col-login { margin-left: auto; width: 800px; height: 0px;}
+  .l-col-signup { margin-left: auto; width: 800px; }
+  .l-page-background {padding-bottom: 1000px;}
+}
+
+
 /* Login Section END */
 
 .name-me-section-home {
@@ -719,7 +717,6 @@ nav {
 .footer-container {
   padding-top: 30px;
   height: 200px;
-  margin-top: 50px;
   background-color: #555;
 }
 

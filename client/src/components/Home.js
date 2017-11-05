@@ -34,7 +34,7 @@ const carouselItems = [
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <div className="home-slider">
         <Slider className="home-slider" carouselItems={carouselItems} />
       </div>

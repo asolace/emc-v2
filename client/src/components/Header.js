@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
 class Header extends Component {
@@ -16,14 +16,26 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Navbar color="faded" light expand="md" fixed="top">
+        <Navbar className="header-navbar"color="black" light expand="md" fixed="top">
           <NavbarBrand>
-            <span className="emc-brand-blue">E</span>
-            <span className="emc-brand-blue">M</span>
-            <span className="emc-brand-blue">C</span>
-            <span className="emc-title-blue"> | EBENEZER </span>
-            <span className="emc-title-red">MISSION </span>
-            <span className="emc-title-blue">CHURCH</span>
+            <Link to="/">
+            <Row className="emc-brand">
+              <div className="emc-subbrandA">
+                <Col>
+                  <span className="emc-brand-blue">E</span>
+                  <span className="emc-brand-blue">M</span>
+                  <span className="emc-brand-blue">C</span>
+                </Col>
+              </div>
+              <div className="emc-subbrandB">
+                <Col>
+                  <span className="emc-title-blue"> | EBENEZER </span>
+                  <span className="emc-title-red">MISSION </span>
+                  <span className="emc-title-blue">CHURCH </span>
+                </Col>
+              </div>
+            </Row>
+            </Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
