@@ -73,15 +73,17 @@ const Home = () => {
               </p>
             </div>
           </Col>
+          <div className="h-map">
           <Col>
             <Gmaps
               isMarkerShown
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYjYt7PpDffRruRe3nHn85J0vVdcx-V3g&v3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
+              containerElement={<div style={{ height: `300px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </Col>
+          </div>
         </Row>
       </Container>
     </div>

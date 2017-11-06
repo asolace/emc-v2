@@ -500,11 +500,16 @@ nav {
 
 .h-intro-text {
   font-family: 'Roboto', sans-serif;
-  margin-left: 150px;
-  margin-right: 750px;
+  margin-left: 10vw;
+  margin-right: 50vw;
   font-size: 28px;
   color: white;
   animation: fadeIn 2s;
+}
+
+.h-map{
+  width: 350px;
+  height: 100px;
 }
 
 .h-text {
@@ -522,7 +527,7 @@ nav {
 
 .h-tri-header {
   color: #ad574e;;
-  font-size: 2.8vw;
+  font-size: 2.8em;
   font-weight: 900;
 }
 
@@ -531,29 +536,21 @@ nav {
   font-family: 'Roboto', sans-serif;
 }
 
-.home-slider {
-  width: 98.9vw;
+@media screen and (max-width: 1000px){
+  .h-map{ width: 1000px; padding-top: 75px; padding-bottom: 200px;}
 }
 
-.home-tri-section-header {
-  color: #5058b2;
-  font-family: 'PT Serif Caption', serif;
-  font-size: 2.8vw;
-  font-weight: 900;
+@media screen and (max-width: 950px){
+  .h-intro-text { font-size: 24px;}
+  .h-tri-container { margin-top: 50px;}
 }
 
-.home-header {
-  font-family: 'PT Serif Caption', serif;
+@media screen and (max-width: 750px){
+  .h-intro-text { font-size: 20px;}
 }
 
-.home-text {
-  font-size: 1.2em;
-  font-family: 'Alice', serif;
-}
-
-.home-tri-section-content {
-  font-family: 'Alice', serif;
-  font-size: 2vw;
+@media screen and (max-width: 500px){
+  .h-intro-text { margin-right: 38vw; font-size: 18px;}
 }
 
 /* Home Page END */
@@ -582,7 +579,7 @@ nav {
 }
 
 .l-fish{
-  height: 250px;
+  height: 200px;
   padding-top: 10px;
   padding-bottom: 30px;
 }
