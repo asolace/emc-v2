@@ -467,6 +467,53 @@ nav {
   margin-bottom: 30px;
 }
 
+/* Gallery Page BEGIN */
+
+.g-header {
+  padding-top: 50px;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.g-page {
+  background-color: #f4f2ed;
+  margin-right: 0px;
+  width: 97.2vw;
+  height: 1000px;
+}
+
+.g-picA,
+.g-picF {
+  width: 500px;
+}
+
+.g-picB,
+.g-picC,
+.g-picD,
+.g-picE {
+  width: 230px;
+}
+
+.g-rowA-colA {
+  margin-right: 0px;
+  margin-left: 25%;
+}
+
+.g-rowA-colB {
+  margin-left: 0px;
+}
+
+.g-rowB-colA {
+  margin-right: 0px;
+  margin-left: 25%;
+}
+
+.g-rowB-colB {
+  margin-left: 0px;
+}
+
+/* Gallery Page END */
+
 .header-navbar{
   /*
   background-color: #f7f1ed;

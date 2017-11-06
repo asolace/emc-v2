@@ -9,28 +9,9 @@ import About from './components/About'
 import Fellowship from './components/Fellowship'
 import Login from './components/Login'
 import Footer from './components/Footer'
+import Gallery from './components/Gallery'
 
 import Warping from './components/Warping'
-
-const Members = () =>
-<div className="about-page">
-  <Warping />
-</div>
-
-const Prayers = () =>
-<div className="about-page">
-  <Warping />
-</div>
-
-const Gallery = () =>
-<div className="about-page">
-  <Warping />
-</div>
-
-const Events = () =>
-<div className="about-page">
-  <Warping />
-</div>
 
 class App extends Component {
   render() {
@@ -41,12 +22,9 @@ class App extends Component {
           <div className="App-container">
             <Route exact path="/" component={ Home } />
             <Route path="/about" component={ About } />
-            <Route path="/members" component={ Members } />
             <Route path="/fellowship" component={ Fellowship } />
             <Route path="/login" component={ Login } />
-            <Route path="/prayers" component={ Prayers } />
             <Route path="/gallery" component={ Gallery } />
-            <Route path="/events" component={ Events } />
           </div>
           <Footer />
         </div>
