@@ -21,8 +21,7 @@ const About = () => {
         </ScrollAnimation>
       </div>
 
-      <br /><br /><br /><br />
-      <hr />
+      <br /><br />
 
       <h1 className="about-leader-header">Our Leaders</h1>
       <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
@@ -97,8 +96,6 @@ const About = () => {
           </Row>
         </div>
       </ScrollAnimation>
-
-      <hr />
 
       <h1 className="about-leader-header">Our Deacons</h1>
       <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
