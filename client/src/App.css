@@ -466,14 +466,60 @@ nav {
   /*
   background-color: #f7f1ed;
   */
-  background-color: #ede7e3;
-  
+  background-color: white;
   height: 66px;
   border-bottom: 2px solid black;
 }
 
+/* Home Page BEGIN */
+.h-container {
+  background-image: url('./photos/ebenezerrockedited.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  padding-top: 250px;
+  padding-bottom: 265px;
+  height: 92vh;
+  opacity: 1;
+}
+
+.h-dir-emc {
+  font-family: 'Roboto', sans-serif;  
+  font-weight: 600;
+}
+
+.h-header {
+  font-family: 'Roboto', sans-serif;
+}
+
+.h-intro-text {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 150px;
+  margin-right: 750px;
+  font-size: 28px;
+  color: white;
+  animation: fadeIn 2s;
+}
+
+.h-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em
+}
+
+.h-tri-content {
+  font-size: 1.5em;
+}
+
+.h-tri-header {
+  color: #ad574e;;
+  font-size: 2.8vw;
+  font-weight: 900;
+}
+
 .home-container {
   background-color: #f4f2ed;
+  font-family: 'Roboto', sans-serif;
 }
 
 .home-slider {
@@ -500,6 +546,8 @@ nav {
   font-family: 'Alice', serif;
   font-size: 2vw;
 }
+
+/* Home Page END */
 
 .img-in-pa {
   width: 370px;
