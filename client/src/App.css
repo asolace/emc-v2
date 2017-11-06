@@ -95,7 +95,7 @@ nav {
   width: 18.5vw;
   height: 18.5vw;
 }
-
+/*
 .about-leader-image-border {
   margin: auto;
   border-radius: 50%;
@@ -103,7 +103,7 @@ nav {
   height: 20vw;
   width: 20vw;
 }
-
+*/
 .about-leader-name{
   margin-top: 30px;
   font-family: 'Alice', serif;
@@ -174,7 +174,7 @@ nav {
   padding-left: 20%;
   padding-right: 20%;
 }
-
+/*
 .about-deacon-image-borderA {
   border-radius: 50%;
   background-image: url('./photos/lightleather.jpg');
@@ -188,7 +188,7 @@ nav {
   width: 15.2vw;
   height: 15.2vw;
 }
-
+*/
 @media screen and (max-width: 1150px){
   .about-deacon-nameA, .about-deacon-nameB { font-size: 24px; }
 }
@@ -266,7 +266,7 @@ nav {
 }
 
 .f-fg-container {
-  background-image: url('./photos/biblestudy.jpg');
+  background-image: url('./photos/diversebiblestudy.jpg');
 }
 
 .f-pm-container {
@@ -282,7 +282,7 @@ nav {
 }
 
 .f-pg-container{
-  background-image: url('./photos/parentgroup.jpg');
+  background-image: url('./photos/family.jpeg');
 }
 
 .f-fg-header,
@@ -485,7 +485,7 @@ nav {
 }
 
 .h-dir-emc {
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
 }
 
@@ -570,6 +570,12 @@ nav {
   height: 250px;
   padding-top: 30px;
   padding-bottom: 60px;
+}
+
+.l-fish{
+  height: 250px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .l-inputA {

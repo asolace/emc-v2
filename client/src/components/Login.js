@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Input, Row, Col } from 'reactstrap';
 import cross from '../photos/logincross.png'
+import fish from '../photos/jesusfish.png'
 
 class Login extends Component {
   state = {
@@ -20,8 +21,8 @@ class Login extends Component {
   render() {
     return (
       <div className="l-page-background">
-        <div className="l-cross">
-          <img className="l-cross" src={cross} alt="cross"/>
+        <div className="l-fish">
+          <img className="l-fish" src={fish} alt="fish"/>
         </div>
         <p className="l-text">"So we, though many, are one body in Christ"</p>
         <p className="l-text">Romans 12:5 ESV</p>
