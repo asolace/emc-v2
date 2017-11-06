@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Input, Row, Col } from 'reactstrap';
 import cross from '../photos/logincross.png'
 
 class Login extends Component {
@@ -21,7 +21,7 @@ class Login extends Component {
     return (
       <div className="l-page-background">
         <div className="l-cross">
-          <img className="l-cross" src={cross}></img>
+          <img className="l-cross" src={cross} alt="cross"/>
         </div>
         <p className="l-text">"So we, though many, are one body in Christ"</p>
         <p className="l-text">Romans 12:5 ESV</p>

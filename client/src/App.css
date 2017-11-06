@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Alice|PT+Serif+Caption|Archivo+Black');
+@font-face {
+  font-family: 'Gotham-Back-Regular';
+  src: local('Gotham-Back-Regular'), url(./fonts/GothamBlackRegular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: local('Bebas-Neue'), url(./fonts/BebasNeue.otf) format('opentype');
+}
 
 h1, p {
   font-family: 'Alice', serif;
@@ -10,6 +18,7 @@ td {
 
 .App {
   text-align: center;
+  background-color: #f4f2ed;
 }
 
 .App-container {
@@ -74,15 +83,6 @@ nav {
   padding-right: 10%;
 }
 
-.about-leader-image-border {
-  border-radius: 50%;
-  background-image: url('./photos/mediumleather.jpg');
-  background-color: #b27c2a;
-  width: 20vw;
-  height: 20vw;
-  margin-left: 25%;
-}
-
 .about-leader-header {
   font-family: "Alice", serif;
   font-weight: 600;
@@ -94,6 +94,14 @@ nav {
   border-radius: 50%;
   width: 18.5vw;
   height: 18.5vw;
+}
+
+.about-leader-image-border {
+  margin: auto;
+  border-radius: 50%;
+  background-image: url('./photos/mediumleather.jpg');
+  height: 20vw;
+  width: 20vw;
 }
 
 .about-leader-name{
@@ -144,38 +152,13 @@ nav {
   height: 14vw;
 }
 
-.about-deacon-image-borderA {
-  border-radius: 50%;
-  background-image: url('./photos/lightleather.jpg');
-  background-color: #b27c2a;
-  width: 15.2vw;
-  height: 15.2vw;
-  margin-left: 1vw;
-}
-
-.about-deacon-image-borderB {
-  border-radius: 50%;
-  background-image: url('./photos/lightleather.jpg');
-  background-color: #b27c2a;
-  width: 15.2vw;
-  height: 15.2vw;
-  margin-left: 1vw;
-}
-
-.about-deacon-nameA {
-  font-family: 'Alice', serif;
-  font-weight: 600;
-  margin-top: 10%;
-  margin-right: 10%;
-  margin-left: 1vw;
-}
-
+.about-deacon-nameA,
 .about-deacon-nameB {
   font-family: 'Alice', serif;
   font-weight: 600;
   margin-top: 10%;
   margin-right: 10%;
-  margin-left: 1vw;
+  margin-left: 0vw;
 }
 
 .about-deacon-rowA {
@@ -192,15 +175,29 @@ nav {
   padding-right: 20%;
 }
 
+.about-deacon-image-borderA {
+  border-radius: 50%;
+  background-image: url('./photos/lightleather.jpg');
+  width: 15.2vw;
+  height: 15.2vw;
+}
+
+.about-deacon-image-borderB {
+  border-radius: 50%;
+  background-image: url('./photos/lightleather.jpg');
+  width: 15.2vw;
+  height: 15.2vw;
+}
+
 @media screen and (max-width: 1150px){
-  .about-deacon-nameA { font-size: 24px; }
-  .about-deacon-nameB { font-size: 24px;}
+  .about-deacon-nameA, .about-deacon-nameB { font-size: 24px; }
 }
 
 @media screen and (max-width: 800px){
-  .about-deacon-image-borderA { margin: auto; height: 26vw; width: 26vw; margin-right: 0px; }
-  .about-deacon-image-borderB { margin: auto; height: 26vw; width: 26vw; }
   .about-deacon-image { height: 24vw; width: 24vw; }
+  .about-deacon-image-borderA,
+  .about-deacon-image-borderB { margin: auto; height: 26vw; width: 26vw; }
+  .about-deacon-image-borderA { margin-right: 0px; }
   .about-deacon-nameA { font-size: 20px; margin-left: 35%; }
   .about-deacon-nameB { font-size: 20px; margin-left: 10%; }
   .about-deacon-rowB { padding-left:15%; padding-right: 5%;}
@@ -245,9 +242,6 @@ nav {
   margin-left: 20%;
   width: 60vw;
   height: auto;
-  background-image: url('./photos/polaroidframeedited.PNG');
-  background-size: 100% 100%;
-  box-shadow: 0px 0px 10px 20px #874f1f;
 }
 
 .about-space {
@@ -257,113 +251,57 @@ nav {
 /* About Page END */
 
 /* Fellowship Page BEGIN */
-
-.f-page-background {
-  background-color: #f4f2ed;
-  width: auto;
-  font-family: 'Alice', serif;
-}
-
-.f-intro-container{
+.f-container {
   background-attachment: fixed;
-  background-image: url('./photos/biblecandleedited.JPG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  opacity: 0.85;
   color: white;
+  opacity: 0.8;
 }
 
-.f-fg-container{
-  background-attachment: fixed;
+.f-intro-container {
+  background-image: url('./photos/biblecandleedited.JPG');
+}
+
+.f-fg-container {
   background-image: url('./photos/biblestudy.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 0.9;
-  color: white;
 }
 
-.f-pm-container{
-  background-attachment: fixed;
+.f-pm-container {
   background-image: url('./photos/prayergroup.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 0.9;
-  color: white;
 }
 
 .f-tc-container{
-  background-attachment: fixed;
   background-image: url('./photos/seminarybook.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 0.85;
-  color: white;
 }
 
 .f-sg-container{
-  background-attachment: fixed;
   background-image: url('./photos/saturdaygroup.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 0.75;
-  color: white;
 }
 
 .f-pg-container{
-  background-attachment: fixed;
   background-image: url('./photos/parentgroup.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 0.8;
-  color: white;
 }
 
-.f-fg-header {
+.f-fg-header,
+.f-tc-header,
+.f-pm-header,
+.f-sg-header,
+.f-pg-header {
   padding-top: 10vw;
 }
 
 .f-pm-header {
   color: black;
-  padding-top: 10vw;
 }
 
-.f-tc-header {
-  padding-top: 10vw;
-}
-
-.f-sg-header {
-  padding-top: 10vw;
-}
-
-.f-pg-header {
-  padding-top: 10vw;
-}
-
-.f-fg-text {
-  font-size: 22px;
-  font-weight: 600;
-  padding-top: 10vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  animation: fadeIn 2s;
-}
-
+.f-fg-text,
 .f-intro-text {
   font-size: 22px;
   font-weight: 600;
-  padding-top: 20vw;
+  padding-top: 300px;
   margin-left: 20vw;
   margin-right: 20vw;
   animation: fadeIn 2s;
@@ -386,8 +324,8 @@ nav {
 
 .f-info {
   background-color: lightgrey;
-  border-radius: 10%;
   color: black;
+  border-radius: 10%;
   margin-top: 6vw;
   margin-bottom: auto;
   padding-top: 2.5vw;
@@ -476,6 +414,8 @@ nav {
 }
 
 .emc-brand {
+  position: absolute;
+  top: 0px;
   width: 400px;
 }
 
@@ -484,33 +424,36 @@ nav {
 }
 
 .emc-subbrandB {
+  margin-top: 5px;
   width: 100px;
 }
 
 .emc-brand-blue {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Gotham-Back-Regular';
   color: #38322e;
   /*color: #5058b2;*/
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .emc-brand-red {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Gotham-Back-Regular';
   color:#191817;
   font-weight: 600;
   /*color: #ad574e;*/
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .emc-title-blue {
+  font-family: 'Bebas-Neue', sans-serif;
   color: #38322e;
   /*color: #5058b2;*/
   font-size: 0.8em;
 }
 
 .emc-title-red {
-  color: #ad574e;
   font-size: 0.8em;
+  color: #ad574e;
+  font-family: 'Bebas-Neue', sans-serif;
 }
 
 .gospel-img {
@@ -519,12 +462,13 @@ nav {
   margin-bottom: 30px;
 }
 
-.home-container {
-  background-color: #f4f2ed;
+.header-navbar{
+  height: 66px;
+  border-bottom: 2px solid black;
 }
 
-.header-navbar{
-  border-bottom: 2px solid grey;
+.home-container {
+  background-color: #f4f2ed;
 }
 
 .home-slider {
@@ -556,7 +500,6 @@ nav {
   width: 370px;
   height: auto;
 }
-
 /* Login Section BEGIN */
 
 .l-page-background {
@@ -572,8 +515,8 @@ nav {
 
 .l-cross {
   height: 250px;
-  padding-top: 15px;
-  padding-bottom: 35px;
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 .l-inputA {
@@ -666,8 +609,12 @@ nav {
 }
 
 .nav-link {
-  font-weight: 400;
+  font-weight: 700;
   position: relative;
+}
+
+.test {
+  color: black;
 }
 
 .nav-link:after,

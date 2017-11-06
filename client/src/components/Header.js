@@ -19,22 +19,24 @@ class Header extends Component {
         <Navbar className="header-navbar"color="black" light expand="md" fixed="top">
           <NavbarBrand>
             <Link to="/">
-            <Row className="emc-brand">
-              <div className="emc-subbrandA">
-                <Col>
-                  <span className="emc-brand-blue">E</span>
-                  <span className="emc-brand-blue">M</span>
-                  <span className="emc-brand-blue">C</span>
-                </Col>
+              <div className="emc-brand">
+                <Row>
+                  <div className="emc-subbrandA">
+                    <Col>
+                      <span className="emc-brand-blue">E</span>
+                      <span className="emc-brand-blue">M</span>
+                      <span className="emc-brand-blue">C</span>
+                    </Col>
+                  </div>
+                  <div className="emc-subbrandB">
+                    <Col>
+                      <span className="emc-title-blue"> | EBENEZER </span>
+                      <span className="emc-title-red">MISSION </span>
+                      <span className="emc-title-blue">CHURCH </span>
+                    </Col>
+                  </div>
+                </Row>
               </div>
-              <div className="emc-subbrandB">
-                <Col>
-                  <span className="emc-title-blue"> | EBENEZER </span>
-                  <span className="emc-title-red">MISSION </span>
-                  <span className="emc-title-blue">CHURCH </span>
-                </Col>
-              </div>
-            </Row>
             </Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
