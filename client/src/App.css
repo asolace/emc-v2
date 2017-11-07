@@ -320,13 +320,65 @@ nav {
   background-color: white;
   color: black;
   border-radius: 10%;
-  width: 40vw;
-  margin-top: 2.5vw;
+  width: 500px;
+  margin-top: 30px;
   margin-left: 20vw;
+  margin-right: auto;
   padding: 2.5vw;
   opacity: 0.7;
 }
 
+.f-info {
+  background-color: lightgrey;
+  color: black;
+  border-radius: 10%;
+  margin-top: 6vw;
+  padding-top: 35px;
+  padding-left: 10px;
+  padding-bottom: 35px;
+  margin-right: 10vw;
+  width: 250px;
+  height: auto;
+  text-align: left;
+}
+
+.f-test {
+  width: auto;
+}
+
+@media screen and (max-width: 1175px) {
+  .f-description { margin-left: 10vw; }
+}
+
+@media screen and (max-width: 1025px) {
+  .f-description { margin-left: 20vw; margin-right: 20vw; width: auto;}
+  .f-info { margin-left: 30vw; margin-right: 30vw; width: auto; margin-top: 10px;}
+}
+
+@media screen and (max-width: 800px) {
+  .f-description { margin-left: 15vw; margin-right: 15vw; }
+  .f-info { margin-left: 25vw; margin-right: 25vw }
+}
+
+@media screen and (max-width: 600px) {
+  .f-description { margin-left: 10vw; margin-right: 10vw; }
+  .f-info { margin-left: 20vw; margin-right: 20vw }
+}
+
+@media screen and (max-width: 460px) {
+  .f-description { font-size: 14px; }
+  .f-info { font-size: 14px; }
+  .f-intro-text { padding-top: 260px; }
+  .f-fg-header { padding-top: 10vw;}
+}
+
+@media screen and (max-width: 360px) {
+  .f-description { font-size: 14px; margin-left: 5vw; margin-right: 5vw; margin-top: 10px; }
+  .f-info { font-size: 14px; margin-left: 8vw; margin-right: 8vw;   margin-top: 0vw;}
+  .f-intro-text { margin-left: 10vw; margin-right: 10vw; }
+}
+
+/*
 .f-info {
   background-color: lightgrey;
   color: black;
@@ -340,52 +392,7 @@ nav {
   width: 250px;
   text-align: left;
 }
-
-.f-test-header {
-  font-family: 'Alice', sans-serif;
-  font-weight: 600;
-  margin: auto;
-  padding-bottom: 20px;
-}
-
-.f-test-info {
-  font-size: 14px;
-  border-radius: 10%;
-  margin-top: 1vw;
-  margin-bottom: auto;
-  padding-top: 2.5vw;
-  padding-left: 10px;
-  padding-bottom: 2.5vw;
-  margin-right: 10vw;
-  width: 250px;
-  text-align: left;
-}
-/* before changes */
-
-.fellowship-intro-container {
-  background-attachment: fixed;
-  background-image: url('./photos/biblestudy.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  opacity: 0.85;
-  color: white;
-}
-
-.fellowship-intro-text {
-  font-size: 22px;
-  font-weight: 600;
-  padding-top: 16vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  animation: fadeIn 2s;
-}
-
-.fellowship-intro-header {
-  padding-top: 10vw;
-  font-weight: 900;
-}
+*/
 
 @keyframes fadeIn {
    0% {opacity: 0;}
@@ -723,10 +730,6 @@ nav {
 .nav-link {
   font-weight: 700;
   position: relative;
-}
-
-.test {
-  color: black;
 }
 
 .nav-link:after,

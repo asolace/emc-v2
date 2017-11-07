@@ -7,36 +7,9 @@ import carousel5 from '../photos/carousel/carousel-5.jpg'
 import carousel6 from '../photos/carousel/carousel-6.jpg'
 import carousel7 from '../photos/carousel/carousel-7.jpg'
 
-const carouselItems1 = [
-  {
-    src: carousel4,
-    altText: '',
-    caption: ''
-  },
-  {
-    src: carousel5,
-    altText: '',
-    caption: ''
-  }
-]
-
-const carouselItems2 = [
-  {
-    src: carousel6,
-    altText: '',
-    caption: ''
-  },
-  {
-    src: carousel7,
-    altText: '',
-    caption: ''
-  }
-]
-
 const Fellowship = () => {
   return (
     <div className="f-page-background">
-
       <div className="f-intro-container f-container">
         <p className="f-intro-text">
         "They devoted themselves to the apostles' teaching and to
@@ -50,6 +23,7 @@ const Fellowship = () => {
           <h1 className="f-fg-header">Friends Gathering</h1>
         </ScrollAnimation>
         <Row className="f-row">
+          <div className="f-test">
           <Col>
             <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
               <div className="f-description">
@@ -62,6 +36,7 @@ const Fellowship = () => {
               </div>
             </ScrollAnimation>
           </Col>
+          </div>
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
@@ -183,7 +158,7 @@ const Fellowship = () => {
               <div className="f-description">
                 <p>Saturday group is a safe and confidential place where both non-Christians and Christians come together to share about each others lives.
                   Life can bring many hardships and struggles and group is where one can find ears willing to listen and hearts that welcome. We are joyful
-                  to say that through group many people have found healing and growth. Some of us have even taken it a step further and participated 
+                  to say that through group many people have found healing and growth. Some of us have even taken it a step further and participated
                   in Healing Camps where troubled teens found guidance and support. Anyone is welcome to join!
                 </p>
               </div>
