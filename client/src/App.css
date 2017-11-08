@@ -378,38 +378,6 @@ nav {
   .f-intro-text { margin-left: 10vw; margin-right: 10vw; }
 }
 
-/*
-.f-info {
-  background-color: lightgrey;
-  color: black;
-  border-radius: 10%;
-  margin-top: 6vw;
-  margin-bottom: auto;
-  padding-top: 2.5vw;
-  padding-left: 10px;
-  padding-bottom: 2.5vw;
-  margin-right: 10vw;
-  width: 250px;
-  text-align: left;
-}
-*/
-
-@keyframes fadeIn {
-   0% {opacity: 0;}
-   100% {opacity: 1;}
-}
-/*
-@media screen and (max-width: 450px) {
-  .about-mission-header{ padding-top: 15vw; font-size: 32px; }
-  .about-mission-text{ font-size: 16px; }
-}
-
-@media screen and (max-width: 360px) {
-  .about-mission-header{ padding-top: 28vw; font-size: 28px; }
-  .about-mission-text{ font-size: 14px; }
-}
-*/
-
 /* Fellowship Page END */
 
 .col {
@@ -480,43 +448,82 @@ nav {
   padding-top: 50px;
   font-size: 48px;
   font-weight: 600;
+  color: white;
 }
 
 .g-page {
+  background-color: black;
+  /*
   background-color: #f4f2ed;
+  */
   margin-right: 0px;
-  width: 97.2vw;
-  height: 1000px;
+  width: 98.9vw;
+  height: 1250px;
 }
 
-.g-picA,
-.g-picF {
-  width: 500px;
+.g-posA {
+  position: absolute;
 }
 
-.g-picB,
-.g-picC,
-.g-picD,
-.g-picE {
-  width: 230px;
+.g-colB{
+  left: 32.9vw;
 }
 
-.g-rowA-colA {
-  margin-right: 0px;
-  margin-left: 25%;
+.g-colC{
+  left: 65.9vw;
 }
 
-.g-rowA-colB {
-  margin-left: 0px;
+.g-rowA {
+  top: 15vw;
 }
 
-.g-rowB-colA {
-  margin-right: 0px;
-  margin-left: 25%;
+.g-rowB {
+  top: 48vw;
 }
 
-.g-rowB-colB {
-  margin-left: 0px;
+.g-rowC {
+  top: 81vw;
+}
+.g-pic {
+  padding: 0px;
+  width: 33vw;
+  height: 33vw;
+}
+
+.g-fadein {
+  opacity:0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration:1s;
+}
+
+.g-fadein.one {
+  animation-delay: 0s;
+}
+
+.g-fadein.two {
+  animation-delay: 0.5s;
+}
+
+.g-fadein.three {
+  animation-delay: 1s;
+}
+
+.g-fadein.four {
+  animation-delay: 1.5s;
+}
+
+.g-fadein.five {
+  animation-delay: 2s;
+}
+
+.g-fadein.six {
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Gallery Page END */
