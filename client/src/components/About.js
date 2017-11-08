@@ -149,8 +149,6 @@ const About = () => {
         </div>
       </ScrollAnimation>
 
-      <hr />
-
       <h1 className="about-restofus-header">And the rest of our family!</h1>
 
       <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>

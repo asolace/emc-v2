@@ -44,6 +44,7 @@ nav {
   background-size: cover;
   font-family: 'Roboto', sans-serif;
   height: 92vh;
+  border: solid;
 }
 
 .about-mission-header{
@@ -548,6 +549,7 @@ nav {
   padding-bottom: 265px;
   height: 92vh;
   opacity: 1;
+  border: solid black;
 }
 
 .h-dir-emc {
