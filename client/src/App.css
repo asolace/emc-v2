@@ -44,7 +44,6 @@ nav {
   background-size: cover;
   font-family: 'Roboto', sans-serif;
   height: 92vh;
-  border: solid;
 }
 
 .about-mission-header{
@@ -567,7 +566,6 @@ nav {
   */
   background-color: white;
   height: 66px;
-  border-bottom: 2px solid black;
 }
 
 /* Home Page BEGIN */
@@ -581,7 +579,6 @@ nav {
   padding-bottom: 265px;
   height: 92vh;
   opacity: 1;
-  border: solid black;
 }
 
 .h-dir-emc {
@@ -667,12 +664,6 @@ nav {
   margin: auto;
 }
 
-.l-cross {
-  height: 250px;
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-
 .l-fish{
   height: 200px;
   padding-top: 10px;
@@ -700,6 +691,7 @@ nav {
 }
 
 .l-text {
+  padding-top: 115px;
   font-family: 'Alice', sans-serif;
   font-weight: bold;
   font-size: 20px;

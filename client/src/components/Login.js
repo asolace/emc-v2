@@ -21,12 +21,11 @@ class Login extends Component {
   render() {
     return (
       <div className="l-page-background">
-        <div className="l-fish">
-          <img className="l-fish" src={fish} alt="fish"/>
-        </div>
-        <p className="l-text">"So we, though many, are one body in Christ"</p>
-        <p className="l-text">Romans 12:5 ESV</p>
 
+        <div className="l-text">
+          <p>"So we, though many, are one body in Christ"</p>
+          <p>Romans 12:5 ESV</p>
+        </div>
         <div className="l-row">
           <Row>
             <div className="l-col-login">
