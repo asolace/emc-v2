@@ -12,25 +12,25 @@ import picF from '../photos/emcgallery/6.JPG'
 const Gallery = () => {
   return (
     <div className="g-page">
-    
+
       <div className="g-header">Gallery</div>
       <br/>
-      <div className="g-posA g-rowA g-fadein one">
+      <div className="g-posA g-one g-fadein one">
         <img className="g-pic" src={picA}></img>
       </div>
-      <div className="g-posA g-colB g-rowA g-fadein two">
+      <div className="g-posA g-two g-fadein two">
         <img className="g-pic" src={picB}></img>
       </div>
-      <div className="g-posA g-colC g-rowA g-fadein three">
+      <div className="g-posA g-three g-fadein three">
         <img className="g-pic" src={picC}></img>
       </div>
-      <div className="g-posA g-rowB g-fadein four">
+      <div className="g-posA g-four g-fadein four">
           <img className="g-pic" src={picD}></img>
       </div>
-      <div className="g-posA g-colB g-rowB g-fadein five">
+      <div className="g-posA g-five g-fadein five">
         <img className="g-pic" src={picE}></img>
       </div>
-      <div className="g-posA g-colC g-rowB g-fadein six">
+      <div className="g-posA g-six g-fadein six">
         <img className="g-pic" src={picF}></img>
       </div>
 

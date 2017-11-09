@@ -15,24 +15,6 @@ import carousel1 from '../photos/carousel/carousel-1.jpg'
 import carousel2 from '../photos/carousel/carousel-2.jpg'
 import carousel3 from '../photos/carousel/carousel-3.jpg'
 
-const carouselItems = [
-  {
-    src: carousel1,
-    altText: '',
-    caption: ''
-  },
-  {
-    src: carousel2,
-    altText: '',
-    caption: ''
-  },
-  {
-    src: carousel3,
-    altText: '',
-    caption: ''
-  }
-]
-
 const Home = () => {
   return (
     <div className="home-container">
