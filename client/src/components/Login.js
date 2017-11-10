@@ -27,7 +27,7 @@ class Login extends Component {
           <p>Romans 12:5 ESV</p>
         </div>
         <div className="l-row">
-          <Row>
+          <Row className="l-row">
             <div className="l-col-login">
               <Col>
                 <div className="l-container">
