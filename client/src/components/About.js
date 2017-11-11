@@ -18,18 +18,18 @@ import ArleneVirgil from '../photos/emcleaders/10.jpg';
 const About = () => {
   return (
     <div className="about-page-container">
-      <div className="about-mission-container">
+      <div className="about-mission-background">
+        <div className="about-mission-space" />
+        <div className="about-mission-text-container">
         <h1 className="about-mission-header">Our Mission</h1>
         <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
           <p className="about-mission-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec nec dui et enim commodo facilisis id in magna.
-          Nam ullamcorper nulla nunc, quis maximus lacus consectetur eu.
-          Aenean et diam egestas, vestibulum orci sodales, tristique odio.
-          Aliquam quis varius quam, ultrices euismod ipsum.
-          Integer gravida iaculis mauris ac tristique.
+          The Ebenezer Mission Church exists to bring glory to God by
+          making disciples of all nations by planting our lives
+          amongst people groups and living out obedient life publicly.
           </p>
         </ScrollAnimation>
+        </div>
       </div>
 
       <br /><br />
@@ -90,7 +90,7 @@ const About = () => {
               </div>
             </Col>
             <Col>
-              <h2 className="about-leader-name">Dr. Soo-Il Lee</h2>
+              <h2 className="about-leader-name">Dr. Soo-il Lee</h2>
               <p className="about-leader-text sooil">
                 Dr. Soo-il Lee is a clinician, professor, lecturer, columnist and pastor. He is currently Director of Communioty Residence at Life Recvery center, Department of Psychiatry at Bronx Lebanon Hospital Center. He acquired B.S. and M. Ed. in Physical Education and Sport Sociology, respectively, at Seoul National University. He also received M.Ed. in Therapeutic Recreation at Springfield College, MA in Mental Health/Christian Counseling at Nyack College, and Ph. D. in Health Studies at NYU. He has been adjunct assistant professor at Lehman College (CUNY) and Nyack College (Alliance Graduate School of Counseling. He also teaches counseling theories and practices at two local Korean seminaries. He has been involved with Christian ministry for youth and young adults, currently cooperating pastor at NY Ebenezer Mission Church, Bayside, Queens. He is the recipient of multiple awards from his professional organizations and Korean Community organizations for his God-given pro-bono counseling services. </p>
             </Col>
@@ -99,8 +99,8 @@ const About = () => {
       </ScrollAnimation>
 
       <h1 className="about-deacon-header">Our Deacons</h1>
-      <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
-        <div className="about-deacon-container">
+      <div className="about-deacon-container">
+        <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
           <Row className="about-deacon-rowA">
             <Col>
               <div className="about-deacon-image-borderA">
@@ -116,23 +116,23 @@ const About = () => {
             </Col>
             <Col>
               <div className="about-deacon-image-borderA">
-                <img className="about-deacon-image" src={profilepic} alt="profile"></img>
+                <img className="about-deacon-image" src={Nilsa} alt="profile"></img>
               </div>
-              <h2 className="about-deacon-nameA">Kay Choi</h2>
+              <h2 className="about-deacon-nameA">Nilsa Morales</h2>
             </Col>
             <Col>
               <div className="about-deacon-image-borderA">
-                <img className="about-deacon-image" src={ArleneVirgil} alt="profile"></img>
+                <img className="about-deacon-image" src={profilepic} alt="profile"></img>
               </div>
-              <h2 className="about-deacon-nameA">Arlene & Virgil Macaraeg</h2>
+              <h2 className="about-deacon-nameA">Kay Choi</h2>
             </Col>
           </Row>
           <Row className="about-deacon-rowB">
             <Col>
               <div className="about-deacon-image-borderB">
-                <img className="about-deacon-image" src={Nilsa} alt="profile"></img>
+                <img className="about-deacon-image" src={ArleneVirgil} alt="profile"></img>
               </div>
-              <h2 className="about-deacon-nameB">Nilsa Morales</h2>
+              <h2 className="about-deacon-nameB">Arlene & Virgil Macaraeg</h2>
             </Col>
             <Col>
               <div className="about-deacon-image-borderB">
@@ -147,8 +147,8 @@ const About = () => {
               <h2 className="about-deacon-nameB">Daniel Hsin</h2>
             </Col>
           </Row>
-        </div>
-      </ScrollAnimation>
+        </ScrollAnimation>
+      </div>
 
       <h1 className="about-restofus-header">And the rest of our family!</h1>
 
