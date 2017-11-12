@@ -111,14 +111,8 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
               <div className="f-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                sit amet tincidunt nibh. Nullam et nisl felis.
+                <p>TEE (Theological Education by Extension) is easy to learn and effective training for Christians of all levels to acquire systematic understanding of the Bible and to live out the life of Christ's disciples. The Word makes our daily lives more meaningful.
+                Strongly recommended for everyone who is interested in learning more about the bible!
                 </p>
               </div>
             </ScrollAnimation>
@@ -197,14 +191,8 @@ const Fellowship = () => {
           <Col>
             <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
               <div className="f-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Proin gravida aliquam semper. In laoreet urna lacus, nec varius
-                orci mattis sed. Integer porta non tortor et placerat. Nam mollis
-                eget lectus sed blandit. Morbi dolor lorem, rutrum in tellus ut,
-                congue vehicula ex. Aenean id lorem et diam tempor convallis ac ut
-                nunc. Donec eu augue eu enim laoreet vehicula sed ac ex.
-                Morbi facilisis lorem ante, sed commodo nisi lobortis vitae. Vivamus
-                sit amet tincidunt nibh. Nullam et nisl felis.
+                <p>EMC cooperates with Esther Ha foundation and offers its place for the weekly Parents class. As people learn about empathy, communication, and empowering, they also practice them through sharing and role play. They observe themselves how their characters are transformed, bearing more fruits of Holy Spirit.
+                Please keep in mind that the classes run in Korean.
                 </p>
               </div>
             </ScrollAnimation>

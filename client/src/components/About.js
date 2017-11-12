@@ -45,13 +45,8 @@ const About = () => {
             </Col>
             <Col>
               <h2 className="about-leader-name">Pastor Jae Lee</h2>
-              <p className="about-leader-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec nec dui et enim commodo facilisis id in magna.
-                Nam ullamcorper nulla nunc, quis maximus lacus consectetur eu.
-                Aenean et diam egestas, vestibulum orci sodales, tristique odio.
-                Aliquam quis varius quam, ultrices euismod ipsum.
-                Integer gravida iaculis mauris ac tristique.</p>
+              <p className="about-leader-text jae">
+                Serving as an overseer of EMC, Jae enjoys being friends to everyone he meets through the ministry of EMC.  His passion is sharing the grace of God in more tangible ways by starting Christ-sharing small gatherings, hopefully all around the world.  He is married to Ellen and lives with two middle schoolers, Sophia and Jeremy.   </p>
             </Col>
           </Row>
           <Row className="about-leader-row">
