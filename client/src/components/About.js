@@ -18,12 +18,12 @@ import ArleneVirgil from '../photos/emcleaders/10.jpg';
 const About = () => {
   return (
     <div className="about-page-container">
-      <div className="about-mission-background">
-        <div className="about-mission-space" />
-        <div className="about-mission-text-container">
-        <h1 className="about-mission-header">Our Mission</h1>
+      <div className="aa">
+        <div className="ae" />
+        <div className="ad">
+        <h1 className="ab">Our Mission</h1>
         <ScrollAnimation animateIn='fadeIn' initiallyVisible={false} animateOnce={true}>
-          <p className="about-mission-text">
+          <p className="ac">
           The Ebenezer Mission Church exists to bring glory to God by
           making disciples of all nations by planting our lives
           amongst people groups and living out obedient life publicly.

@@ -36,7 +36,7 @@ nav {
 /* About Page Begin */
 
 /* About Mission Section BEGIN */
-.about-mission-background{
+.aa{
   background-attachment: fixed;
   background-image: url('./photos/blurrychurchedited.jpg');
   background-position: center center;
@@ -44,15 +44,16 @@ nav {
   background-size: cover;
   font-family: 'Roboto', sans-serif;
   height: 92vh;
+  min-height: 400px;
 }
 
-.about-mission-header{
+.ab{
   font-weight: 600;
   padding-top: 5vh;
   color: black;
 }
 
-.about-mission-text{
+.ac{
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -60,7 +61,7 @@ nav {
   color: black;
 }
 
-.about-mission-text-container{
+.ad{
   background-color: white;
   border-radius: 10%;
   opacity: 0.55;
@@ -71,22 +72,23 @@ nav {
   padding-bottom: 5vh;
 }
 
-.about-mission-space{
-  padding-top: 175px;
+.ae{
+  padding-top: 25vh;
 }
 
 @media screen and (max-width: 900px) {
-  .about-mission-header{ padding-top: 175px; font-size: 32px; }
-  .about-mission-text{ font-size: 16px; }
+  .ab{ font-size: 32px; }
+  .ac{ font-size: 20px; }
 }
 
 @media screen and (max-width: 600px) {
-  .about-mission-header{ padding-top: 135px; font-size: 32px; }
-  .about-mission-text{ font-size: 16px; }
+  .ab{ font-size: 32px; }
+  .ac{ font-size: 16px; }
+  .ad{ margin-left: 10vw; margin-right: 10vw; }
 }
 @media screen and (max-width: 360px) {
-  .about-mission-header{ padding-top: 120px; font-size: 28px; }
-  .about-mission-text{ font-size: 14px; }
+  .ab{ font-size: 28px; }
+  .ac{ font-size: 14px; }
 }
 /* About Mission Section END */
 
