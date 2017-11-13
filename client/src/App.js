@@ -7,13 +7,11 @@ import Home from './components/Home'
 import Header from './components/Header'
 import About from './components/About'
 import Fellowship from './components/Fellowship'
-import InvalidLogin from './components/InvalidLogin.js'
+import InvalidLogin from './components/InvalidLogin'
 import Login from './components/Login'
 import Footer from './components/Footer'
 import Gallery from './components/Gallery'
 import SignUp from './components/SignUp'
-
-import Warping from './components/Warping'
 
 class App extends Component {
   render() {

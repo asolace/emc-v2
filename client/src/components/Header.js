@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Row, Col, Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
@@ -17,26 +17,24 @@ class Header extends Component {
     return (
       <div className="header">
         <Navbar className="ea" color="black" light expand="md" fixed="top">
-          <NavbarBrand>
-            <Link to="/">
-              <div className="eb">
-                <Row>
-                  <div className="ec">
-                    <Col>
-                      <span className="ee">EMC</span>
-                    </Col>
-                  </div>
-                  <div className="ed">
-                    <Col>
-                      <span className="ef"> | EBENEZER </span>
-                      <span className="eg">MISSION </span>
-                      <span className="ef">CHURCH </span>
-                    </Col>
-                  </div>
-                </Row>
-              </div>
-            </Link>
-          </NavbarBrand>
+          <Link className="navbar-brand" to="/">
+            <div className="eb">
+              <Row>
+                <div className="ec">
+                  <Col>
+                    <span className="ee">EMC</span>
+                  </Col>
+                </div>
+                <div className="ed">
+                  <Col>
+                    <span className="ef"> | EBENEZER </span>
+                    <span className="eg">MISSION </span>
+                    <span className="ef">CHURCH </span>
+                  </Col>
+                </div>
+              </Row>
+            </div>
+          </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

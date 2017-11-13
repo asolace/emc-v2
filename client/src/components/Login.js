@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Input, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
 import FaLock from 'react-icons/lib/fa/lock';
 

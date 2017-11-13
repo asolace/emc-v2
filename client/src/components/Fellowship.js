@@ -1,11 +1,6 @@
 import React from 'react';
-import { Row, Col, UncontrolledCarousel } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
-
-import carousel4 from '../photos/carousel/carousel-4.jpg'
-import carousel5 from '../photos/carousel/carousel-5.jpg'
-import carousel6 from '../photos/carousel/carousel-6.jpg'
-import carousel7 from '../photos/carousel/carousel-7.jpg'
 
 const Fellowship = () => {
   return (
