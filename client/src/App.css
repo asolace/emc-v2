@@ -745,10 +745,21 @@ nav {
   background-color: #ad574e;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin: auto;
   width: 250px;
   color: white;
+}
+
+.lp{
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+}
+
+.lq{
+  color: green;
 }
 
 .le {

@@ -25,8 +25,9 @@ class Login extends Component {
         <div className="lb">
           <div className="lc">
             <div className="ld">
-              <p>"So we, though many, are one body in Christ"</p>
-              <p>Romans 12:5 ESV</p>
+              <p className="lp">"So we, though many, </p>
+              <p className="lp">are one body in Christ"</p>
+              <p className="lp">Romans 12:5 ESV</p>
             </div>
             <Form>
               <FormGroup>
@@ -45,7 +46,7 @@ class Login extends Component {
               </FormGroup>
               <Button onClick={this.onSubmit} color="info"><div className="li">Login</div></Button>
             </Form>
-            <p className="lj">Or <a href="/signup">sign up</a></p>
+            <p className="lj">Or <a href="/signup" className="lq">sign up</a></p>
           </div>
         </div>
 
