@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   state = {

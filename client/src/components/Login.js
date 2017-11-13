@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Input, Row, Col } from 'reactstrap';
-import cross from '../photos/logincross.png'
-import fish from '../photos/jesusfish.png'
+import { Link } from 'react-router-dom';
+import FaUser from 'react-icons/lib/fa/user';
+import FaLock from 'react-icons/lib/fa/lock';
 
 class Login extends Component {
   state = {
@@ -20,66 +21,39 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="l-page-background">
-
-        <div className="l-text">
-          <p>"So we, though many, are one body in Christ"</p>
-          <p>Romans 12:5 ESV</p>
-        </div>
-        <div className="l-row">
-          <Row className="l-row">
-            <div className="l-col-login">
-              <Col>
-                <div className="l-container">
-                  <Form>
-                    <FormGroup>
-                      <div className="l-inputA">
-                        <Input onChange={this.onChange} type="username" name="username" placeholder="Username" />
-                      </div>
-                    </FormGroup>
-                    <FormGroup>
-                      <div className="l-inputB">
-                        <Input onChange={this.onChange} type="password" name="password" placeholder="Password" />
-                      </div>
-                    </FormGroup>
-                  </Form>
-                  <Button onClick={this.onSubmit} color="info">Login</Button>
+      <div className="la">
+        <div className="lb">
+          <div className="lc">
+            <div className="ld">
+              <p>"So we, though many, are one body in Christ"</p>
+              <p>Romans 12:5 ESV</p>
+            </div>
+            <Form>
+              <FormGroup>
+                <div className="le">
+                  <div className="lm"></div>
+                  <Input className="ll" onChange={this.onChange} type="username" name="username" placeholder="Username" required/>
+                  <span className="lf"><FaUser /></span>
                 </div>
-              </Col>
-            </div>
-
-            <div className="l-col-vr">
-              <Col>
-                <div className="l-vr"></div>
-              </Col>
-            </div>
-
-            <div className="l-col-signup">
-              <Col>
-                <div className="l-container">
-                  <Form>
-                    <FormGroup>
-                      <div className="l-inputA">
-                        <Input onChange={this.onChange} type="username" name="username" placeholder="example@domain.com" />
-                      </div>
-                    </FormGroup>
-                    <FormGroup>
-                      <div className="l-inputB">
-                        <Input onChange={this.onChange} type="password" name="password" placeholder="Password" />
-                      </div>
-                    </FormGroup>
-                  </Form>
-                  <Button onClick={this.onSubmit} color="success">Sign-Up</Button>
+              </FormGroup>
+              <FormGroup>
+                <div className="lg">
+                  <div className="ln"></div>
+                  <Input className="lo" onChange={this.onChange} type="password" name="password" placeholder="Password" required/>
+                  <span className="lh"><FaLock /></span>
                 </div>
-              </Col>
-            </div>
-          </Row>
+              </FormGroup>
+              <Button onClick={this.onSubmit} color="info"><div className="li">Login</div></Button>
+            </Form>
+            <p className="lj">Or <a href="/signup">sign up</a></p>
+          </div>
         </div>
 
-        <div className="l-closing-statement">
+        <div className="lk">
           <p>Here at EMC, we value membership and relationships very highly.</p>
           <p>If you would like to be a part of our family please feel free to sign-up!</p>
         </div>
+
       </div>
     )
   }

@@ -35,7 +35,7 @@ const Home = () => {
       <Container className="h-tri-container">
         <Row>
           <Col>
-            <h3 className="h-tri-header">Time <span className="section-icon"><FaClock/></span></h3>
+            <h3 className="h-tri-header"><span className="section-icon"><FaClock/></span></h3>
             <div className="h-tri-content">
               <h2 className="h-dir-emc">Sunday</h2>
               <p className="h-dir-emc">
@@ -46,7 +46,7 @@ const Home = () => {
             </div>
           </Col>
           <Col>
-            <h3 className="h-tri-header">Location <span className="section-icon"><FaMapMarker/></span></h3>
+            <h3 className="h-tri-header"><span className="section-icon"><FaMapMarker/></span></h3>
             <div className="h-tri-content">
               <h2 className="h-dir-emc">Ebenezer Mission</h2>
               <h2 className="h-dir-emc">Church</h2>
