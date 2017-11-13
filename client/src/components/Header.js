@@ -16,23 +16,21 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Navbar className="header-navbar" color="black" light expand="md" fixed="top">
+        <Navbar className="ea" color="black" light expand="md" fixed="top">
           <NavbarBrand>
             <Link to="/">
-              <div className="emc-brand">
+              <div className="eb">
                 <Row>
-                  <div className="emc-subbrandA">
+                  <div className="ec">
                     <Col>
-                      <span className="emc-brand-blue">E</span>
-                      <span className="emc-brand-blue">M</span>
-                      <span className="emc-brand-blue">C</span>
+                      <span className="ee">EMC</span>
                     </Col>
                   </div>
-                  <div className="emc-subbrandB">
+                  <div className="ed">
                     <Col>
-                      <span className="emc-title-blue"> | EBENEZER </span>
-                      <span className="emc-title-red">MISSION </span>
-                      <span className="emc-title-blue">CHURCH </span>
+                      <span className="ef"> | EBENEZER </span>
+                      <span className="eg">MISSION </span>
+                      <span className="ef">CHURCH </span>
                     </Col>
                   </div>
                 </Row>
