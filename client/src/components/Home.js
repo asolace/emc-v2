@@ -1,19 +1,8 @@
 import React from 'react';
-import Slider from './Slider'
-import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap';
 import Gmaps from './Gmaps'
 import FaClock from 'react-icons/lib/fa/clock-o'
 import FaMapMarker from 'react-icons/lib/fa/map-marker'
-import ScrollAnimation from 'react-animate-on-scroll';
-
-import members from '../photos/people/IMG_0582.JPG'
-import events from '../photos/people/IMG_0433.jpg'
-import prayers from '../photos/people/IMG_0510.JPG'
-
-import carousel1 from '../photos/carousel/carousel-1.jpg'
-import carousel2 from '../photos/carousel/carousel-2.jpg'
-import carousel3 from '../photos/carousel/carousel-3.jpg'
 
 const Home = () => {
   return (

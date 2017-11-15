@@ -25,7 +25,6 @@ const Fellowship = () => {
           <h1 className="f-fg-header">Friends Gathering</h1>
         </ScrollAnimation>
         <Row className="f-row">
-
           <Col>
             <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
               <div className="f-description">
