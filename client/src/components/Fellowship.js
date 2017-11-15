@@ -1,11 +1,13 @@
 import React from 'react';
-import { Row, Col, UncontrolledCarousel } from 'reactstrap';
+import { Button, Row, Col, UncontrolledCarousel } from 'reactstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollToTop from 'react-scroll-up';
 
-import carousel4 from '../photos/carousel/carousel-4.jpg'
-import carousel5 from '../photos/carousel/carousel-5.jpg'
-import carousel6 from '../photos/carousel/carousel-6.jpg'
-import carousel7 from '../photos/carousel/carousel-7.jpg'
+import carousel4 from '../photos/carousel/carousel-4.jpg';
+import carousel5 from '../photos/carousel/carousel-5.jpg';
+import carousel6 from '../photos/carousel/carousel-6.jpg';
+import carousel7 from '../photos/carousel/carousel-7.jpg';
+import uparrow from '../photos/uparrow.png';
 
 const Fellowship = () => {
   return (
@@ -23,7 +25,7 @@ const Fellowship = () => {
           <h1 className="f-fg-header">Friends Gathering</h1>
         </ScrollAnimation>
         <Row className="f-row">
-          <div className="f-test">
+
           <Col>
             <ScrollAnimation animateIn='bounceInLeft' animateOnce={true}>
               <div className="f-description">
@@ -36,7 +38,7 @@ const Fellowship = () => {
               </div>
             </ScrollAnimation>
           </Col>
-          </div>
+
           <Col>
             <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
               <div className="f-info">
@@ -221,6 +223,9 @@ const Fellowship = () => {
           </Col>
         </Row>
       </div>
+      <ScrollToTop showUnder={500}>
+        <img className="f-button" src={ uparrow }></img>
+      </ScrollToTop>
     </div>
   )
 }
