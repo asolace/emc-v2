@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Alice|PT+Serif+Caption|Archivo+Black');
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed|Cabin|Varela+Round');
 @font-face {
   font-family: 'Gotham-Back-Regular';
   src: local('Gotham-Back-Regular'), url(./fonts/GothamBlackRegular.ttf) format('truetype');
@@ -391,17 +392,13 @@ nav {
 
 /* Fellowship Page BEGIN */
 
-.f-page-background {
-  font-family: 'Roboto', sans-serif;
-}
-
 .f-button {
   width: calc(25px + 5vw);
 }
-
+/*
 .f-container {
   background-attachment: fixed;
-  background-position: center;
+  background-position: 50% - 100px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 45vw;
@@ -440,20 +437,22 @@ nav {
   min-height: 768px;
 }
 
-.f-fg-header,
-.f-tc-header,
-.f-pm-header,
-.f-sg-header,
-.f-pg-header {
-  padding-top: 10vw;
+*/
+
+.f-header {
+  background-color: white;
+  margin-top: 10vw;
+  padding: 25px;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+  opacity: 0.75;
 }
 
-.f-pm-header {
-  color: black;
-}
-
-.f-fg-text,
-.f-intro-text {
+.f-intro-text{
+  color: white;
+  height: 45vw;
+  min-height: 350px;
+  font-family: 'Alice', sans-serif;
   font-size: 22px;
   font-weight: 600;
   padding-top: calc(22vw - 40px);
@@ -462,6 +461,42 @@ nav {
   animation: fadeIn 2s;
 }
 
+.f-bgimage{
+  width: 100vw;
+  height: 850px;
+}
+
+.f-container {
+  height: 40vw;
+}
+
+.f-container.fg {
+  min-height: 956px;
+}
+.f-container.pm {
+  min-height: 865px;
+}
+.f-container.tc {
+  min-height: 745px;
+}
+.f-container.sg {
+  min-height: 864px;
+}
+.f-container.pg {
+  min-height: 768px;
+}
+
+/*
+.f-intro-text {
+  font-size: 22px;
+  font-weight: 600;
+  padding-top: calc(22vw - 40px);
+  margin-left: 20vw;
+  margin-right: 20vw;
+  animation: fadeIn 2s;
+}
+*/
+
 .f-row {
   margin-top: 10vh;
   width: 95vw;
@@ -469,20 +504,21 @@ nav {
 
 .f-description {
   background-color: white;
-  color: black;
   border-radius: 10%;
+  color: black;
+  font-family: 'Cabin', sans-serif;
   width: 494px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 100px;
   padding: 35px;
-  opacity: 0.7;
   text-align: justify;
 }
 
 .f-info {
   background-color: lightgrey;
-  color: black;
   border-radius: 10%;
+  color: black;
+  font-family: 'Asap Condensed', sans-serif;
   padding-top: 35px;
   padding-left: 10px;
   padding-bottom: 35px;
@@ -493,23 +529,23 @@ nav {
 }
 
 .f-info.fg{
-  margin-top: 96px;
+  margin-top: 165px;
 }
 
 .f-info.pm{
-  margin-top: 107px;
+  margin-top: 177px;
 }
 
 .f-info.tc{
-  margin-top: 70px;
+  margin-top: 140px;
 }
 
 .f-info.sg{
-  margin-top: 108px;
+  margin-top: 178px;
 }
 
 .f-info.pg{
-  margin-top: 85px;
+  margin-top: 155px;
 }
 
 .f-colA {
@@ -531,6 +567,10 @@ nav {
   .f-info.tc,
   .f-info.sg,
   .f-info.pg { margin-top: 6vw;}
+  .f-test{
+    width: auto;
+    height: 850px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -544,7 +584,13 @@ nav {
 }
 
 @media screen and (max-width: 360px) {
+  .f-description{ margin-top: 30px; }
   .f-intro-text { margin-left: 10vw; margin-right: 10vw; }
+  .f-container.fg { min-height: 973px; }
+  .f-container.pm { min-height: 927px; }
+  .f-container.tc { min-height: 761px; }
+  .f-container.sg { min-height: 946px; }
+  .f-container.pg { min-height: 830px; }
 }
 
 /* Fellowship Page END */
