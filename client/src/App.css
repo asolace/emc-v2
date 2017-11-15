@@ -404,33 +404,40 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 45vw;
+  min-height: 800px;
   color: white;
   opacity: 0.8;
 }
 
 .f-intro-container {
   background-image: url('./photos/biblecandleedited.JPG');
+  min-height: 350px;
 }
 
 .f-fg-container {
   background-image: url('./photos/diversebiblestudy.jpg');
+  min-height: 956px;
 }
 
 .f-pm-container {
   background-image: url('./photos/prayergroup.jpg');
+  min-height: 865px;
 }
 
 .f-tc-container{
   background-image: url('./photos/seminarybook.jpg');
+  min-height: 745px;
 }
 
 .f-sg-container{
   background-image: url('./photos/saturdaygroup.jpg');
+  min-height: 864px;
 }
 
 .f-pg-container{
   background-image: url('./photos/family.jpeg');
+  min-height: 768px;
 }
 
 .f-fg-header,
@@ -449,13 +456,14 @@ nav {
 .f-intro-text {
   font-size: 22px;
   font-weight: 600;
-  padding-top: 300px;
+  padding-top: calc(22vw - 40px);
   margin-left: 20vw;
   margin-right: 20vw;
   animation: fadeIn 2s;
 }
 
 .f-row {
+  margin-top: 10vh;
   width: 95vw;
 }
 
@@ -463,57 +471,79 @@ nav {
   background-color: white;
   color: black;
   border-radius: 10%;
-  width: 500px;
+  width: 494px;
+  margin: auto;
   margin-top: 30px;
-  margin-left: 20vw;
-  margin-right: auto;
-  padding: 2.5vw;
+  padding: 35px;
   opacity: 0.7;
+  text-align: justify;
 }
 
 .f-info {
   background-color: lightgrey;
   color: black;
   border-radius: 10%;
-  margin-top: 6vw;
   padding-top: 35px;
   padding-left: 10px;
   padding-bottom: 35px;
   margin-right: 10vw;
-  width: 250px;
+  width: 255px;
   height: auto;
-  text-align: left;
+  text-align: justify;
 }
 
-@media screen and (max-width: 1175px) {
-  .f-description { margin-left: 10vw; }
+.f-info.fg{
+  margin-top: 110px;
 }
 
-@media screen and (max-width: 1025px) {
-  .f-description { margin-left: 20vw; margin-right: 20vw; width: auto;}
-  .f-info { margin-left: 30vw; margin-right: 30vw; width: auto; margin-top: 10px;}
+.f-info.pm{
+  margin-top: 107px;
 }
 
-@media screen and (max-width: 800px) {
-  .f-description { margin-left: 15vw; margin-right: 15vw; }
-  .f-info { margin-left: 25vw; margin-right: 25vw }
+.f-info.tc{
+  margin-top: 70px;
 }
 
-@media screen and (max-width: 600px) {
-  .f-description { margin-left: 10vw; margin-right: 10vw; }
-  .f-info { margin-left: 20vw; margin-right: 20vw }
+.f-info.sg{
+  margin-top: 108px;
+}
+
+.f-info.pg{
+  margin-top: 85px;
+}
+
+.f-colA {
+  margin-left: calc(50vw - 411px);
+  width: 500px;
+}
+
+.f-colB {
+  margin-left: 50px;
+  width: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .f-row{ margin-top: 0vh; }
+  .f-colA { margin-left: calc(50vw - 255px);}
+  .f-colB { margin-left: calc(50vw - 136px); width: 500px; }
+  .f-info.fg,
+  .f-info.pm,
+  .f-info.tc,
+  .f-info.sg,
+  .f-info.pg { margin-top: 6vw;}
+}
+
+@media screen and (max-width: 550px) {
+  .f-colA { margin: 0; width: auto;}
+  .f-description { padding: 25px; width: auto; margin-left: 8.5vw; margin-right: 0vw;}
+  .f-intro-text { padding-top: 18vw; }
 }
 
 @media screen and (max-width: 460px) {
-  .f-description { font-size: 14px; }
-  .f-info { font-size: 14px; }
-  .f-intro-text { padding-top: 260px; }
   .f-fg-header { padding-top: 10vw;}
 }
 
 @media screen and (max-width: 360px) {
-  .f-description { font-size: 14px; margin-left: 5vw; margin-right: 5vw; margin-top: 10px; }
-  .f-info { font-size: 14px; margin-left: 8vw; margin-right: 8vw;   margin-top: 0vw;}
   .f-intro-text { margin-left: 10vw; margin-right: 10vw; }
 }
 
