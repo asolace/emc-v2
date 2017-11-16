@@ -245,7 +245,7 @@ const Fellowship = () => {
         </div>
       </Parallax>
 
-      <ScrollToTop style={ scrolltopstyles } showUnder={500}>
+      <ScrollToTop showUnder={500}>
         <img className="f-button" alt="up arrow" src={ uparrow }></img>
       </ScrollToTop>
     </div>

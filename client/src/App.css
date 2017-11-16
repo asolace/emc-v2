@@ -33,7 +33,7 @@ nav {
 /* About Page Begin */
 
 /* About Mission Section BEGIN */
-.aa{
+.aa {
   background-attachment: fixed;
   background-image: url('./photos/blurrychurchedited.jpg');
   background-position: center center;
@@ -44,13 +44,13 @@ nav {
   min-height: 400px;
 }
 
-.ab{
+.ab {
   font-weight: 600;
   padding-top: 5vh;
   color: black;
 }
 
-.ac{
+.ac {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -58,7 +58,7 @@ nav {
   color: black;
 }
 
-.ad{
+.ad {
   background-color: white;
   border-radius: 10%;
   opacity: 0.55;
@@ -69,8 +69,18 @@ nav {
   padding-bottom: 5vh;
 }
 
-.ae{
+.ae {
   padding-top: 25vh;
+}
+
+.af {
+  width: 100vw;
+  height: 850px;
+}
+
+.ag {
+  height: 45vw;
+  min-height: 350px;
 }
 
 @media screen and (max-width: 900px) {
@@ -567,7 +577,7 @@ nav {
   .f-info.tc,
   .f-info.sg,
   .f-info.pg { margin-top: 6vw;}
-  .f-test{
+  .f-bgimage{
     width: auto;
     height: 850px;
   }
@@ -586,11 +596,11 @@ nav {
 @media screen and (max-width: 360px) {
   .f-description{ margin-top: 30px; }
   .f-intro-text { margin-left: 10vw; margin-right: 10vw; }
-  .f-container.fg { min-height: 973px; }
-  .f-container.pm { min-height: 927px; }
-  .f-container.tc { min-height: 761px; }
-  .f-container.sg { min-height: 946px; }
-  .f-container.pg { min-height: 830px; }
+  .f-container.fg { min-height: 988px; }
+  .f-container.pm { min-height: 940px; }
+  .f-container.tc { min-height: 751px; }
+  .f-container.sg { min-height: 962px; }
+  .f-container.pg { min-height: 820px; }
 }
 
 /* Fellowship Page END */

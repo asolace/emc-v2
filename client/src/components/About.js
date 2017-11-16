@@ -1,8 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Background, Parallax } from 'react-parallax';
 import GroupPic from '../photos/people/IMG_0582.JPG';
 import profilepic from '../photos/tempprofilepic.jpg';
+import missionimage from '../photos/blurrychurchedited.jpg'
 
 import Ricky from '../photos/emcleaders/1.jpg';
 import Jae from '../photos/emcleaders/2.jpg';
