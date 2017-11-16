@@ -300,19 +300,6 @@ nav {
 
 /* About Page END */
 
-.col {
-  padding: 10px 0 0 0;
-}
-
-.container {
-  margin-top: 130px;
-}
-
-.direction-emc {
-  font-size: 1.3em;
-  font-weight: 900;
-}
-
 /* Header BEGIN */
 
 .eb {
@@ -736,6 +723,8 @@ nav {
   opacity: 1;
 }
 
+.col { padding: 10px 0 0 0; }
+
 .h-dir-emc {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
@@ -761,11 +750,19 @@ nav {
 
 .h-text {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.3em
+  font-size: 1.3em;
 }
 
+.h-tri-colA { margin: auto }
+
+.h-tri-colB { margin: auto }
+
 .h-tri-container {
-  padding-bottom: 200px;
+  padding-bottom: 35px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px grey;
 }
 
 .h-tri-content {
@@ -778,6 +775,20 @@ nav {
   font-weight: 900;
 }
 
+.h-space {
+  padding-top: 100px;
+}
+
+.h-subintro-container {
+  margin-top: 0px;
+  padding: 100px;
+}
+
+.h-vr {
+  border-left: 6px solid grey;
+  margin-top: 25.5px;
+  height: 250px;
+}
 .home-container {
   background-color: #f4f2ed;
   font-family: 'Roboto', sans-serif;
@@ -798,6 +809,8 @@ nav {
 
 @media screen and (max-width: 500px){
   .h-intro-text { margin-right: 38vw; font-size: 18px;}
+  .h-tri-colA { margin-left: calc(50vw- 100px) }
+  .h-tri-colB { margin-left: calc(50vw- 100px) }
 }
 
 /* Home Page END */

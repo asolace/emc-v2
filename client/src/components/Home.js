@@ -7,13 +7,15 @@ import FaMapMarker from 'react-icons/lib/fa/map-marker'
 const Home = () => {
   return (
     <div className="home-container">
+
       <div className="h-container">
         <h1 className="h-intro-text">Then Samuel took a stone and set it up between Mizpah and
         Shen. He named it Ebenezer, saying, “Thus far the Lord has
         helped us.”</h1>
         <h1 className="h-intro-text">1 Samuel 7:12 NIV</h1>
       </div>
-      <div className="container">
+
+      <div className="h-subintro-container">
         <h3 className="h-header">Friends and Family Devoted to Christ!</h3><br/>
         <p className="h-text">
           Ebenezer Mission Church is a <b>missional</b> church.
@@ -23,40 +25,49 @@ const Home = () => {
 
       <Container className="h-tri-container">
         <Row>
-          <Col>
-            <h3 className="h-tri-header"><span className="section-icon"><FaClock/></span></h3>
-            <div className="h-tri-content">
-              <h2 className="h-dir-emc">Sunday</h2>
-              <p className="h-dir-emc">
-                English 12:30 PM<br/>
-                Chinese 1:00 PM<br/>
-                Korean 10:45 AM
-              </p>
-            </div>
-          </Col>
-          <Col>
-            <h3 className="h-tri-header"><span className="section-icon"><FaMapMarker/></span></h3>
-            <div className="h-tri-content">
-              <h2 className="h-dir-emc">Ebenezer Mission</h2>
-              <h2 className="h-dir-emc">Church</h2>
-              <p className="h-dir-emc">
-                22016 Union Tpke,<br/> Oakland Gardens, NY 11364
-              </p>
-            </div>
-          </Col>
+          <div className="h-tri-colA">
+            <Col>
+              <h3 className="h-tri-header"><span className="section-icon"><FaClock/></span></h3>
+              <div className="h-tri-content">
+                <h2 className="h-dir-emc">Sunday</h2>
+                <p className="h-dir-emc">
+                  English 12:30 PM<br/>
+                  Chinese 1:00 PM<br/>
+                  Korean 10:45 AM
+                </p>
+              </div>
+            </Col>
+          </div>
+          <div>
+            <Col>
+              <div className="h-vr" />
+            </Col>
+          </div>
+          <div className="h-tri-colB">
+            <Col>
+              <h3 className="h-tri-header"><span className="section-icon"><FaMapMarker/></span></h3>
+              <div className="h-tri-content">
+                <h2 className="h-dir-emc">EMC</h2>
+                <p className="h-dir-emc">
+                  22016 Union Tpke,<br/> Oakland Gardens,<br/> NY 11364
+                </p>
+              </div>
+            </Col>
+          </div>
           <div className="h-map">
-          <Col>
-            <Gmaps
-              isMarkerShown
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYjYt7PpDffRruRe3nHn85J0vVdcx-V3g&v3.exp&libraries=geometry,drawing,places"
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `300px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
-          </Col>
+            <Col>
+              <Gmaps
+                isMarkerShown
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYjYt7PpDffRruRe3nHn85J0vVdcx-V3g&v3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `300px` }} />}
+                mapElement={<div style={{ height: `100%` }} />}
+              />
+            </Col>
           </div>
         </Row>
       </Container>
+      <div className="h-space" />
     </div>
   )
 
