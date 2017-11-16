@@ -1,19 +1,28 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Gmaps from './Gmaps'
-import FaClock from 'react-icons/lib/fa/clock-o'
-import FaMapMarker from 'react-icons/lib/fa/map-marker'
+import { Background, Parallax } from 'react-parallax';
+import Gmaps from './Gmaps';
+import FaClock from 'react-icons/lib/fa/clock-o';
+import FaMapMarker from 'react-icons/lib/fa/map-marker';
+
+import bgimg from '../photos/ebenezerrockedited.jpg';
 
 const Home = () => {
   return (
     <div className="home-container">
 
-      <div className="h-container">
-        <h1 className="h-intro-text">Then Samuel took a stone and set it up between Mizpah and
-        Shen. He named it Ebenezer, saying, “Thus far the Lord has
-        helped us.”</h1>
-        <h1 className="h-intro-text">1 Samuel 7:12 NIV</h1>
-      </div>
+      <Parallax strength={500}>
+        <Background>
+          <img className="h-bgimage" src={bgimg}></img>
+        </Background>
+        <div className="h-cont">
+          <div className="h-intro-txt">
+            Then Samuel took a stone and set it up between Mizpah and
+            Shen. He named it Ebenezer, saying, “Thus far the Lord has
+            helped us.”<br/>1 Samuel 7:12 NIV
+          </div>
+        </div>
+      </Parallax>
 
       <div className="h-subintro-container">
         <h3 className="h-header">Friends and Family Devoted to Christ!</h3><br/>
@@ -27,7 +36,7 @@ const Home = () => {
         <Row>
           <div className="h-tri-colA">
             <Col>
-              <h3 className="h-tri-header"><span className="section-icon"><FaClock/></span></h3>
+              <h3 className="h-tri-header"><span className="h-section-icon"><FaClock/></span></h3>
               <div className="h-tri-content">
                 <h2 className="h-dir-emc">Sunday</h2>
                 <p className="h-dir-emc">
@@ -38,14 +47,14 @@ const Home = () => {
               </div>
             </Col>
           </div>
-          <div>
+          <div className="h-vr-col">
             <Col>
               <div className="h-vr" />
             </Col>
           </div>
           <div className="h-tri-colB">
             <Col>
-              <h3 className="h-tri-header"><span className="section-icon"><FaMapMarker/></span></h3>
+              <h3 className="h-tri-header"><span className="h-section-icon"><FaMapMarker/></span></h3>
               <div className="h-tri-content">
                 <h2 className="h-dir-emc">EMC</h2>
                 <p className="h-dir-emc">

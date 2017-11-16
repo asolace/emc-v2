@@ -392,49 +392,6 @@ nav {
 .f-button {
   width: calc(25px + 5vw);
 }
-/*
-.f-container {
-  background-attachment: fixed;
-  background-position: 50% - 100px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 45vw;
-  min-height: 800px;
-  color: white;
-  opacity: 0.8;
-}
-
-.f-intro-container {
-  background-image: url('./photos/biblecandleedited.JPG');
-  min-height: 350px;
-}
-
-.f-fg-container {
-  background-image: url('./photos/diversebiblestudy.jpg');
-  min-height: 956px;
-}
-
-.f-pm-container {
-  background-image: url('./photos/prayergroup.jpg');
-  min-height: 865px;
-}
-
-.f-tc-container{
-  background-image: url('./photos/seminarybook.jpg');
-  min-height: 745px;
-}
-
-.f-sg-container{
-  background-image: url('./photos/saturdaygroup.jpg');
-  min-height: 864px;
-}
-
-.f-pg-container{
-  background-image: url('./photos/family.jpeg');
-  min-height: 768px;
-}
-
-*/
 
 .f-header {
   background-color: white;
@@ -711,16 +668,24 @@ nav {
 /* Gallery Page END */
 
 /* Home Page BEGIN */
-.h-container {
-  background-image: url('./photos/ebenezerrockedited.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+.h-bgimage{
+  width: 100vw;
+  height: 850px;
+}
+
+.h-cont{
+  height: 40vw;
+  min-height: 350px;
+}
+
+.h-intro-txt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  margin-top: 17.5vw;
+  margin-left: calc(20vw - 80px);
+  margin-right: calc(55vw - 100px);
   color: white;
-  padding-top: 250px;
-  padding-bottom: 265px;
-  height: 92vh;
-  opacity: 1;
+  animation: fadeIn 2s;
 }
 
 .col { padding: 10px 0 0 0; }
@@ -734,15 +699,6 @@ nav {
   font-family: 'Roboto', sans-serif;
 }
 
-.h-intro-text {
-  font-family: 'Roboto', sans-serif;
-  margin-left: 10vw;
-  margin-right: 50vw;
-  font-size: 28px;
-  color: white;
-  animation: fadeIn 2s;
-}
-
 .h-map{
   width: 350px;
   height: 100px;
@@ -753,14 +709,17 @@ nav {
   font-size: 1.3em;
 }
 
-.h-tri-colA { margin: auto }
+.h-tri-colA {
+   margin: auto;
+}
 
-.h-tri-colB { margin: auto }
+.h-tri-colB {
+   margin: auto;
+}
 
 .h-tri-container {
   padding-bottom: 35px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 100px;
   background-color: white;
   box-shadow: 1px 1px 10px 1px grey;
 }
@@ -775,13 +734,24 @@ nav {
   font-weight: 900;
 }
 
-.h-space {
-  padding-top: 100px;
+.h-subintro-container {
+  background-color: #ad574e;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  border-left: 50px solid black;
+  border-right: 50px solid black;
+  color: white;
+  margin-top: 100px;
+  padding: 100px;
 }
 
-.h-subintro-container {
-  margin-top: 0px;
-  padding: 100px;
+.h-section-icon {
+  text-align: right;
+  font-size: 2em;
+}
+
+.h-space {
+  padding-top: 100px;
 }
 
 .h-vr {
@@ -790,27 +760,39 @@ nav {
   height: 250px;
 }
 .home-container {
-  background-color: #f4f2ed;
+  background-color: lightgrey;
+  /*background-color: #f4f2ed;*/
   font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 1000px){
-  .h-map{ width: 1000px; padding-top: 75px; padding-bottom: 200px;}
-}
-
-@media screen and (max-width: 950px){
-  .h-intro-text { font-size: 24px;}
+@media screen and (max-width: 1000px) {
+  .h-bgimage {width: auto;}
+  .h-intro-txt { font-size: 24px; }
   .h-tri-container { margin-top: 50px;}
 }
 
-@media screen and (max-width: 750px){
-  .h-intro-text { font-size: 20px;}
+@media screen and (max-width: 992px){
+  .h-map{ width: 1000px; height: 315px; padding-top: 25px; padding-bottom: 200px;}
 }
 
-@media screen and (max-width: 500px){
-  .h-intro-text { margin-right: 38vw; font-size: 18px;}
-  .h-tri-colA { margin-left: calc(50vw- 100px) }
-  .h-tri-colB { margin-left: calc(50vw- 100px) }
+@media screen and (max-width: 800px) {
+  .h-subintro-container { padding: calc(20vw - 60px); padding-top: calc(10vw + 10px)}
+}
+
+@media screen and (max-width: 600px) {
+  .h-subintro-container { border-right: calc(10vw - 20px) solid black; border-left: calc(10vw - 20px) solid black;}
+  .h-tri-colA { margin-left: calc(50vw- 100px); width: 400px; }
+  .h-tri-colB { margin-left: calc(50vw- 100px); width: 400px; }
+  .h-vr {margin-left: 10px; width: calc(500px); height: 1px; border-left: 0px solid grey; border-top: 6px solid grey;}
+}
+
+@media screen and (max-width: 575px) {
+  .h-vr-col { width: 80vw;}
+  .h-vr {margin-left: 3.5vw; margin-right: 3.5vw; width: calc(90vw - 35px); height: 1px; border-left: 0px solid grey; border-top: 6px solid grey;}
+}
+
+@media screen and (max-width: 450px) {
+  .h-intro-txt{ margin-top: 30vw; margin-left: 10px; margin-right: 10px; }
 }
 
 /* Home Page END */
@@ -947,34 +929,6 @@ nav {
 }
 /* Login Section END */
 
-.name-me-section-home {
-  font-family: 'PT Serif Caption', serif;
-  color: black;
-}
-
-.name-me-section-home:hover {
-  color: #ad574e;
-}
-
-.name-me-img-home {
-  width: 350px;
-  height: 212px;
-}
-
-.name-me-text {
-  font-family: 'PT Serif Caption', serif;
-  padding-top: 20px;
-}
-
-.section-icon {
-  text-align: right;
-  font-size: 2em;
-}
-
-.sunday-time {
-  font-size: 2.2em;
-}
-
 /*Footer Begin*/
 .copyright {
   color: gray;
@@ -1067,19 +1021,3 @@ nav {
     content: 'Member Login';
 }
 /*Login End*/
-
-/*Home Page @media BEGIN*/
-
-@media screen and (max-width: 900px) {
-  .home-tri-section-header { font-size: 30px; }
-  .sunday-time { font-size: 30px; }
-  .home-tri-section-content { font-size: 20px; }
-}
-
-@media screen and (max-width: 500px) {
-  .home-tri-section-header { font-size: 20px; }
-  .home-tri-section-content { font-size: 15px; }
-  .direction-emc { font-size: 17px; }
-}
-
-/*Home Page @media END*/
