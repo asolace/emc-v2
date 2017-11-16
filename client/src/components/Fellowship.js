@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import ScrollAnimation from 'react-animate-on-scroll';
 import ScrollToTop from 'react-scroll-up';
 import { Background, Parallax } from 'react-parallax';
 
@@ -11,11 +10,6 @@ import image3 from '../photos/prayergroup.jpg';
 import image4 from '../photos/seminarybook.jpg';
 import image5 from '../photos/saturdaygroup.jpg';
 import image6 from '../photos/family.jpeg';
-
-const scrolltopstyles = {
-  left: '46.75%',
-  right: 'auto',
-};
 
 const Fellowship = () => {
   return (
@@ -30,7 +24,7 @@ const Fellowship = () => {
 
       <Parallax strength={500}>
         <Background>
-          <img className="f-bgimage" src={image2}></img>
+          <img className="f-bgimage" src={image2} alt="bgimg"/>
         </Background>
         <div className="f-container fg">
           <h1 className="f-header">Friends Gathering</h1>
@@ -75,7 +69,7 @@ const Fellowship = () => {
 
       <Parallax strength={500}>
         <Background>
-          <img className="f-bgimage" src={image3}></img>
+          <img className="f-bgimage" src={image3} alt="bgimg"/>
         </Background>
         <div className="f-container pm">
           <h1 className="f-header">Prayer Meeting</h1>
@@ -119,7 +113,7 @@ const Fellowship = () => {
 
       <Parallax strength={500}>
         <Background>
-          <img className="f-bgimage" src={image4}></img>
+          <img className="f-bgimage" src={image4} alt="bgimg" />
         </Background>
         <div className="f-container tc">
           <h1 className="f-header">TEE Class</h1>
@@ -161,7 +155,7 @@ const Fellowship = () => {
 
       <Parallax strength={500}>
         <Background>
-          <img className="f-bgimage" src={image5}></img>
+          <img className="f-bgimage" src={image5} alt="bgimg" />
         </Background>
         <div className="f-container sg">
           <h1 className="f-header">Saturday Group</h1>
@@ -205,7 +199,7 @@ const Fellowship = () => {
 
       <Parallax strength={500}>
         <Background>
-          <img className="f-bgimage" src={image6}></img>
+          <img className="f-bgimage" src={image6} alt="bgimg" />
         </Background>
         <div className="f-container pg">
           <h1 className="f-header">Parent Group</h1>

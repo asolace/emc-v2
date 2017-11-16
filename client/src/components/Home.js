@@ -13,7 +13,7 @@ const Home = () => {
 
       <Parallax strength={500}>
         <Background>
-          <img className="h-bgimage" src={bgimg}></img>
+          <img className="h-bgimage" src={bgimg} alt="bgimg"/>
         </Background>
         <div className="h-cont">
           <div className="h-intro-txt">
