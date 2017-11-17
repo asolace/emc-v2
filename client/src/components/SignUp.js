@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
 import { Button, Form, FormGroup, Input, FormFeedback } from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
 import FaLock from 'react-icons/lib/fa/lock';
@@ -17,37 +20,11 @@ class SignUp extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-     fetch('/user/checkemail', {
-      method: 'post',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(this.state)
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.status.email.available) {
-          fetch('/user/register', {
-            method: 'post',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(this.state)
-          })
-            .then(res => res.json())
-            .then(data => {
-              // A successfull register, data will = {success: true, msg: "User registered"}
-              // A failed register, data will = {success: false, msg: "Faield to register user"}
-
-              // .push("/some route after login") otherwise do something else
-              data.success ? this.props.history.push("/") : console.log(data);
-            })
-        } else {
-          this.setState({
-            emailStatus: data.status.email.available,
-            emailFeedback: data.status.email.msg
-          }, () => console.log(this.state))
-        }
-      })
+    this.props.registerUser(this.state)
   }
 
   render() {
+    // Sang Styleing in this Component needs to be fixed!
     return (
       <div className="la">
         <div className="lb">
@@ -91,4 +68,8 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp
+function mapStateToProps({ register }) {
+  return { register }
+}
+
+export default connect(mapStateToProps, actions)(SignUp)

@@ -20,7 +20,6 @@ module.exports = app => {
 
   app.post('/user/register', (req, res, next) => {
     const { errors, isValid } = validateInput(req.body)
-
     if (!isValid) {
       res.status(422).json({errors})
     } else {
