@@ -1022,26 +1022,26 @@ nav {
 }
 /*Login End*/
 
-/*Signup Begin*/
-.signup-container {
+/*Login/Signup Begin*/
+.login-signup-container {
   width: 50%;
   min-width: 300px;
   margin: auto;
   padding: 100px 20px 50px 20px;
 }
 
-.signup-form {
+.login-signup-form {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   padding: 15px;
 }
 
-.signup-form-header {
+.login-signup-form-header {
   background-color: #ad574e;
   color: white;
   border-radius: 15px 15px 0 0;
   margin: -15px -15px 15px -15px;
   padding: 15px 15px 2px 15px;
 }
-/*Signup End*/
+/*Login/Signup End*/

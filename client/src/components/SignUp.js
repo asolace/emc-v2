@@ -37,10 +37,10 @@ class SignUp extends Component {
     const { errors } = this.state
     return (
       <div>
-        <div className="signup-container">
+        <div className="login-signup-container">
           <h1>Sign Up!</h1>
-          <Form className="signup-form">
-            <div className="signup-form-header">
+          <Form className="login-signup-form">
+            <div className="login-signup-form-header">
               <p>
                 "So we, though many,
                 are one body in Christ"
@@ -103,7 +103,7 @@ class SignUp extends Component {
             <Link className="your-class-name" to='/login'> Login </Link>
           </Form>
         </div>
-        
+
         <p>Here at EMC, we value membership and relationships very highly.</p>
         <p>If you would like to be a part of our family please feel free to sign-up!</p>
       </div>
