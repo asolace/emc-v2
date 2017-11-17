@@ -15,14 +15,17 @@ class SignUp extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-    console.log(this.state)
     fetch('/user/register', {
       method: 'post',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state)
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+      // A successfull register, data will = {success: true, msg: "User registered"}
+      // A failed register, data will = {success: false, msg: "Faield to register user"}
+      data.success ? this.props.history.push("/") : console.log(data);
+    })
   }
 
   render() {
@@ -50,10 +53,12 @@ class SignUp extends Component {
                   <span className="lh"><FaLock /></span>
                 </div>
               </FormGroup>
-              <Button onClick={this.onSubmit} color="info" disabled><div className="li">SignUp</div></Button>
+              <Button onClick={this.onSubmit} color="info"><div className="li">SignUp</div></Button>
             </Form>
             <p className="lj">Or <a href="/signup" className="lq">login</a></p>
           </div>
+          <h1>Sign Up</h1>
+
         </div>
 
         <div className="lk">

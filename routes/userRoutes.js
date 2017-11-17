@@ -32,10 +32,8 @@ module.exports = app => {
         if (err) {
           console.log(err);
           res.json({ success: false, msg: 'Failed to register user', err })
-          console.log('Failed to register User...')
         } else {
           res.json({ success: true, msg: 'User registered' })
-          console.log('Successfully register user!')
         }
       })
     }
@@ -48,7 +46,6 @@ module.exports = app => {
     User.getUserByEmail(email, (err, user) => {
       if (err) throw err
       if (!user) {
-        console.log('User not found.')
         return res.json({success: false, msg: 'User not found'})
       }
 

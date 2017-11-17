@@ -47,6 +47,8 @@ class Login extends Component {
             </Form>
             <p className="lj">Or <a href="/signup" className="lq">sign up</a></p>
           </div>
+          <h1>Login</h1>
+
         </div>
 
         <div className="lk">
