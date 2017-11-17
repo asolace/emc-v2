@@ -83,7 +83,6 @@ module.exports = app => {
     let status = {
       email: {available: true, msg: 'Email is available!'}
     }
-
     const email = req.body.email
 
     User.getUserByEmail(email, (err, user) => {
@@ -91,8 +90,8 @@ module.exports = app => {
       if (user && user.email === email) {
         status.email.available = false
         status.email.msg = 'Email is Taken!'
-        res.json({ status })
       }
+      res.json({ status })
     })
   })
 }

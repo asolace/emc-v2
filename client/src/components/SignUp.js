@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Input, FormFeedback } from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
 import FaLock from 'react-icons/lib/fa/lock';
 
 class SignUp extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    emailStatus: true,
+    emailFeedback: ''
   }
 
   onChange = event => {
@@ -15,17 +17,34 @@ class SignUp extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-    fetch('/user/register', {
+     fetch('/user/checkemail', {
       method: 'post',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state)
     })
-    .then(res => res.json())
-    .then(data => {
-      // A successfull register, data will = {success: true, msg: "User registered"}
-      // A failed register, data will = {success: false, msg: "Faield to register user"}
-      data.success ? this.props.history.push("/") : console.log(data);
-    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.status.email.available) {
+          fetch('/user/register', {
+            method: 'post',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(this.state)
+          })
+            .then(res => res.json())
+            .then(data => {
+              // A successfull register, data will = {success: true, msg: "User registered"}
+              // A failed register, data will = {success: false, msg: "Faield to register user"}
+
+              // .push("/some route after login") otherwise do something else
+              data.success ? this.props.history.push("/") : console.log(data);
+            })
+        } else {
+          this.setState({
+            emailStatus: data.status.email.available,
+            emailFeedback: data.status.email.msg
+          }, () => console.log(this.state))
+        }
+      })
   }
 
   render() {
@@ -42,7 +61,8 @@ class SignUp extends Component {
               <FormGroup>
                 <div className="le">
                   <div className="lm"></div>
-                  <Input className="ll" onChange={this.onChange} type="email" name="email" placeholder="Email" required/>
+                  <Input className="ll" onChange={this.onChange} type="email" name="email" valid={true} placeholder="Email" required/>
+                  {/*<FormFeedback>{this.state.emailFeedback}</FormFeedback>*/}
                   <span className="lf"><FaUser /></span>
                 </div>
               </FormGroup>
@@ -55,7 +75,7 @@ class SignUp extends Component {
               </FormGroup>
               <Button onClick={this.onSubmit} color="info"><div className="li">SignUp</div></Button>
             </Form>
-            <p className="lj">Or <a href="/signup" className="lq">login</a></p>
+            <p className="lj">Or <a href="/login" className="lq">login</a></p>
           </div>
           <h1>Sign Up</h1>
 
