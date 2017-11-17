@@ -48,7 +48,7 @@ class Header extends Component {
                 <Link className="nav-link" to="/gallery">Gallery</Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/login">Members</Link>
+                <Link className="nav-link" to="/members">Members</Link>
               </NavItem>
             </Nav>
           </Collapse>

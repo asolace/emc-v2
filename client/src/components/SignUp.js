@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import validateInput from './Validator'
@@ -35,8 +35,11 @@ class SignUp extends Component {
 
   render() {
     const { errors } = this.state
+    console.log(this.props);
     if (this.props.register && this.props.register.success) {
-      return <Redirect to="/" />
+      return (
+        <div><h1>Thank you for registering we will get back to you soon!</h1></div>
+      )
     } else {
       return (
         <div>
@@ -115,8 +118,8 @@ class SignUp extends Component {
   }
 }
 
-function mapStateToProps({ register }) {
-  return { register }
+function mapStateToProps({ register, auth }) {
+  return { register, auth }
 }
 
 export default connect(mapStateToProps, actions)(SignUp)

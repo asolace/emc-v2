@@ -1,11 +1,23 @@
 import axios from 'axios'
 
-import { LOGIN_USER, REGISTER_USER } from './types'
+import { LOGIN_USER, REGISTER_USER, LOGOUT_USER } from './types'
 
 export const loginUser = (data) => async dispatch => {
   const res = await axios.post('/user/authenticate', data)
-  if (res.data.success) sessionStorage.setItem('jwt', res.data.token)
+  if (res.data.success) {
+    sessionStorage.setItem('jwt', res.data.token)
+    sessionStorage.setItem('user', res.data.user.id)
+  }
   dispatch({ type: LOGIN_USER, payload: res.data })
+}
+
+export const logoutUser = () => async dispatch => {
+  const res = await axios.get('/user/logout')
+  if (!res.data.success) {
+    sessionStorage.removeItem('jwt')
+    sessionStorage.removeItem('user')
+  }
+  dispatch({ type: LOGOUT_USER, payload: res.data })
 }
 
 export const getUser = () => async dispatch => {

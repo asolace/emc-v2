@@ -61,7 +61,9 @@ module.exports = app => {
             token: 'bearer ' + token,
             user: {
               id: user._id,
-              email: user.email
+              email: user.email,
+              isMember: user.isMember,
+              isAdmin: user.admin
             }
           })
         } else {
@@ -73,6 +75,7 @@ module.exports = app => {
 
   app.get('/user/logout', (req, res) => {
     req.logout()
+    res.json({ success: false })
   })
 
   app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
