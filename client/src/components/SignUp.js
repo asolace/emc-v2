@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import validateInput from './Validator'
 
-import { Button, Form, FormGroup, Input, FormFeedback } from 'reactstrap';
+
+import { Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
 
 class SignUp extends Component {
   state = {
+    full_name: '',
     email: '',
-    password: '',
-    emailStatus: true,
-    emailFeedback: ''
+    password: ''
+  }
+
+  isValid() {
+    const { errors, isValid } = validateInput(this.state)
+    if (!isValid) this.setState({ errors })
+    return isValid
   }
 
   onChange = event => {
@@ -20,49 +29,83 @@ class SignUp extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-    this.props.registerUser(this.state)
+    this.setState({ errors: '' })
+    if (this.isValid()) this.props.registerUser(this.state)
   }
 
   render() {
-    // Sang Styleing in this Component needs to be fixed!
+    const { errors } = this.state
     return (
-      <div className="la">
-        <div className="lb">
-          <div className="lc">
-            <div className="ld">
-              <p className="lp">"So we, though many, </p>
-              <p className="lp">are one body in Christ"</p>
-              <p className="lp">Romans 12:5 ESV</p>
+      <div>
+        <div className="signup-container">
+          <h1>Sign Up!</h1>
+          <Form className="signup-form">
+            <div className="signup-form-header">
+              <p>
+                "So we, though many,
+                are one body in Christ"
+                Romans 12:5 ESV
+              </p>
             </div>
-            <Form>
-              <FormGroup>
-                <div className="le">
-                  <div className="lm"></div>
-                  <Input className="ll" onChange={this.onChange} type="email" name="email" valid={true} placeholder="Email" required/>
-                  {/*<FormFeedback>{this.state.emailFeedback}</FormFeedback>*/}
-                  <span className="lf"><FaUser /></span>
-                </div>
-              </FormGroup>
-              <FormGroup>
-                <div className="lg">
-                  <div className="ln"></div>
-                  <Input className="lo" onChange={this.onChange} type="password" name="password" placeholder="Password" required/>
-                  <span className="lh"><FaLock /></span>
-                </div>
-              </FormGroup>
-              <Button onClick={this.onSubmit} color="info"><div className="li">SignUp</div></Button>
-            </Form>
-            <p className="lj">Or <a href="/login" className="lq">login</a></p>
-          </div>
-          <h1>Sign Up</h1>
 
+            <InputGroup>
+              <InputGroupAddon><FaEnvelope /></InputGroupAddon>
+              <Input
+                onChange={this.onChange}
+                type="email" name="email"
+                placeholder="Email"
+                valid={this.props.register ? this.props.register.available :
+                  errors ? this.state.errors.email_valid : null}
+              />
+              <FormFeedback>
+                &nbsp;{this.props.register ? 'Oh noes! that email is already registered' :
+                  (this.state.email === '') ? 'Email is required' :
+                  this.state.errors ? this.state.errors.email : null}
+              </FormFeedback>
+            </InputGroup>
+
+            <br />
+
+            <InputGroup>
+              <InputGroupAddon><FaUser /></InputGroupAddon>
+              <Input
+                onChange={this.onChange}
+                type="full_name"
+                name="full_name"
+                placeholder="Full Name"
+                valid={errors ? this.state.errors.full_name_valid : null}
+              />
+              <FormFeedback>&nbsp;{errors ? this.state.errors.full_name : null}</FormFeedback>
+            </InputGroup>
+
+            <br />
+
+            <InputGroup>
+              <InputGroupAddon><FaLock /></InputGroupAddon>
+              <Input
+                onChange={this.onChange}
+                type="password"
+                name="password"
+                placeholder="password"
+                valid={errors ? this.state.errors.password_valid : null}
+                />
+                <FormFeedback>&nbsp;{errors ? this.state.errors.password : null}</FormFeedback>
+            </InputGroup>
+
+            <br />
+
+            <Button
+              onClick={this.onSubmit}
+              color="info"
+            >Register
+            </Button>
+            &nbsp;Or
+            <Link className="your-class-name" to='/login'> Login </Link>
+          </Form>
         </div>
-
-        <div className="lk">
-          <p>Here at EMC, we value membership and relationships very highly.</p>
-          <p>If you would like to be a part of our family please feel free to sign-up!</p>
-        </div>
-
+        
+        <p>Here at EMC, we value membership and relationships very highly.</p>
+        <p>If you would like to be a part of our family please feel free to sign-up!</p>
       </div>
     )
   }

@@ -10,6 +10,7 @@ validateInput = data => {
   let errors = {}
 
   if (Validator.isEmpty(data.password)) errors.password = 'EMC needs your Password'
+  if (Validator.isEmpty(data.full_name)) errors.full_name = 'EMC needs your Full Name'
   if (!Validator.isEmail(data.email)) errors.email = 'EMC do not like your email'
   if (Validator.isEmpty(data.email)) errors.email = 'EMC wants your email'
 
@@ -24,6 +25,7 @@ module.exports = app => {
       res.status(422).json({errors})
     } else {
       let newUser = new User({
+        fullName: req.body.full_name,
         email: req.body.email,
         password: req.body.password
       })
