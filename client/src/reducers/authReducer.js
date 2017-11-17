@@ -1,9 +1,24 @@
-import { FETCH_USER } from '../actions/types'
+import { userConstants } from '../constants';
 
-export default function(state = null, action) {
+let user = JSON.parse(localStorage.getItem('user'));
+const initialState = user ? { loggedIn: true, user } : {};
+
+export function authentication(state = initialState, action) {
   switch (action.type) {
-    case FETCH_USER:
-      return action.payload || false
+    case userConstants.LOGIN_REQUEST:
+      return {
+        loggingIn: true,
+        user: action.user
+      };
+    case userConstants.LOGIN_SUCCESS:
+      return {
+        loggedIn: true,
+        user: action.user
+      };
+    case userConstants.LOGIN_FAILURE:
+      return {};
+    case userConstants.LOGOUT:
+      return {};
     default:
       return state
   }

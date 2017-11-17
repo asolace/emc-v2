@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { userActions } from '../actions'
+
 import { Button, Form, FormGroup, Input, FormFeedback } from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
 import FaLock from 'react-icons/lib/fa/lock';
@@ -7,8 +10,7 @@ class SignUp extends Component {
   state = {
     email: '',
     password: '',
-    emailStatus: true,
-    emailFeedback: ''
+    submitted: false
   }
 
   onChange = event => {
@@ -17,34 +19,39 @@ class SignUp extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-     fetch('/user/checkemail', {
-      method: 'post',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(this.state)
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.status.email.available) {
-          fetch('/user/register', {
-            method: 'post',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(this.state)
-          })
-            .then(res => res.json())
-            .then(data => {
-              // A successfull register, data will = {success: true, msg: "User registered"}
-              // A failed register, data will = {success: false, msg: "Faield to register user"}
+    this.setState({ submitted: true })
+    const { dispatch } = this.props
+    if (this.state.email && this.state.password) {
+      dispatch(userActions.register(this.state))
+    }
+    //  fetch('/user/checkemail', {
+    //   method: 'post',
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(this.state)
+    // })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     if (data.status.email.available) {
+    //       fetch('/user/register', {
+    //         method: 'post',
+    //         headers: { "Content-Type": "application/json" },
+    //         body: JSON.stringify(this.state)
+    //       })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //           // A successfull register, data will = {success: true, msg: "User registered"}
+    //           // A failed register, data will = {success: false, msg: "Faield to register user"}
 
-              // .push("/some route after login") otherwise do something else
-              data.success ? this.props.history.push("/") : console.log(data);
-            })
-        } else {
-          this.setState({
-            emailStatus: data.status.email.available,
-            emailFeedback: data.status.email.msg
-          }, () => console.log(this.state))
-        }
-      })
+    //           // .push("/some route after login") otherwise do something else
+    //           data.success ? this.props.history.push("/") : console.log(data);
+    //         })
+    //     } else {
+    //       this.setState({
+    //         emailStatus: data.status.email.available,
+    //         emailFeedback: data.status.email.msg
+    //       }, () => console.log(this.state))
+    //     }
+    //   })
   }
 
   render() {
@@ -91,4 +98,9 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp
+function mapStateToProps(state) {
+  const { registering } = state.registration
+  return { registering }
+}
+
+export default connect(mapStateToProps, null, null)(SignUp)
