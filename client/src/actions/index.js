@@ -1,10 +1,15 @@
 import axios from 'axios'
 
-import { FETCH_USER, REGISTER_USER } from './types'
+import { LOGIN_USER, REGISTER_USER } from './types'
 
-export const fetchUser = () => async dispatch => {
-  const res = await axios.get('/user/current_user')
-  dispatch({ type: FETCH_USER, payload: res.data })
+export const loginUser = (data) => async dispatch => {
+  const res = await axios.post('/user/authenticate', data)
+  if (res.data.success) sessionStorage.setItem('jwt', res.data.token)
+  dispatch({ type: LOGIN_USER, payload: res.data })
+}
+
+export const getUser = () => async dispatch => {
+  // axios.get('/user/profile',{headers: {"Authorization": token}}).then(res => console.log(res))
 }
 
 export const registerUser = (data) => async dispatch => {

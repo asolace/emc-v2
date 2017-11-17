@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Input } from 'reactstrap';
-import FaUser from 'react-icons/lib/fa/user';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+import validateInput from './Validator'
+
+import { Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
 
 class Login extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    full_name: 'not required'
+  }
+
+  isValid() {
+    const { errors, isValid } = validateInput(this.state)
+    if (!isValid) this.setState({ errors })
+    return isValid
   }
 
   onChange = event => {
@@ -15,50 +27,80 @@ class Login extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-    console.log(this.state);
+    this.setState({ errors: '' })
+    if (this.isValid()) this.props.loginUser(this.state)
   }
 
   render() {
-    return (
-      <div className="la">
-        <div className="lb">
-          <div className="lc">
-            <div className="ld">
-              <p className="lp">"So we, though many, </p>
-              <p className="lp">are one body in Christ"</p>
-              <p className="lp">Romans 12:5 ESV</p>
-            </div>
-            <Form>
-              <FormGroup>
-                <div className="le">
-                  <div className="lm"></div>
-                  <Input className="ll" onChange={this.onChange} type="email" name="email" placeholder="Email" required/>
-                  <span className="lf"><FaUser /></span>
-                </div>
-              </FormGroup>
-              <FormGroup>
-                <div className="lg">
-                  <div className="ln"></div>
-                  <Input className="lo" onChange={this.onChange} type="password" name="password" placeholder="Password" required/>
-                  <span className="lh"><FaLock /></span>
-                </div>
-              </FormGroup>
-              <Button onClick={this.onSubmit} color="info"><div className="li">Login</div></Button>
+    const { errors } = this.state
+    if (this.props.auth && this.props.auth.success) {
+      return <Redirect to="/" />
+    } else {
+      return (
+        <div>
+          <div className="login-signup-container">
+            <h1>Login!</h1>
+            <Form className="login-signup-form">
+              <div className="login-signup-form-header">
+                <p>
+                  "So we, though many,
+                  are one body in Christ"
+                  Romans 12:5 ESV
+                </p>
+              </div>
+
+              <InputGroup>
+                <InputGroupAddon><FaEnvelope /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="email" name="email"
+                  placeholder="Email"
+                  valid={this.props.register ? this.props.register.available :
+                    errors ? this.state.errors.email_valid : null}
+                />
+                <FormFeedback>
+                  &nbsp;{this.props.register ? 'Oh noes! that email is already registered' :
+                    (this.state.email === '') ? 'Email is required' :
+                    this.state.errors ? this.state.errors.email : null}
+                </FormFeedback>
+              </InputGroup>
+
+              <br />
+
+              <InputGroup>
+                <InputGroupAddon><FaLock /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  valid={errors ? this.state.errors.password_valid : null}
+                  />
+                  <FormFeedback>&nbsp;{errors ? this.state.errors.password : null}</FormFeedback>
+              </InputGroup>
+
+              <br />
+
+              <Button
+                onClick={this.onSubmit}
+                color="info"
+              >Login
+              </Button>
+              &nbsp;Or
+              <Link className="your-class-name" to='/signup'> Register </Link>
             </Form>
-            <p className="lj">Or <a href="/signup" className="lq">sign up</a></p>
           </div>
-          <h1>Login</h1>
 
-        </div>
-
-        <div className="lk">
           <p>Here at EMC, we value membership and relationships very highly.</p>
           <p>If you would like to be a part of our family please feel free to sign-up!</p>
         </div>
-
-      </div>
-    )
+      )
+    }
   }
 }
 
-export default Login
+function mapStateToProps({ auth }) {
+  return { auth }
+}
+
+export default connect(mapStateToProps, actions)(Login)

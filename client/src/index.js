@@ -9,15 +9,18 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import registerServiceWorker from './registerServiceWorker';
 
+import axios from 'axios'
+window.axios = axios
+
 const store = createStore(
-    reducers, {}, applyMiddleware(reduxThunk)
+  reducers, {}, applyMiddleware(reduxThunk)
 )
 
 ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('root')
-  )
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
 
 registerServiceWorker()

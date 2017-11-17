@@ -73,11 +73,13 @@ module.exports = app => {
 
   app.get('/user/logout', (req, res) => {
     req.logout()
-    // res.redirect('/')
   })
 
   app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
-    res.json({ user: req.user })
+    res.json({
+      full_name: req.user.fullName,
+      email: req.user.email
+    })
   })
 
   app.post('/user/checkemail', (req, res, next) => {
