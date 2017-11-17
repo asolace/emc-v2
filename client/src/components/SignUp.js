@@ -5,7 +5,7 @@ import FaLock from 'react-icons/lib/fa/lock';
 
 class SignUp extends Component {
   state = {
-    username: '',
+    email: '',
     password: ''
   }
 
@@ -15,7 +15,14 @@ class SignUp extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-    console.log(this.state);
+    console.log(this.state)
+    fetch('/user/register', {
+      method: 'post',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.state)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
   }
 
   render() {
@@ -32,7 +39,7 @@ class SignUp extends Component {
               <FormGroup>
                 <div className="le">
                   <div className="lm"></div>
-                  <Input className="ll" onChange={this.onChange} type="username" name="username" placeholder="Username" required/>
+                  <Input className="ll" onChange={this.onChange} type="email" name="email" placeholder="Email" required/>
                   <span className="lf"><FaUser /></span>
                 </div>
               </FormGroup>

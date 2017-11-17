@@ -10,8 +10,6 @@ validateInput = data => {
   let errors = {}
 
   if (Validator.isEmpty(data.password)) errors.password = 'EMC needs your Password'
-  if (Validator.isEmpty(data.password_confirmation)) errors.password_confirmation = 'EMC wants to confirm your password'
-  if (!Validator.equals(data.password, data.password_confirmation)) errors.password_confirmation = 'EMC thinks your password do not match'
   if (!Validator.isEmail(data.email)) errors.email = 'EMC do not like your email'
   if (Validator.isEmpty(data.email)) errors.email = 'EMC wants your email'
 
@@ -20,7 +18,7 @@ validateInput = data => {
 
 module.exports = app => {
 
-  app.post('/register', (req, res, next) => {
+  app.post('/user/register', (req, res, next) => {
     const { errors, isValid } = validateInput(req.body)
 
     if (!isValid) {
@@ -43,7 +41,7 @@ module.exports = app => {
     }
   })
 
-  app.post('/authenticate', (req, res, next) => {
+  app.post('/user/authenticate', (req, res, next) => {
     const email = req.body.email
     const password = req.body.password
 
@@ -75,16 +73,16 @@ module.exports = app => {
     })
   })
 
-  app.get('/logout', (req, res) => {
+  app.get('/user/logout', (req, res) => {
     req.logout()
     // res.redirect('/')
   })
 
-  app.get('/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+  app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
     res.json({ user: req.user })
   })
 
-  app.post('/checkemail', (req, res, next) => {
+  app.post('/user/checkemail', (req, res, next) => {
     let status = {
       email: {available: true, msg: 'Email is available!'}
     }

@@ -5,7 +5,7 @@ import FaLock from 'react-icons/lib/fa/lock';
 
 class Login extends Component {
   state = {
-    username: '',
+    email: '',
     password: ''
   }
 
@@ -32,7 +32,7 @@ class Login extends Component {
               <FormGroup>
                 <div className="le">
                   <div className="lm"></div>
-                  <Input className="ll" onChange={this.onChange} type="username" name="username" placeholder="Username" required/>
+                  <Input className="ll" onChange={this.onChange} type="email" name="email" placeholder="Email" required/>
                   <span className="lf"><FaUser /></span>
                 </div>
               </FormGroup>
