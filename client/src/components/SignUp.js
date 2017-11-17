@@ -50,7 +50,7 @@ class SignUp extends Component {
                   <span className="lh"><FaLock /></span>
                 </div>
               </FormGroup>
-              <Button onClick={this.onSubmit} color="info"><div className="li">SignUp</div></Button>
+              <Button onClick={this.onSubmit} color="info" disabled><div className="li">SignUp</div></Button>
             </Form>
             <p className="lj">Or <a href="/signup" className="lq">login</a></p>
           </div>
