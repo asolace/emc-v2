@@ -13,6 +13,10 @@ class Header extends Component {
     })
   }
 
+  onDismiss = () => {
+    console.log('hi');
+  }
+
   render() {
     return (
       <div className="header">

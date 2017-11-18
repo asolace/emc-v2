@@ -4,7 +4,7 @@ import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaYoutube from 'react-icons/lib/fa/youtube'
 
 const Footer = () =>
-  <div className="footer-container">
+  <footer>
     <div className='social-wrap'>
       <a href="https://www.facebook.com/pages/Ebenezer-Mission-Church/149714738395852" target="_blank" rel="noopener noreferrer">
         <button className='facebook'>
@@ -19,8 +19,8 @@ const Footer = () =>
           <FaYoutube />
         </button>
     </div>
-    <p className="copyright">&copy; Copyright 2017 EMC -- @asolace development</p>
+    <p className="copyright">&copy; Copyright 2017 EMC</p>
+  </footer>
 
-  </div>
 
 export default Footer

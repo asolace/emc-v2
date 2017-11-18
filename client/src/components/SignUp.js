@@ -64,7 +64,7 @@ class SignUp extends Component {
                     errors ? this.state.errors.email_valid : null}
                 />
                 <FormFeedback>
-                  &nbsp;{this.props.register ? 'Oh noes! that email is already registered' :
+                  &nbsp;{this.props.register ? 'Email is already used' :
                     (this.state.email === '') ? 'Email is required' :
                     this.state.errors ? this.state.errors.email : null}
                 </FormFeedback>

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import validateInput from './Validator'
 
-import { Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
+import { Alert, Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
 
@@ -32,6 +32,7 @@ class Login extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { errors } = this.state
     if (this.props.auth && this.props.auth.success) {
       return <Redirect to="/members" />
@@ -39,6 +40,10 @@ class Login extends Component {
       return (
         <div>
           <div className="login-signup-container">
+          {this.props.auth && !this.props.auth.success ?
+            <Alert color="danger">
+              {this.props.auth.msg}
+           </Alert> : <div></div>}
             <h1>Login!</h1>
             <Form className="login-signup-form">
               <div className="login-signup-form-header">
@@ -59,7 +64,7 @@ class Login extends Component {
                     errors ? this.state.errors.email_valid : null}
                 />
                 <FormFeedback>
-                  &nbsp;{this.props.register ? 'Oh noes! that email is already registered' :
+                  &nbsp;{this.props.register ? 'Email' :
                     (this.state.email === '') ? 'Email is required' :
                     this.state.errors ? this.state.errors.email : null}
                 </FormFeedback>
