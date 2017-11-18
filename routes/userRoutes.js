@@ -30,6 +30,7 @@ module.exports = app => {
         let newUser = new User({
           fullName: seed.full_name,
           email: seed.email,
+          phone: seed.phone,
           password: seed.password
         })
         User.addUser(newUser, (err, user) => {
@@ -109,6 +110,17 @@ module.exports = app => {
     })
   })
 
+  app.get('/user/directory', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+    User.find({}, (err, users) => {
+      let mappedUsers = []
+
+      users.forEach((user, i) => {
+        mappedUsers.push({ fullName: user.fullName, email: user.email, phone: user.phone })
+      })
+      res.json({mappedUsers})
+    })
+  })
+
   app.post('/user/checkemail', (req, res, next) => {
     let status = {
       email: {available: true, msg: 'Email is available!'}
@@ -123,9 +135,5 @@ module.exports = app => {
       }
       res.json({ status })
     })
-  })
-
-  app.get('/user/directories', passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log('works');
   })
 }
