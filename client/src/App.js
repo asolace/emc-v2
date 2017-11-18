@@ -4,6 +4,7 @@ import './App.css';
 import "animate.css/animate.min.css";
 
 import About from './components/About'
+import Directory from './components/Members/Directory'
 import Fellowship from './components/Fellowship'
 import Footer from './components/Footer'
 import Gallery from './components/Gallery'
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/gallery" component={ Gallery } />
             <Route path="/members" component={ Members } />
             <Route path="/signup" component={ SignUp } />
+            <Route path="/directory" component={ Directory } />
           </div>
           <Footer />
         </div>

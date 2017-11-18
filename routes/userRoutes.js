@@ -6,11 +6,16 @@ const Validator = require('validator')
 const isEmpty = require('lodash/isEmpty')
 const User = require('../models/User')
 
+const seeds = require('./seeder')
+
 validateInput = data => {
   let errors = {}
 
+  let fullNameLength = data.full_name.split(' ').length
+
   if (Validator.isEmpty(data.password)) errors.password = 'EMC needs your Password'
   if (Validator.isEmpty(data.full_name)) errors.full_name = 'EMC needs your Full Name'
+  if (fullNameLength < 2) errors.full_name = 'EMC needs your Full Name'
   if (!Validator.isEmail(data.email)) errors.email = 'EMC do not like your email'
   if (Validator.isEmpty(data.email)) errors.email = 'EMC wants your email'
 
@@ -18,6 +23,24 @@ validateInput = data => {
 }
 
 module.exports = app => {
+
+  app.get('/user/seed', (req, res) => {
+    seeds.forEach(seed => {
+      for (const key in seed) {
+        let newUser = new User({
+          fullName: seed.full_name,
+          email: seed.email,
+          password: seed.password
+        })
+        User.addUser(newUser, (err, user) => {
+          if (err) console.log('Seeded')
+          else console.log('failed')
+        })
+      }
+    })
+
+    res.send('seed successfull')
+  })
 
   app.post('/user/register', (req, res, next) => {
     const { errors, isValid } = validateInput(req.body)
@@ -29,14 +52,15 @@ module.exports = app => {
         email: req.body.email,
         password: req.body.password
       })
+
       User.addUser(newUser, (err, user) => {
         if (err) {
-          console.log(err);
           res.json({ success: false, msg: 'Failed to register user', err })
         } else {
           res.json({ success: true, msg: 'User registered' })
         }
       })
+
     }
   })
 
@@ -99,5 +123,9 @@ module.exports = app => {
       }
       res.json({ status })
     })
+  })
+
+  app.get('/user/directories', passport.authenticate('jwt', { session: false }), (req, res) => {
+    console.log('works');
   })
 }

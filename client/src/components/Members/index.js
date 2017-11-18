@@ -6,6 +6,7 @@ import * as actions from '../../actions';
 import Member from './Member'
 
 class Members extends Component {
+
   render() {
     if (this.props.auth && this.props.auth.success) {
       switch (this.props.auth.user.isMember) {

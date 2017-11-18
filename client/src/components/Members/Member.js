@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../../actions';
 
 import { Button } from 'reactstrap'
@@ -9,6 +10,7 @@ class Member extends Component {
     return(
       <div>
         <h1>Welcome Member</h1>
+        <Link to="/directory">Directory</Link>
         <Button onClick={this.props.logoutUser}>Fancy Logout Button</Button>
       </div>
     )

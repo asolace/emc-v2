@@ -20,8 +20,9 @@ export const logoutUser = () => async dispatch => {
   dispatch({ type: LOGOUT_USER, payload: res.data })
 }
 
-export const getUser = () => async dispatch => {
-  // axios.get('/user/profile',{headers: {"Authorization": token}}).then(res => console.log(res))
+export const getUser = (token) => async dispatch => {
+  const res = await axios.get('/user/profile',{headers: {"Authorization": token}})
+  console.log(res);
 }
 
 export const registerUser = (data) => async dispatch => {
