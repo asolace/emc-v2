@@ -31,26 +31,6 @@ formatName = name => {
 }
 
 module.exports = app => {
-
-  app.get('/user/seed', (req, res) => {
-    seeds.forEach(seed => {
-      for (const key in seed) {
-        let newUser = new User({
-          fullName: seed.full_name,
-          email: seed.email,
-          phone: seed.phone,
-          password: seed.password
-        })
-        User.addUser(newUser, (err, user) => {
-          if (err) console.log('failed')
-          else console.log('seeded')
-        })
-      }
-    })
-
-    res.send('seed successfull')
-  })
-
   app.post('/user/register', (req, res, next) => {
     const { errors, isValid } = validateInput(req.body)
     if (!isValid) {
