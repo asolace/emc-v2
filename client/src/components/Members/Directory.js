@@ -42,7 +42,7 @@ class Directory extends Component {
         <div className="directory-container">
           <h1>Member's Directory</h1>
           <div className="container">
-            <Table striped inverse>
+            <Table striped>
               <thead>
                 <tr>
                   <th>#</th>
