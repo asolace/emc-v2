@@ -5,6 +5,7 @@ import * as actions from '../actions';
 import validateInput from './Validator'
 
 import { Alert, Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
+import { FormGroup, FormText, Label } from 'reactstrap';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
 
@@ -39,11 +40,10 @@ class Login extends Component {
       return (
         <div className="login-signup-container">
         {this.props.auth && !this.props.auth.success ?
-          <Alert color="danger">
+          <Alert className="l-al" color="danger">
             {this.props.auth.msg}
          </Alert> : <div></div>}
-          <h1>Login!</h1>
-          <Form className="login-signup-form">
+          <Form className="login-signup-form" onSubmit={this.onSubmit}>
             <div className="login-signup-form-header">
               <p>
                 "So we, though many,
@@ -51,47 +51,56 @@ class Login extends Component {
                 Romans 12:5 ESV
               </p>
             </div>
-
-            <InputGroup>
-              <InputGroupAddon><FaEnvelope /></InputGroupAddon>
-              <Input
-                onChange={this.onChange}
-                type="email" name="email"
-                placeholder="Email"
-                valid={this.props.register ? this.props.register.available :
-                  errors ? this.state.errors.email_valid : null}
-              />
-              <FormFeedback>
-                &nbsp;{this.props.register ? 'Email' :
+            <div className="l-in">
+              <InputGroup>
+                <InputGroupAddon><FaEnvelope /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="email" name="email"
+                  placeholder="Email"
+                  valid={this.props.register ? this.props.register.available :
+                    errors ? this.state.errors.email_valid : null}
+                />
+                <FormFeedback className="l-er">
+                  {this.props.register ? 'Email' :
                   (this.state.email === '') ? 'Email is required' :
                   this.state.errors ? this.state.errors.email : null}
-              </FormFeedback>
-            </InputGroup>
+                </FormFeedback>
+              </InputGroup>
+            </div>
 
             <br />
 
-            <InputGroup>
-              <InputGroupAddon><FaLock /></InputGroupAddon>
-              <Input
-                onChange={this.onChange}
-                type="password"
-                name="password"
-                placeholder="password"
-                valid={errors ? this.state.errors.password_valid : null}
-                />
-                <FormFeedback>&nbsp;{errors ? this.state.errors.password : null}</FormFeedback>
-            </InputGroup>
+            <div className="l-in">
+              <InputGroup>
+                <InputGroupAddon><FaLock /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  valid={errors ? this.state.errors.password_valid : null}
+                  />
+                  <FormFeedback className="l-er">{errors ? this.state.errors.password : null}</FormFeedback>
+              </InputGroup>
+            </div>
 
             <br />
 
             <Button
+              className="l-spB"
+              type="submit"
               onClick={this.onSubmit}
               color="info"
             >Login
             </Button>
-            &nbsp;Or
-            <Link className="your-class-name" to='/signup'> Register </Link>
+            <br/>
+            <div className="l-spA">
+              Or
+              <Link className="l-su" to='/signup'> Sign Up </Link>
+            </div>
           </Form>
+
           <p>Here at EMC, we value membership and relationships very highly. <br/>
           If you would like to be a part of our family please feel free to sign-up!</p>
         </div>

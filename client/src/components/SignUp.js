@@ -42,7 +42,6 @@ class SignUp extends Component {
     } else {
       return (
         <div className="login-signup-container">
-          <h1>Sign Up!</h1>
           <Form className="login-signup-form">
             <div className="login-signup-form-header">
               <p>
@@ -52,59 +51,69 @@ class SignUp extends Component {
               </p>
             </div>
 
-            <InputGroup>
-              <InputGroupAddon><FaEnvelope /></InputGroupAddon>
-              <Input
-                onChange={this.onChange}
-                type="email" name="email"
-                placeholder="Email"
-                valid={this.props.register ? this.props.register.available :
-                  errors ? this.state.errors.email_valid : null}
-              />
-              <FormFeedback>
-                &nbsp;{this.props.register ? 'Email is already used' :
+            <div className="l-in">
+              <InputGroup>
+                <InputGroupAddon><FaEnvelope /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="email" name="email"
+                  placeholder="Email"
+                  valid={this.props.register ? this.props.register.available :
+                    errors ? this.state.errors.email_valid : null}
+                />
+                <FormFeedback className="l-er">
+                  {this.props.register ? 'Email is already used' :
                   (this.state.email === '') ? 'Email is required' :
                   this.state.errors ? this.state.errors.email : null}
-              </FormFeedback>
-            </InputGroup>
+                </FormFeedback>
+              </InputGroup>
+            </div>
 
             <br />
 
-            <InputGroup>
-              <InputGroupAddon><FaUser /></InputGroupAddon>
-              <Input
-                onChange={this.onChange}
-                type="full_name"
-                name="full_name"
-                placeholder="Full Name"
-                valid={errors ? this.state.errors.full_name_valid : null}
-              />
-              <FormFeedback>&nbsp;{errors ? this.state.errors.full_name : null}</FormFeedback>
-            </InputGroup>
-
-            <br />
-
-            <InputGroup>
-              <InputGroupAddon><FaLock /></InputGroupAddon>
-              <Input
-                onChange={this.onChange}
-                type="password"
-                name="password"
-                placeholder="password"
-                valid={errors ? this.state.errors.password_valid : null}
+            <div className="l-in">
+              <InputGroup>
+                <InputGroupAddon><FaUser /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="full_name"
+                  name="full_name"
+                  placeholder="Full Name"
+                  valid={errors ? this.state.errors.full_name_valid : null}
                 />
-                <FormFeedback>&nbsp;{errors ? this.state.errors.password : null}</FormFeedback>
-            </InputGroup>
+                <FormFeedback className="l-er">{errors ? this.state.errors.full_name : null}</FormFeedback>
+              </InputGroup>
+            </div>
+
+            <br />
+
+            <div className="l-in">
+              <InputGroup>
+                <InputGroupAddon><FaLock /></InputGroupAddon>
+                <Input
+                  onChange={this.onChange}
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  valid={errors ? this.state.errors.password_valid : null}
+                  />
+                  <FormFeedback className="l-er">{errors ? this.state.errors.password : null}</FormFeedback>
+              </InputGroup>
+            </div>
 
             <br />
 
             <Button
+              className="l-spB"
               onClick={this.onSubmit}
               color="info"
-            >Register
+            > Sign Up
             </Button>
-            &nbsp;Or
-            <Link className="your-class-name" to='/login'> Login </Link>
+            <br/>
+            <div className="l-spA">
+              Or
+              <Link className="l-su" to='/login'> Login </Link>
+            </div>
           </Form>
           <p>Here at EMC, we value membership and relationships very highly.<br/>
           If you would like to be a part of our family please feel free to sign-up!</p>
