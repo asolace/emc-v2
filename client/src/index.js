@@ -11,11 +11,6 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import registerServiceWorker from './registerServiceWorker';
 
-import axios from 'axios'
-window.axios = axios
-
-// use axios.get('/user/seed')
-
 const store = createStore(
   reducers, {}, applyMiddleware(reduxThunk)
 )
