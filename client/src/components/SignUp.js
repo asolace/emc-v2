@@ -9,12 +9,14 @@ import { Alert, Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon }
 import FaUser from 'react-icons/lib/fa/user';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
+import FaPhone from 'react-icons/lib/fa/phone';
 
 class SignUp extends Component {
   state = {
     full_name: '',
     email: '',
-    password: ''
+    password: '',
+    phone: ''
   }
 
   isValid() {
@@ -52,6 +54,39 @@ class SignUp extends Component {
           </div>
 
           <InputGroup>
+            <InputGroupAddon><FaUser /></InputGroupAddon>
+            <Input
+              onChange={this.onChange}
+              type="full_name"
+              name="full_name"
+              placeholder="Full Name"
+              valid={errors ? this.state.errors.full_name_valid : null}
+            />
+            <FormFeedback>&nbsp;{errors ? this.state.errors.full_name : null}</FormFeedback>
+          </InputGroup>
+
+          <br />
+
+          <InputGroup>
+            <InputGroupAddon><FaPhone /></InputGroupAddon>
+            <Input
+              onChange={this.onChange}
+              type="tel"
+              name="phone"
+              placeholder="Phone"
+              valid={this.props.register ? this.props.register.available :
+                errors ? this.state.errors.phone_valid : null}
+            />
+            <FormFeedback>
+              &nbsp;{this.props.register ? 'Phone is already used' :
+                (this.state.phone === '') ? 'Phone is required' :
+                this.state.errors ? this.state.errors.phone : null}
+            </FormFeedback>
+          </InputGroup>
+
+          <br />
+
+          <InputGroup>
             <InputGroupAddon><FaEnvelope /></InputGroupAddon>
             <Input
               onChange={this.onChange}
@@ -65,20 +100,6 @@ class SignUp extends Component {
                 (this.state.email === '') ? 'Email is required' :
                 this.state.errors ? this.state.errors.email : null}
             </FormFeedback>
-          </InputGroup>
-
-          <br />
-
-          <InputGroup>
-            <InputGroupAddon><FaUser /></InputGroupAddon>
-            <Input
-              onChange={this.onChange}
-              type="full_name"
-              name="full_name"
-              placeholder="Full Name"
-              valid={errors ? this.state.errors.full_name_valid : null}
-            />
-            <FormFeedback>&nbsp;{errors ? this.state.errors.full_name : null}</FormFeedback>
           </InputGroup>
 
           <br />

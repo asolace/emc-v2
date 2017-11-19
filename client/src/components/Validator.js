@@ -23,6 +23,10 @@ export default function validateInput(data) {
     errors.full_name = 'Full name is required'
     errors.full_name_valid = false
   }
+  if (Validator.isEmpty(data.phone)) {
+    errors.phone = 'Phone is required'
+    errors.phone_valid = false
+  }
   if (Validator.isEmpty(data.password)) {
     errors.password = 'Password is required'
     errors.password_valid = false

@@ -15,11 +15,19 @@ validateInput = data => {
 
   if (Validator.isEmpty(data.password)) errors.password = 'EMC needs your Password'
   if (Validator.isEmpty(data.full_name)) errors.full_name = 'EMC needs your Full Name'
+  if (Validator.isEmpty(data.phone)) errors.phone = 'EMC needs your Full Name'
   if (fullNameLength < 2) errors.full_name = 'EMC needs your Full Name'
   if (!Validator.isEmail(data.email)) errors.email = 'EMC do not like your email'
   if (Validator.isEmpty(data.email)) errors.email = 'EMC wants your email'
 
   return { errors, isValid: isEmpty(errors) }
+}
+
+formatName = name => {
+  return name
+    .split(' ')
+    .map(name => name.charAt(0).toUpperCase() + name.slice(1))
+    .join(' ')
 }
 
 module.exports = app => {
@@ -34,8 +42,8 @@ module.exports = app => {
           password: seed.password
         })
         User.addUser(newUser, (err, user) => {
-          if (err) console.log('Seeded')
-          else console.log('failed')
+          if (err) console.log('failed')
+          else console.log('seeded')
         })
       }
     })
@@ -49,7 +57,8 @@ module.exports = app => {
       res.status(422).json({errors})
     } else {
       let newUser = new User({
-        fullName: req.body.full_name,
+        fullName: formatName(req.body.full_name),
+        phone: req.body.phone,
         email: req.body.email,
         password: req.body.password
       })
@@ -87,6 +96,8 @@ module.exports = app => {
             user: {
               id: user._id,
               email: user.email,
+              fullName: user.fullName,
+              phone: user.phone,
               isMember: user.isMember,
               isAdmin: user.admin
             }
@@ -106,7 +117,9 @@ module.exports = app => {
   app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
     res.json({
       full_name: req.user.fullName,
-      email: req.user.email
+      email: req.user.email,
+      phone: req.user.phone,
+      email: req.user.email,
     })
   })
 

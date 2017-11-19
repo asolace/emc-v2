@@ -16,10 +16,16 @@ class Directory extends Component {
   }
 
   renderRows() {
-    return this.state.directory.map((obj, i) => {
+    return this.state.directory
+      .sort((a, b) => {
+        if (a.fullName < b.fullName) return -1
+        if (a.fullName > b.fullName) return 1
+        return 0
+      })
+      .map((obj, i) => {
       return (
-        <tr>
-          <th scope="row">{i=1}</th>
+        <tr key={i}>
+          <th scope="row">{i+1}</th>
           <td>{obj.fullName}</td>
           <td>{obj.email}</td>
           <td>{obj.phone}</td>

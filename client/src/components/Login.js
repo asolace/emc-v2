@@ -12,7 +12,8 @@ class Login extends Component {
   state = {
     email: '',
     password: '',
-    full_name: 'not required'
+    full_name: 'not required',
+    phone: 'not required'
   }
 
   isValid() {

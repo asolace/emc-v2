@@ -44,7 +44,7 @@ module.exports = [
   {
     full_name: 'Bryan Sepulveda',
     email: 'user4@test.com',
-    phone: '917.432.7721',
+    phone: '917-432-7721',
     password: 'passtest'
   },
   {
@@ -152,7 +152,7 @@ module.exports = [
   {
     full_name: 'Enrique Pinero',
     email: 'solstrider92881@yahoo.com',
-    phone: '347.942.1434',
+    phone: '347-942-1434',
     password: 'passtest'
   },
   {
@@ -176,7 +176,7 @@ module.exports = [
   {
     full_name: 'Grace Eunjin Lee',
     email: 'gracelee.x3@gmail.com',
-    phone: '646.620-1455',
+    phone: '646-620-1455',
     password: 'passtest'
   },
   {
