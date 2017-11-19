@@ -4,9 +4,10 @@ const bcrypt = require('bcryptjs')
 const UserSchema = mongoose.Schema({
   fullName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  phone: { type: String, required: true, unique: true, default: ' ' },
+  phone: { type: String, required: true },
   password: { type: String, required: true },
-  isMember: { type: String, default: 'false' }
+  isMember: { type: String, default: 'false' },
+  data: { type: Object }
 })
 
 const User = module.exports = mongoose.model('User', UserSchema)

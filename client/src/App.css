@@ -573,17 +573,17 @@ nav {
   top: 45px;
 }
 
-.g-one {
+.g-one,
+.g-two,
+.g-three {
   margin-top: 15vw;
 }
 
 .g-two {
-  margin-top: 15vw;
   left: 32.9vw;
 }
 
 .g-three {
-  margin-top: 15vw;
   left: 65.9vw;
 }
 
@@ -1033,7 +1033,7 @@ input {
   height: 70vh;
   margin: auto;
   margin-bottom: 300px;
-  padding: 150px 20px 50px 20px;
+  padding: 75px 20px 50px 20px;
 }
 
 .login-signup-form {
@@ -1049,12 +1049,6 @@ input {
   border-radius: 15px 15px 0 0;
   margin: -15px -15px 15px -15px;
   padding: 15px 15px 2px 15px;
-}
-
-.l-al {
-  position: absolute;
-  top: 120px;
-  left: calc(50vw - 82px);
 }
 
 .l-in {

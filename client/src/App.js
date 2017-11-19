@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
 import "animate.css/animate.min.css";
 
+import Auth from './components/Auth'
+
 import About from './components/About'
 import Directory from './components/Members/Directory'
 import Fellowship from './components/Fellowship'
@@ -28,7 +30,7 @@ class App extends Component {
             <Route path="/gallery" component={ Gallery } />
             <Route path="/members" component={ Members } />
             <Route path="/signup" component={ SignUp } />
-            <Route path="/directory" component={ Directory } />
+            <Route path="/directory" component={ Auth(Directory) } />
           </div>
           <Footer />
         </div>

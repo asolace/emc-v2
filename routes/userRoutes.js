@@ -6,8 +6,6 @@ const Validator = require('validator')
 const isEmpty = require('lodash/isEmpty')
 const User = require('../models/User')
 
-const seeds = require('./seeder')
-
 validateInput = data => {
   let errors = {}
 
@@ -15,6 +13,7 @@ validateInput = data => {
 
   if (Validator.isEmpty(data.password)) errors.password = 'EMC needs your Password'
   if (Validator.isEmpty(data.full_name)) errors.full_name = 'EMC needs your Full Name'
+  if (Validator.isEmpty(data.phone)) errors.phone = 'EMC needs your Full Name'
   if (fullNameLength < 2) errors.full_name = 'EMC needs your Full Name'
   if (!Validator.isEmail(data.email)) errors.email = 'EMC do not like your email'
   if (Validator.isEmpty(data.email)) errors.email = 'EMC wants your email'
@@ -22,33 +21,22 @@ validateInput = data => {
   return { errors, isValid: isEmpty(errors) }
 }
 
+formatName = name => {
+  return name
+    .split(' ')
+    .map(name => name.charAt(0).toUpperCase() + name.slice(1))
+    .join(' ')
+}
+
 module.exports = app => {
-
-  app.get('/user/seed', (req, res) => {
-    seeds.forEach(seed => {
-      for (const key in seed) {
-        let newUser = new User({
-          fullName: seed.full_name,
-          email: seed.email,
-          password: seed.password
-        })
-        User.addUser(newUser, (err, user) => {
-          if (err) console.log('Seeded')
-          else console.log('failed')
-        })
-      }
-    })
-
-    res.send('seed successfull')
-  })
-
   app.post('/user/register', (req, res, next) => {
     const { errors, isValid } = validateInput(req.body)
     if (!isValid) {
       res.status(422).json({errors})
     } else {
       let newUser = new User({
-        fullName: req.body.full_name,
+        fullName: formatName(req.body.full_name),
+        phone: req.body.phone,
         email: req.body.email,
         password: req.body.password
       })
@@ -86,6 +74,8 @@ module.exports = app => {
             user: {
               id: user._id,
               email: user.email,
+              fullName: user.fullName,
+              phone: user.phone,
               isMember: user.isMember,
               isAdmin: user.admin
             }
@@ -105,7 +95,20 @@ module.exports = app => {
   app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
     res.json({
       full_name: req.user.fullName,
-      email: req.user.email
+      email: req.user.email,
+      phone: req.user.phone,
+      email: req.user.email,
+    })
+  })
+
+  app.get('/user/directory', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+    User.find({}, (err, users) => {
+      let mappedUsers = []
+
+      users.forEach((user, i) => {
+        mappedUsers.push({ fullName: user.fullName, email: user.email, phone: user.phone })
+      })
+      res.json({mappedUsers})
     })
   })
 
@@ -123,9 +126,5 @@ module.exports = app => {
       }
       res.json({ status })
     })
-  })
-
-  app.get('/user/directories', passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log('works');
   })
 }

@@ -13,7 +13,8 @@ class Login extends Component {
   state = {
     email: '',
     password: '',
-    full_name: 'not required'
+    full_name: 'not required',
+    phone: 'not required'
   }
 
   isValid() {
@@ -40,7 +41,7 @@ class Login extends Component {
       return (
         <div className="login-signup-container">
         {this.props.auth && !this.props.auth.success ?
-          <Alert className="l-al" color="danger">
+          <Alert color="danger">
             {this.props.auth.msg}
          </Alert> : <div></div>}
           <Form className="login-signup-form" onSubmit={this.onSubmit}>
