@@ -6,8 +6,6 @@ const Validator = require('validator')
 const isEmpty = require('lodash/isEmpty')
 const User = require('../models/User')
 
-const seeds = require('./seeder')
-
 validateInput = data => {
   let errors = {}
 
