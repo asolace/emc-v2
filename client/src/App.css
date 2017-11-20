@@ -1081,6 +1081,7 @@ input {
 }
 /*Login/Signup End*/
 
+/*Directory Begin*/
 .directory-container {
   text-align: left;
   background-color: white;
@@ -1096,6 +1097,9 @@ input {
   background-color: #ffe0e0;
 }
 
+.tmbr { color: red }
+.tmbg { color: green }
+
 @media screen and (max-width: 730px) {
   .directory-container {
     font-size: 0.6em;
@@ -1107,3 +1111,5 @@ input {
     font-size: 4px;
   }
 }
+
+/*Directory End*/

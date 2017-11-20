@@ -37,7 +37,7 @@ class App extends Component {
             <Route path="/gallery" component={ Gallery } />
             <Route path="/members" component={ Auth(Members) } />
             <Route path="/signup" component={ SignUp } />
-            <Route path="/directory" component={ Auth(Directory) } />
+            <Route path="/directory" component={ Directory } />
           </div>
           <Footer />
         </div>

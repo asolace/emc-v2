@@ -116,7 +116,7 @@ module.exports = app => {
         phone: req.user.phone,
         email: req.user.email,
         isMember: req.user.isMember,
-        isAdmin: req.user.admin
+        isAdmin: req.user.isAdmin
       }
     })
   })
@@ -131,7 +131,8 @@ module.exports = app => {
           fullName: user.fullName,
           email: user.email,
           phone: user.phone,
-          isMember: user.isMember
+          isMember: user.isMember,
+          isAdmin: user.isAdmin
         })
       })
 
@@ -139,8 +140,19 @@ module.exports = app => {
     })
   })
 
-  app.post('/user/update', passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log(req.body)
+  app.post('/user/update', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+    if (req.user.isAdmin) {
+      let { userId, type, value } = req.body
+      value = value === 'true' ? true : false
+
+      User.findById(userId, (err, user) => {
+        user[type] = value
+        user.save()
+        res.send("Member successfully updated!")
+      })
+    } else {
+      res.send("You're not allowed to modify members")
+    }
   })
 
 }

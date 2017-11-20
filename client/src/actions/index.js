@@ -43,8 +43,11 @@ export const registerUser = (data) => async dispatch => {
 }
 
 export const updateUser = (token, data) => async dispatch => {
-  const res = await axios.post('/user/profile', {
-    headers: { "Authorization": token }
+  const res = await axios.post('/user/update', data, {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": token
+    }
   })
   console.log(res);
 }

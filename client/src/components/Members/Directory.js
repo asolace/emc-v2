@@ -5,13 +5,15 @@ import * as actions from '../../actions';
 
 import { Table, Progress } from 'reactstrap';
 
+const token = sessionStorage.getItem('jwt')
+
 class Directory extends Component {
   state = {
     directory: []
   }
+
   async componentDidMount() {
-    let token = sessionStorage.getItem('jwt')
-    let res = await axios.get('/user/directory',{headers: {"Authorization": token}})
+    let res = await axios.get('/user/directory', { headers: {"Authorization": token} })
     this.setState({ directory: res.data.mappedUsers })
   }
 
@@ -19,8 +21,18 @@ class Directory extends Component {
 
   updateStatus = event => {
     let userId = event.target.parentNode.id
-    let value = event.target.innerHTML
     let type = event.target.id
+
+    let value = event.target.innerHTML
+    value = value === 'false' ? 'true' : 'false'
+    event.target.innerHTML = value
+
+    let data = { userId, type, value }
+    this.props.updateUser(token, data)
+  }
+
+  updateUser = event => {
+
   }
 
   renderRows() {
@@ -37,10 +49,12 @@ class Directory extends Component {
           <td>{obj.fullName}</td>
           <td>{this.checkEmail(obj.email)}</td>
           <td>{obj.phone}</td>
-          <td id="isMember" onClick={this.updateStatus}>
-            {
-              obj.isMember
-            }
+          <td
+            id="isMember"
+            className={obj.isMember ? 'tmbg' : 'tmbr'} 
+            onClick={this.updateStatus}
+          >
+            {obj.isMember.toString()}
           </td>
         </tr>
       )
