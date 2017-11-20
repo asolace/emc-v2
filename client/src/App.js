@@ -4,6 +4,8 @@ import './App.css';
 import "animate.css/animate.min.css";
 
 import Auth from './components/Auth'
+import { connect } from 'react-redux';
+import * as actions from './actions';
 
 import About from './components/About'
 import Directory from './components/Members/Directory'
@@ -17,6 +19,11 @@ import Members from './components/Members'
 import SignUp from './components/SignUp'
 
 class App extends Component {
+  componentDidMount() {
+    let token = sessionStorage.getItem('jwt')
+    if (token) this.props.getUser(token)
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -28,7 +35,7 @@ class App extends Component {
             <Route path="/fellowship" component={ Fellowship } />
             <Route path="/login" component={ Login } />
             <Route path="/gallery" component={ Gallery } />
-            <Route path="/members" component={ Members } />
+            <Route path="/members" component={ Auth(Members) } />
             <Route path="/signup" component={ SignUp } />
             <Route path="/directory" component={ Auth(Directory) } />
           </div>
@@ -40,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, actions)(App);

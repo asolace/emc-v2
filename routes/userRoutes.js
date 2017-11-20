@@ -110,10 +110,14 @@ module.exports = app => {
 
   app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
     res.json({
-      full_name: req.user.fullName,
-      email: req.user.email,
-      phone: req.user.phone,
-      email: req.user.email,
+      user: {
+        full_name: req.user.fullName,
+        email: req.user.email,
+        phone: req.user.phone,
+        email: req.user.email,
+        isMember: req.user.isMember,
+        isAdmin: req.user.admin
+      }
     })
   })
 

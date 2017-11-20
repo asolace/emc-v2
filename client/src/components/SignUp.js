@@ -142,8 +142,8 @@ class SignUp extends Component {
   }
 }
 
-function mapStateToProps({ register, auth }) {
-  return { register, auth }
+function mapStateToProps({ register }) {
+  return { register }
 }
 
 export default connect(mapStateToProps, actions)(SignUp)

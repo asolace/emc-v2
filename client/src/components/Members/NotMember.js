@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 import { Button } from 'reactstrap'
 
-class Members extends Component {
+class NotMember extends Component {
   onLogout = () => {
     this.props.logoutUser()
-    this.props.history.push('/')
   }
 
   render() {
-    return(
+    return (
       <div>
-        <h1>MEMBER DASHBOARD</h1>
-        <Link to="/directory">Directories</Link><br />
+        <h1>Sorry you're not a member yet... </h1>
         <Button onClick={this.onLogout}>Fancy Logout Button</Button>
       </div>
     )
@@ -26,4 +23,4 @@ function mapStateToProps({ auth }) {
   return { auth }
 }
 
-export default connect(mapStateToProps, actions)(Members)
+export default connect(mapStateToProps, actions)(NotMember)

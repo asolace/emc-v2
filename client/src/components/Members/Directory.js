@@ -21,7 +21,6 @@ class Directory extends Component {
     let userId = event.target.parentNode.id
     let value = event.target.innerHTML
     let type = event.target.id
-
   }
 
   renderRows() {
