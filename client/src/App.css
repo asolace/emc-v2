@@ -1079,5 +1079,31 @@ input {
 .l-sp {
   padding-top: 10px;
 }
-
 /*Login/Signup End*/
+
+.directory-container {
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+}
+
+.directory-container table {
+  border: 1px solid #e9ecef !important;
+}
+
+.directory-container tr:hover,
+.table-striped tbody tr:nth-of-type(odd):hover {
+  background-color: #ffe0e0;
+}
+
+@media screen and (max-width: 730px) {
+  .directory-container {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .directory-container {
+    font-size: 4px;
+  }
+}

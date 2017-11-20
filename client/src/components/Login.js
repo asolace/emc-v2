@@ -5,7 +5,6 @@ import * as actions from '../actions';
 import validateInput from './Validator'
 
 import { Alert, Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
-import { FormGroup, FormText, Label } from 'reactstrap';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
 
@@ -57,7 +56,8 @@ class Login extends Component {
                 <InputGroupAddon><FaEnvelope /></InputGroupAddon>
                 <Input
                   onChange={this.onChange}
-                  type="email" name="email"
+                  type="email"
+                  name="email"
                   placeholder="Email"
                   valid={this.props.register ? this.props.register.available :
                     errors ? this.state.errors.email_valid : null}

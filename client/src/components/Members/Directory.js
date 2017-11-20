@@ -15,6 +15,15 @@ class Directory extends Component {
     this.setState({ directory: res.data.mappedUsers })
   }
 
+  checkEmail = email => email.includes('test.com') ? 'NA' : email
+
+  updateStatus = event => {
+    let userId = event.target.parentNode.id
+    let value = event.target.innerHTML
+    let type = event.target.id
+
+  }
+
   renderRows() {
     return this.state.directory
       .sort((a, b) => {
@@ -24,11 +33,16 @@ class Directory extends Component {
       })
       .map((obj, i) => {
       return (
-        <tr key={i}>
+        <tr id={obj._id} key={obj._id}>
           <th scope="row">{i+1}</th>
           <td>{obj.fullName}</td>
-          <td>{obj.email}</td>
+          <td>{this.checkEmail(obj.email)}</td>
           <td>{obj.phone}</td>
+          <td id="isMember" onClick={this.updateStatus}>
+            {
+              obj.isMember
+            }
+          </td>
         </tr>
       )
     })
@@ -41,7 +55,6 @@ class Directory extends Component {
       return (
         <div className="directory-container">
           <h1>Member's Directory</h1>
-          <div className="container">
             <Table striped>
               <thead>
                 <tr>
@@ -49,13 +62,13 @@ class Directory extends Component {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 {this.renderRows()}
               </tbody>
             </Table>
-          </div>
         </div>
       )
     }

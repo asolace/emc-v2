@@ -21,7 +21,9 @@ export const logoutUser = () => async dispatch => {
 }
 
 export const getUser = (token) => async dispatch => {
-  const res = await axios.get('/user/profile',{headers: {"Authorization": token}})
+  const res = await axios.get('/user/profile', {
+    headers: { "Authorization": token }
+  })
   console.log(res);
 }
 
@@ -33,4 +35,11 @@ export const registerUser = (data) => async dispatch => {
   } else {
     dispatch({ type: REGISTER_USER, payload: checkEmailRes.data.status.email })
   }
+}
+
+export const updateUser = (token, data) => async dispatch => {
+  const res = await axios.post('/user/profile', {
+    headers: { "Authorization": token }
+  })
+  console.log(res);
 }

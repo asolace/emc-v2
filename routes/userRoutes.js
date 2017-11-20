@@ -52,6 +52,22 @@ module.exports = app => {
     }
   })
 
+  app.post('/user/checkemail', (req, res, next) => {
+    let status = {
+      email: {available: true, msg: 'Email is available!'}
+    }
+    const email = req.body.email
+
+    User.getUserByEmail(email, (err, user) => {
+      if (err) throw err
+      if (user && user.email === email) {
+        status.email.available = false
+        status.email.msg = 'Email is Taken!'
+      }
+      res.json({ status })
+    })
+  })
+
   app.post('/user/authenticate', (req, res, next) => {
     const email = req.body.email
     const password = req.body.password
@@ -106,25 +122,21 @@ module.exports = app => {
       let mappedUsers = []
 
       users.forEach((user, i) => {
-        mappedUsers.push({ fullName: user.fullName, email: user.email, phone: user.phone })
+        mappedUsers.push({
+          _id: user._id,
+          fullName: user.fullName,
+          email: user.email,
+          phone: user.phone,
+          isMember: user.isMember
+        })
       })
-      res.json({mappedUsers})
+
+      res.json({ mappedUsers })
     })
   })
 
-  app.post('/user/checkemail', (req, res, next) => {
-    let status = {
-      email: {available: true, msg: 'Email is available!'}
-    }
-    const email = req.body.email
-
-    User.getUserByEmail(email, (err, user) => {
-      if (err) throw err
-      if (user && user.email === email) {
-        status.email.available = false
-        status.email.msg = 'Email is Taken!'
-      }
-      res.json({ status })
-    })
+  app.post('/user/update', passport.authenticate('jwt', { session: false }), (req, res) => {
+    console.log(req.body)
   })
+
 }
