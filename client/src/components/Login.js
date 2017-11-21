@@ -39,6 +39,7 @@ class Login extends Component {
 
   render() {
     const { errors } = this.state
+    console.log(this.props.auth);
     if (this.props.auth && this.props.auth.user && this.props.auth.user.isMember === true) {
       return <Redirect to="/members" />
     } else if (this.props.auth && this.props.auth.user && this.props.auth.user.isMember === false) {
@@ -46,7 +47,7 @@ class Login extends Component {
     } else {
       return (
         <div className="login-signup-container">
-        {this.props.auth && !this.props.auth.success ?
+        {this.props.auth && !this.props.auth.success && this.props.auth.msg ?
           <Alert color="danger">
             {this.props.auth.msg}
          </Alert> : <div></div>}
