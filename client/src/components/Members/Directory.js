@@ -13,6 +13,8 @@ class Directory extends Component {
   }
 
   async componentDidMount() {
+    const token = sessionStorage.getItem('jwt')
+
     let res = await axios.get('/user/directory', { headers: {"Authorization": token} })
     this.setState({ directory: res.data.mappedUsers })
   }
@@ -43,7 +45,7 @@ class Directory extends Component {
   }
 
   updateUserInfo = event => {
-
+    
   }
 
   renderAdminRows() {
@@ -98,7 +100,7 @@ class Directory extends Component {
   }
 
   render() {
-    console.log(this.props);
+    console.log('here');
     if (this.state.directory.length === 0) {
       return <Progress animated value="100" />
     } else {
