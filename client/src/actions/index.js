@@ -41,13 +41,3 @@ export const registerUser = (data) => async dispatch => {
     dispatch({ type: REGISTER_USER, payload: checkEmailRes.data.status.email })
   }
 }
-
-export const updateUser = (token, data) => async dispatch => {
-  const res = await axios.post('/user/update', data, {
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": token
-    }
-  })
-  console.log(res);
-}

@@ -39,7 +39,6 @@ class Login extends Component {
 
   render() {
     const { errors } = this.state
-    console.log(this.props.auth);
     if (this.props.auth && this.props.auth.user && this.props.auth.user.isMember === true) {
       return <Redirect to="/members" />
     } else if (this.props.auth && this.props.auth.user && this.props.auth.user.isMember === false) {

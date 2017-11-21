@@ -17,9 +17,20 @@ class Directory extends Component {
     this.setState({ directory: res.data.mappedUsers })
   }
 
+  async updateUser(data) {
+    const updateRes = await axios.post('/user/update', data, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": token
+      }
+    })
+    const res = await axios.get('/user/directory', { headers: {"Authorization": token} })
+    this.setState({ directory: res.data.mappedUsers, updateRes })
+  }
+
   checkEmail = email => email.includes('test.com') ? 'NA' : email
 
-  updateStatus = event => {
+  updateUserStatus = event => {
     let userId = event.target.parentNode.id
     let type = event.target.id
 
@@ -28,11 +39,37 @@ class Directory extends Component {
     event.target.innerHTML = value
 
     let data = { userId, type, value }
-    this.props.updateUser(token, data)
+    this.updateUser(data)
   }
 
-  updateUser = event => {
+  updateUserInfo = event => {
 
+  }
+
+  renderAdminRows() {
+    return this.state.directory
+      .sort((a, b) => {
+        if (a.fullName < b.fullName) return -1
+        if (a.fullName > b.fullName) return 1
+        return 0
+      })
+      .map((obj, i) => {
+      return (
+        <tr id={obj._id} key={obj._id}>
+          <th scope="row">{i+1}</th>
+          <td>{obj.fullName}</td>
+          <td>{this.checkEmail(obj.email)}</td>
+          <td>{obj.phone}</td>
+          <td
+            id="isMember"
+            className={obj.isMember ? 'tmbg-a' : 'tmbr-a'}
+            onClick={this.updateUserStatus}
+          >
+            {obj.isMember.toString()}
+          </td>
+        </tr>
+      )
+    })
   }
 
   renderRows() {
@@ -51,8 +88,7 @@ class Directory extends Component {
           <td>{obj.phone}</td>
           <td
             id="isMember"
-            className={obj.isMember ? 'tmbg' : 'tmbr'} 
-            onClick={this.updateStatus}
+            className={obj.isMember ? 'tmbg' : 'tmbr'}
           >
             {obj.isMember.toString()}
           </td>
@@ -62,6 +98,7 @@ class Directory extends Component {
   }
 
   render() {
+    console.log(this.props);
     if (this.state.directory.length === 0) {
       return <Progress animated value="100" />
     } else {
@@ -79,7 +116,8 @@ class Directory extends Component {
                 </tr>
               </thead>
               <tbody>
-                {this.renderRows()}
+                {this.props.auth && this.props.auth.user && this.props.auth.user.isAdmin ?
+                  this.renderAdminRows() : this.renderRows()}
               </tbody>
             </Table>
         </div>

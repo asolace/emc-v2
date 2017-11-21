@@ -1097,8 +1097,15 @@ input {
   background-color: #ffe0e0;
 }
 
-.tmbr { color: red }
-.tmbg { color: green }
+.tmbr-a {
+  color: red;
+  cursor: pointer;
+}
+
+.tmbg-a {
+  color: green;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 730px) {
   .directory-container {
