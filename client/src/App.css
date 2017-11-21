@@ -1097,15 +1097,10 @@ input {
   background-color: #ffe0e0;
 }
 
-.tmbr-a {
-  color: red;
-  cursor: pointer;
-}
+.tmbr { color: red; }
+.tmbg { color: green; }
 
-.tmbg-a {
-  color: green;
-  cursor: pointer;
-}
+.td-admin { cursor: pointer; }
 
 @media screen and (max-width: 730px) {
   .directory-container {

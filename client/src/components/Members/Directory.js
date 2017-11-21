@@ -62,7 +62,7 @@ class Directory extends Component {
           <td>{obj.phone}</td>
           <td
             id="isMember"
-            className={obj.isMember ? 'tmbg-a' : 'tmbr-a'}
+            className={obj.isMember ? 'tmbg td-admin' : 'tmbr td-admin'}
             onClick={this.updateUserStatus}
           >
             {obj.isMember.toString()}
