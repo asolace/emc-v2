@@ -20,20 +20,20 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Navbar className="ea" color="black" light expand="md" fixed="top">
+        <Navbar color="black" light expand="md" fixed="top">
           <Link className="navbar-brand" to="/">
-            <div className="eb">
+            <div className="emc-brand">
               <Row>
-                <div className="ec">
+                <div className="emc-short-container">
                   <Col>
-                    <span className="ee">EMC</span>
+                    <span className="emc-logo">EMC</span>
                   </Col>
                 </div>
-                <div className="ed">
+                <div className="emc-long-container">
                   <Col>
-                    <span className="ef"> | EBENEZER </span>
-                    <span className="eg">MISSION </span>
-                    <span className="ef">CHURCH </span>
+                    <span className="emc-logo-long black"> | EBENEZER </span>
+                    <span className="emc-logo-long red">MISSION </span>
+                    <span className="emc-logo-long black">CHURCH </span>
                   </Col>
                 </div>
               </Row>

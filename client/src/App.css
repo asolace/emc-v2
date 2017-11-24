@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Alice|PT+Serif+Caption|Archivo+Black');
 @import url('https://fonts.googleapis.com/css?family=Asap+Condensed|Cabin|Varela+Round');
+
+/*EMC Logo*/
 @font-face {
   font-family: 'Gotham-Back-Regular';
   src: local('Gotham-Back-Regular'), url(./fonts/GothamBlackRegular.ttf) format('truetype');
 }
+
+/*EMC Logo long*/
 @font-face {
   font-family: 'Bebas-Neue';
   src: local('Bebas-Neue'), url(./fonts/BebasNeue.otf) format('opentype');
 }
 
-td {
-  padding-right: 5px;
-}
-
 .App {
   text-align: center;
-  background-color: #f4f2ed;
+
 }
 
 .App-container {
@@ -28,6 +28,10 @@ a {
 
 nav {
   background-color: white;
+}
+
+td {
+  padding-right: 5px;
 }
 
 /* About Page Begin */
@@ -302,42 +306,37 @@ nav {
 
 /* Header BEGIN */
 
-.eb {
+.emc-brand {
   position: absolute;
   top: 0px;
   width: 200px;
 }
 
-.ec {
+.emc-short-container {
   width: 70px;
 }
 
-.ed {
+.emc-long-container {
   margin-top: 5px;
   width: 50px;
 }
 
-.ee {
+.emc-logo {
   font-family: 'Gotham-Back-Regular';
   color: #38322e;
-  /*color: #5058b2;*/
   font-size: 1.5em;
 }
 
-.ef {
+.emc-logo-long {
   font-family: 'Bebas-Neue', sans-serif;
-  color: #38322e;
-  /*color: #5058b2;*/
   font-size: 0.8em;
+
 }
 
-.eg {
-  font-size: 0.8em;
-  color: #ad574e;
-  font-family: 'Bebas-Neue', sans-serif;
-}
+.black { color: #38322e; }
+.red { color: #ad574e; }
 
-.ea{
+nav {
   background-color: white;
   height: 66px;
 }
@@ -372,16 +371,10 @@ nav {
 }
 
 @media screen and (max-width: 416px) {
-  .eb { width: 10px;}
-
-  .ef {
+  .emc-brand { width: 10px;}
+  .emc-logo-long {
     width: 1px;
     visibility: hidden;
-  }
-
-  .eg {
-    visibility: hidden;
-    width: 1px;
   }
 }
 
@@ -735,12 +728,6 @@ nav {
 }
 
 .h-subintro-container {
-  background-color: #ad574e;
-  border-top: 10px solid black;
-  border-bottom: 10px solid black;
-  border-left: 50px solid black;
-  border-right: 50px solid black;
-  color: white;
   margin-top: 100px;
   padding: 100px;
 }
@@ -760,8 +747,6 @@ nav {
   height: 250px;
 }
 .home-container {
-  background-color: lightgrey;
-  /*background-color: #f4f2ed;*/
   font-family: 'Roboto', sans-serif;
 }
 
