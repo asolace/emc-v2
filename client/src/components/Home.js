@@ -27,7 +27,7 @@ const Home = () => {
       <div className="h-subintro-container">
         <h3 className="h-header">Friends and Family Devoted to Christ!</h3><br/>
         <p className="h-text">
-          Ebenezer Mission Church is a <b>missional</b> church.
+          Ebenezer Mission Church is a missional church.
           We believe in Jesus Christ as our Lord and savior! We believe that fellowship, service, and worship are vital for spiritual growth. Therefore we strive to get together as much as possible to learn and grow through the Bible which is the inspired word of God given to man and is useful for teaching, rebuking, correcting and training in righteousness.
         </p>
       </div>

@@ -64,7 +64,7 @@ td {
 
 .ad {
   background-color: white;
-  border-radius: 10%;
+
   opacity: 0.55;
   margin-left: 15vw;
   margin-right: 15vw;
@@ -186,7 +186,7 @@ td {
   margin-right: 0px !important;
   margin-top: 0px;
   padding-top: 50px;
-  background-color: lightgrey;
+
 }
 
 .about-deacon-header {
@@ -196,7 +196,7 @@ td {
   margin-bottom: 0px;
   padding-top: 50px;
   padding-bottom: 0px;
-  background-color: lightgrey;
+
   color: black;
 }
 
@@ -272,7 +272,7 @@ td {
 /* About Deacon Section END */
 
 .about-page-container {
-  background-color: #f4f2ed;
+
   width: auto;
 }
 
@@ -700,6 +700,7 @@ nav {
 .h-text {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
+  color: #6b6b6b;
 }
 
 .h-tri-colA {
