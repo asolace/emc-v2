@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import validateInput from './Validator'
+import NotMember from './Members/NotMember'
 
 import { Alert, Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
@@ -29,17 +30,23 @@ class Login extends Component {
   onSubmit = event => {
     event.preventDefault()
     this.setState({ errors: '' })
-    if (this.isValid()) this.props.loginUser(this.state)
+    if (this.isValid()) {
+      this.props.loginUser(this.state)
+      .then(() => this.props.history.push('/members'))
+      //
+    }
   }
 
   render() {
     const { errors } = this.state
-    if (this.props.auth && this.props.auth.success) {
+    if (this.props.auth && this.props.auth.user && this.props.auth.user.isMember === true) {
       return <Redirect to="/members" />
+    } else if (this.props.auth && this.props.auth.user && this.props.auth.user.isMember === false) {
+      return <NotMember />
     } else {
       return (
         <div className="login-signup-container">
-        {this.props.auth && !this.props.auth.success ?
+        {this.props.auth && !this.props.auth.success && this.props.auth.msg ?
           <Alert color="danger">
             {this.props.auth.msg}
          </Alert> : <div></div>}
@@ -56,7 +63,8 @@ class Login extends Component {
                 <InputGroupAddon><FaEnvelope /></InputGroupAddon>
                 <Input
                   onChange={this.onChange}
-                  type="email" name="email"
+                  type="email"
+                  name="email"
                   placeholder="Email"
                   valid={this.props.register ? this.props.register.available :
                     errors ? this.state.errors.email_valid : null}
@@ -104,7 +112,6 @@ class Login extends Component {
           <p>Here at EMC, we value membership and relationships very highly. <br/>
           If you would like to be a part of our family please feel free to sign-up!</p>
         </div>
-
       )
     }
   }

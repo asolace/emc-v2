@@ -8,7 +8,7 @@ import picD from '../../photos/emcgallery/4.jpg'
 import picE from '../../photos/emcgallery/5.JPG'
 import picF from '../../photos/emcgallery/6.JPG'
 
-const Gallery1 = () => {
+const Gallery = () => {
   return (
     <div className="g-page">
 
@@ -36,4 +36,4 @@ const Gallery1 = () => {
   )
 }
 
-export default Gallery1
+export default Gallery

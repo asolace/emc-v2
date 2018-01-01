@@ -1,6 +1,11 @@
 import axios from 'axios'
 
-import { LOGIN_USER, REGISTER_USER, LOGOUT_USER } from './types'
+import {
+  LOGIN_USER,
+  REGISTER_USER,
+  LOGOUT_USER,
+  AUTHENTICATE_USER
+} from './types'
 
 export const loginUser = (data) => async dispatch => {
   const res = await axios.post('/user/authenticate', data)
@@ -21,8 +26,10 @@ export const logoutUser = () => async dispatch => {
 }
 
 export const getUser = (token) => async dispatch => {
-  const res = await axios.get('/user/profile',{headers: {"Authorization": token}})
-  console.log(res);
+  const res = await axios.get('/user/profile', {
+    headers: { "Authorization": token }
+  })
+  dispatch({ type: AUTHENTICATE_USER, payload: res.data})
 }
 
 export const registerUser = (data) => async dispatch => {

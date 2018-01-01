@@ -52,6 +52,22 @@ module.exports = app => {
     }
   })
 
+  app.post('/user/checkemail', (req, res, next) => {
+    let status = {
+      email: {available: true, msg: 'Email is available!'}
+    }
+    const email = req.body.email
+
+    User.getUserByEmail(email, (err, user) => {
+      if (err) throw err
+      if (user && user.email === email) {
+        status.email.available = false
+        status.email.msg = 'Email is Taken!'
+      }
+      res.json({ status })
+    })
+  })
+
   app.post('/user/authenticate', (req, res, next) => {
     const email = req.body.email
     const password = req.body.password
@@ -94,10 +110,14 @@ module.exports = app => {
 
   app.get('/user/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
     res.json({
-      full_name: req.user.fullName,
-      email: req.user.email,
-      phone: req.user.phone,
-      email: req.user.email,
+      user: {
+        full_name: req.user.fullName,
+        email: req.user.email,
+        phone: req.user.phone,
+        email: req.user.email,
+        isMember: req.user.isMember,
+        isAdmin: req.user.isAdmin
+      }
     })
   })
 
@@ -106,25 +126,33 @@ module.exports = app => {
       let mappedUsers = []
 
       users.forEach((user, i) => {
-        mappedUsers.push({ fullName: user.fullName, email: user.email, phone: user.phone })
+        mappedUsers.push({
+          _id: user._id,
+          fullName: user.fullName,
+          email: user.email,
+          phone: user.phone,
+          isMember: user.isMember,
+          isAdmin: user.isAdmin
+        })
       })
-      res.json({mappedUsers})
+
+      res.json({ mappedUsers })
     })
   })
 
-  app.post('/user/checkemail', (req, res, next) => {
-    let status = {
-      email: {available: true, msg: 'Email is available!'}
+  app.post('/user/update', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+    if (req.user.isAdmin) {
+      let { userId, type, value } = req.body
+      value = value === 'true' ? true : false
+
+      User.findById(userId, (err, user) => {
+        user[type] = value
+        user.save()
+        res.send("Member successfully updated!")
+      })
+    } else {
+      res.send("You're not allowed to modify members")
     }
-    const email = req.body.email
-
-    User.getUserByEmail(email, (err, user) => {
-      if (err) throw err
-      if (user && user.email === email) {
-        status.email.available = false
-        status.email.msg = 'Email is Taken!'
-      }
-      res.json({ status })
-    })
   })
+
 }

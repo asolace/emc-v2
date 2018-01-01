@@ -70,12 +70,7 @@ const About = () => {
             <Col>
               <h2 className="about-leader-name">Pastor Enrique Piñero</h2>
               <p className="about-leader-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec nec dui et enim commodo facilisis id in magna.
-                Nam ullamcorper nulla nunc, quis maximus lacus consectetur eu.
-                Aenean et diam egestas, vestibulum orci sodales, tristique odio.
-                Aliquam quis varius quam, ultrices euismod ipsum.
-                Integer gravida iaculis mauris ac tristique.</p>
+                Dedicated member since 1999. Involved in various ministries, ranging from praise team, welcoming committee, youth ministry, mission work, and Spanish Pastor. Continues to serve with friends and family of EMC, in sharing Christ in a personal and real way.</p>
             </Col>
           </Row>
           <Row className="about-leader-row">

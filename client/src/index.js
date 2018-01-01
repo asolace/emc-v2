@@ -12,7 +12,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(
-  reducers, {}, applyMiddleware(reduxThunk)
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(reduxThunk)
 )
 
 ReactDOM.render(
