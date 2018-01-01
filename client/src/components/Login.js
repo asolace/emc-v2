@@ -5,7 +5,6 @@ import * as actions from '../actions';
 import validateInput from './Validator'
 
 import { Alert, Button, Form, InputGroup, Input, FormFeedback, InputGroupAddon } from 'reactstrap';
-import { FormGroup, FormText, Label } from 'reactstrap';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaLock from 'react-icons/lib/fa/lock';
 

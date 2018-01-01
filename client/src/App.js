@@ -9,7 +9,7 @@ import About from './components/About'
 import Directory from './components/Members/Directory'
 import Fellowship from './components/Fellowship'
 import Footer from './components/Footer'
-import Gallery from './components/Gallery'
+import Gallery1 from './components/Gallery/Gallery1'
 import Home from './components/Home'
 import Header from './components/Header'
 import Login from './components/Login'
@@ -27,7 +27,7 @@ class App extends Component {
             <Route path="/about" component={ About } />
             <Route path="/fellowship" component={ Fellowship } />
             <Route path="/login" component={ Login } />
-            <Route path="/gallery" component={ Gallery } />
+            <Route path="/gallery1" component={ Gallery1 } />
             <Route path="/members" component={ Members } />
             <Route path="/signup" component={ SignUp } />
             <Route path="/directory" component={ Auth(Directory) } />

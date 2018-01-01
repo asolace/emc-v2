@@ -1,13 +1,14 @@
 import React from 'react';
+import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-import picA from '../photos/emcgallery/1.jpg'
-import picB from '../photos/emcgallery/2.jpg'
-import picC from '../photos/emcgallery/3.jpg'
-import picD from '../photos/emcgallery/4.jpg'
-import picE from '../photos/emcgallery/5.JPG'
-import picF from '../photos/emcgallery/6.JPG'
+import picA from '../../photos/emcgallery/1.jpg'
+import picB from '../../photos/emcgallery/2.jpg'
+import picC from '../../photos/emcgallery/3.jpg'
+import picD from '../../photos/emcgallery/4.jpg'
+import picE from '../../photos/emcgallery/5.JPG'
+import picF from '../../photos/emcgallery/6.JPG'
 
-const Gallery = () => {
+const Gallery1 = () => {
   return (
     <div className="g-page">
 
@@ -31,9 +32,8 @@ const Gallery = () => {
       <div className="g-posA g-six g-fadein six">
         <img className="g-pic" alt="pics" src={picF}></img>
       </div>
-
     </div>
   )
 }
 
-export default Gallery
+export default Gallery1
